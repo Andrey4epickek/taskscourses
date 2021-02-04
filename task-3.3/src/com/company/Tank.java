@@ -6,23 +6,23 @@ public class Tank implements IProduct{
    private IProductPart engine;
 
     @Override
-    public void installFirstPart(IProductPart body) {
+    public void installFirstPart(IProductPart first) {
         if (body instanceof ProductBody){
             setBody(body);
         }
     }
 
     @Override
-    public void installSecondPart(IProductPart engine) {
-        if (engine instanceof ProductTower){
-            setEngine(engine);
+    public void installSecondPart(IProductPart second) {
+        if (second instanceof ProductEngine){
+            setEngine(second);
         }
     }
 
     @Override
-    public void installThirdPart(IProductPart tower) {
-        if (tower instanceof ProductBody){
-            setTower(tower);
+    public void installThirdPart(IProductPart third) {
+        if (third instanceof ProductTower){
+            setTower(third);
         }
     }
 

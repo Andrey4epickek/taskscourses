@@ -3,6 +3,7 @@ package com.company;
 public class ProductTower implements IProductPart{
     private String serialNumber;
     private String color;
+
     public ProductTower(String serialNumber,String color) {
         this.serialNumber = serialNumber;
         this.color=color;
