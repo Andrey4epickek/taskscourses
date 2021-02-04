@@ -7,6 +7,6 @@ public class Main {
 	AssemblyLine tankline=new AssemblyLine();
 
 	tankline.assembleProduct(tank);
-	System.out.println("Work is done"+tank.toString());
+	System.out.println("Work is done");
     }
 }

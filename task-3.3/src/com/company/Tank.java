@@ -7,8 +7,8 @@ public class Tank implements IProduct{
 
     @Override
     public void installFirstPart(IProductPart first) {
-        if (body instanceof ProductBody){
-            setBody(body);
+        if (first instanceof ProductBody){
+            setBody(first);
         }
     }
 
