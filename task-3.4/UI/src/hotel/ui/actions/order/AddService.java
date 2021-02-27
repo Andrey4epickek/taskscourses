@@ -16,8 +16,9 @@ public class AddService extends AbstractAction implements IAction {
             System.out.println("Введите название услуги");
             String MaintenanceNameString=reader.readLine();
             System.out.println("Ведите стоимость услуги");
-            int MaintenancePrice =reader.read();
-            Maintenance maintenance=new Maintenance(MaintenanceNameString,MaintenancePrice);
+            String priceString =reader.readLine();
+            Integer price =Integer.parseInt(priceString);
+            Maintenance maintenance=new Maintenance(MaintenanceNameString,price);
             System.out.println("Введите Id заказа");
             String orderIdString=reader.readLine();
             Integer orderId=Integer.parseInt(orderIdString);
