@@ -100,6 +100,8 @@ public class HotelFacade {
         return orderService.getFreeRoomByFixedDate(date);
     }
 
+    public Room getById(Integer roomId){return roomService.getById(roomId);}
+
     public void changeStatus(RoomStatus status,Integer roomId){
         roomService.changeStatus(status, roomId);
     }

@@ -14,4 +14,5 @@ public interface IRoomService {
     List<Room> getSortRoomByCapacity();
     List<Room> getSortRoomByStars();
     List<Integer> getAllRoomsId();
+    Room getById(Integer roomId);
 }

@@ -17,7 +17,8 @@ public class AddMaintenance extends AbstractAction implements IAction {
             System.out.println("Введите название услуги");
             String name=reader.readLine();
             System.out.println("Ведите стоимость услуги");
-            int price =reader.read();
+            String priceString =reader.readLine();
+            Integer price =Integer.parseInt(priceString);
             Maintenance maintenance=hotelFacade.addService(name,price);
             System.out.println(maintenance);
         }catch (IOException e){

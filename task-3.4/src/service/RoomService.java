@@ -82,6 +82,12 @@ public class RoomService implements IRoomService {
     }
 
     @Override
+    public Room getById(Integer roomId) {
+        Room room=roomDao.getByid(roomId);
+        return room;
+    }
+
+    @Override
     public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars, RoomStatus status) {
         try {
             LOGGER.log(Level.INFO,String.format("Adding of room %d with capacity %d, price %d, stars %d",number,capacity,price,stars));

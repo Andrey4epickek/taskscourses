@@ -55,7 +55,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Evict guest",new Evict(),rootMenu))
                 .addItem(new MenuItem("Get free room by date",new GetFreeRoomByDate(),rootMenu))
                 .addItem(new MenuItem("Get order",new GetOrder(),rootMenu))
-                .addItem(new MenuItem("Sort by date",new GetFreeRoomByDate(),rootMenu))
+                .addItem(new MenuItem("Sort by date",new GetSortedByDate(),rootMenu))
                 .addItem(new MenuItem("Sort by name",new GetSortedByName(),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");
