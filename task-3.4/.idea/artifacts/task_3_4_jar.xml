@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="task-3.4:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/task_3_4_jar</output-path>
+    <root id="root">
+      <element id="archive" name="task-3.4.jar">
+        <element id="module-output" name="task-3.4" />
+      </element>
+    </root>
+  </artifact>
+</component>
