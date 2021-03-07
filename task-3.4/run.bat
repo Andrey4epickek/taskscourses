@@ -1,1 +1,0 @@
-java -jar C:\Users\Andrey\Desktop\task-3\task-3.4\out\artifacts\task_3_4_jar\task-3.4.jar
