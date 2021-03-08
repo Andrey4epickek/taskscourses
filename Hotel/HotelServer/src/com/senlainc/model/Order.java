@@ -21,7 +21,8 @@ public class Order extends AEntity {
         this.maintenances = maintenances;
     }
 
-
+    public Order() {
+    }
 
     public Order(Integer id, Room room, Guest guest) {
         this.id = id;

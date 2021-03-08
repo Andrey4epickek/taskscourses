@@ -8,7 +8,7 @@ import java.util.logging.LogManager;
 
 public class CustomLogger {
     static {
-        try(InputStream configReader = new FileInputStream("task-3.4/resources/logger.properties")){
+        try(InputStream configReader = new FileInputStream("HotelServer/resources/logger.properties")){
             LogManager.getLogManager().readConfiguration(configReader);
         }catch (IOException e){
             System.err.println("Could not setup logger configuration" + e.toString());

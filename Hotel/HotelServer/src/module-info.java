@@ -3,4 +3,5 @@ module hotel.server {
     exports com.senlainc.facade;
     exports com.senlainc.model;
     exports com.senlainc.config;
+    exports com.senlainc.util;
 }

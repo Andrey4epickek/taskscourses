@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-08T10:59:55.140193500Z</date>
+  <millis>1615201195140</millis>
+  <nanos>193500</nanos>
+  <sequence>0</sequence>
+  <logger>com.senlainc.util.SerializationHandler</logger>
+  <level>WARNING</level>
+  <class>com.senlainc.util.SerializationHandler</class>
+  <method>serialize</method>
+  <thread>1</thread>
+  <message>Serialization to file failed com.senlainc.model.Order</message>
+</record>
+</log>

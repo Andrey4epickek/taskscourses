@@ -1,8 +1,9 @@
 package com.senlainc.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Room extends AEntity {
+public class Room extends AEntity implements Serializable {
     private Integer number;
     private Integer capacity;
     private Integer price;

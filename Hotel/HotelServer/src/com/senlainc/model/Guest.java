@@ -1,8 +1,9 @@
 package com.senlainc.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Guest extends AEntity {
+public class Guest extends AEntity implements Serializable {
     private String name;
     private  Integer age;
     private List<Order> orders;
