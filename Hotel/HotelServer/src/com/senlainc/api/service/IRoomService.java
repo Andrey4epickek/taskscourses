@@ -1,5 +1,6 @@
 package com.senlainc.api.service;
 
+import com.senlainc.model.Order;
 import com.senlainc.model.Room;
 import com.senlainc.model.RoomStatus;
 
@@ -14,5 +15,6 @@ public interface IRoomService {
     List<Room> getSortRoomByCapacity();
     List<Room> getSortRoomByStars();
     List<Integer> getAllRoomsId();
+    Room getRoom(Integer orderId);
     Room getById(Integer roomId);
 }

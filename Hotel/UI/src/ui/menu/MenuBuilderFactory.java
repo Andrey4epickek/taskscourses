@@ -38,6 +38,7 @@ public class MenuBuilderFactory {
     public Menu roomMenu(Menu rootMenu,Menu previousMenu){
         return new MenuBuilder(rootMenu)
                 .addItem(new MenuItem("Add  room",new AddRoom(),rootMenu))
+                .addItem(new MenuItem("Get  room",new GetRoom(),rootMenu))
                 .addItem(new MenuItem("Change price",new ChangePrice(),rootMenu))
                 .addItem(new MenuItem("Change status",new ChangeStatus(),rootMenu))
                 .addItem(new MenuItem("Sort by capacity",new GetSortRoomByCapacity(),rootMenu))
@@ -57,6 +58,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get order",new GetOrder(),rootMenu))
                 .addItem(new MenuItem("Sort by date",new GetSortedByDate(),rootMenu))
                 .addItem(new MenuItem("Sort by name",new GetSortedByName(),rootMenu))
+                .addItem(new MenuItem("Get three last guests at room",new GetThreeLastGuests(),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");
     }

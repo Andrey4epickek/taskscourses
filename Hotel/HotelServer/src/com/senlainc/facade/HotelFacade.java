@@ -96,6 +96,10 @@ public class HotelFacade {
         return orderService.ordersSortedByCheckOutDate();
     }
 
+    public List<Order> getThreeLastGuests(Integer roomId){
+        return orderService.getThreeLastGuests(roomId);
+    }
+
     public List<Room> getFreeRoomByFixedDate(LocalDate date){
         return orderService.getFreeRoomByFixedDate(date);
     }
@@ -124,6 +128,11 @@ public class HotelFacade {
 
     public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars,RoomStatus status){
         Room room=roomService.addRoom(number, capacity, price, stars,status);
+        return room;
+    }
+
+    public Room getRoom(Integer roomId){
+        Room room = roomService.getRoom(roomId);
         return room;
     }
 

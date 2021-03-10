@@ -33,7 +33,7 @@ public class SerializationHandler {
                 }
             }
         }catch (IOException|ClassNotFoundException e){
-            LOGGER.warning("Deserialization failed" +e.getLocalizedMessage());
+            LOGGER.warning("Deserialization failed " +e.getLocalizedMessage());
             throw new ServiceException(e);
         }
         return Collections.emptyList();

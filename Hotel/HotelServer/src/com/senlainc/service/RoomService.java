@@ -9,6 +9,7 @@ import com.senlainc.exceptions.ServiceException;
 import com.senlainc.model.Room;
 import com.senlainc.model.RoomStatus;
 import com.senlainc.util.IDGenerator;
+import com.senlainc.util.PropertiesHandler;
 
 import java.util.List;
 import java.util.logging.Level;
@@ -30,9 +31,9 @@ public class RoomService implements IRoomService {
     @Override
     public void changeStatus(RoomStatus status,Integer roomId) {
         try {
-            LOGGER.log(Level.INFO,String.format("changeStatus of room %d",roomId));
-            Room room = roomDao.getByid(roomId);
-            room.setStatus(status);
+                LOGGER.log(Level.INFO, String.format("changeStatus of room %d", roomId));
+                Room room = roomDao.getByid(roomId);
+                room.setStatus(status);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Change status failed",e);
             throw new ServiceException("Change status failed",e);
@@ -80,6 +81,17 @@ public class RoomService implements IRoomService {
     @Override
     public List<Integer> getAllRoomsId() {
         return roomDao.getAll().stream().map(Room::getId).collect(Collectors.toList());
+    }
+
+    @Override
+    public Room getRoom(Integer roomId) {
+        try {
+            LOGGER.log(Level.INFO,String.format("getting room %d",roomId));
+            return roomDao.getByid(roomId);
+        }catch (DaoException e){
+            LOGGER.log(Level.WARNING,"Getting room failed",e);
+            throw new ServiceException("Getting room failed",e);
+        }
     }
 
     @Override
