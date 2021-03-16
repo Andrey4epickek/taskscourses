@@ -451,3 +451,130 @@
   <thread>1</thread>
   <message>getting order 1</message>
 </record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-16T14:11:16.399743300Z</date>
+  <millis>1615903876399</millis>
+  <nanos>743300</nanos>
+  <sequence>0</sequence>
+  <logger>com.senlainc.service.RoomService</logger>
+  <level>INFO</level>
+  <class>com.senlainc.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 5</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-16T14:40:52.100250300Z</date>
+  <millis>1615905652100</millis>
+  <nanos>250300</nanos>
+  <sequence>0</sequence>
+  <logger>com.senlainc.service.OrderService</logger>
+  <level>INFO</level>
+  <class>com.senlainc.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<record>
+  <date>2021-03-16T14:40:57.115693900Z</date>
+  <millis>1615905657115</millis>
+  <nanos>693900</nanos>
+  <sequence>1</sequence>
+  <logger>com.senlainc.service.OrderService</logger>
+  <level>INFO</level>
+  <class>com.senlainc.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 5</message>
+</record>
+<record>
+  <date>2021-03-16T14:40:57.117693500Z</date>
+  <millis>1615905657117</millis>
+  <nanos>693500</nanos>
+  <sequence>2</sequence>
+  <logger>com.senlainc.dao.OrderDao</logger>
+  <level>WARNING</level>
+  <class>com.senlainc.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 5</message>
+</record>
+<record>
+  <date>2021-03-16T14:40:57.118694400Z</date>
+  <millis>1615905657118</millis>
+  <nanos>694400</nanos>
+  <sequence>3</sequence>
+  <logger>com.senlainc.service.OrderService</logger>
+  <level>WARNING</level>
+  <class>com.senlainc.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>Getting order failed</message>
+  <exception>
+    <message>com.senlainc.exceptions.DaoException: could not find an entity by id: 5</message>
+    <frame>
+      <class>com.senlainc.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>41</line>
+    </frame>
+    <frame>
+      <class>com.senlainc.service.OrderService</class>
+      <method>getOrder</method>
+      <line>113</line>
+    </frame>
+    <frame>
+      <class>com.senlainc.facade.HotelFacade</class>
+      <method>getOrder</method>
+      <line>88</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.GetOrder</class>
+      <method>execute</method>
+      <line>19</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>starter.Starter</class>
+      <method>main</method>
+      <line>18</line>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-16T14:41:50.701386Z</date>
+  <millis>1615905710701</millis>
+  <nanos>386000</nanos>
+  <sequence>0</sequence>
+  <logger>com.senlainc.service.OrderService</logger>
+  <level>INFO</level>
+  <class>com.senlainc.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 2</message>
+</record>
+</log>

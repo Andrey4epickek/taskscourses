@@ -4,4 +4,5 @@ import com.senlainc.model.Guest;
 
 public interface IGuestDao extends GenericDao<Guest> {
 
+
 }

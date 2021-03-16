@@ -1,5 +1,6 @@
 package ui.menu;
 
+import ui.actions.SaveToFile;
 import ui.actions.guest.AddGuest;
 import ui.actions.guest.GetAllGuestId;
 import ui.actions.guest.GetGuest;
@@ -17,9 +18,16 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Room actions",null,roomMenu(new Menu(),rootMenu)))
                 .addItem(new MenuItem("Order actions",null,orderMenu(new Menu(),rootMenu)))
                 .addItem(new MenuItem("Maintenance actions",null,maintenanceMenu(new Menu(),rootMenu)))
+                .addItem(new MenuItem("Save",null,saveMenu(new Menu(),rootMenu)))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");
 
+    }
+    public  Menu saveMenu(Menu rootMenu,Menu previousMenu){
+        return new MenuBuilder(rootMenu)
+                .addItem(new MenuItem("Save",new SaveToFile(),rootMenu))
+                .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
+                .build("Hotel Application menu (0-Exit)");
     }
     public Menu guestMenu(Menu rootMenu,Menu previousMenu){
         return new MenuBuilder(rootMenu)

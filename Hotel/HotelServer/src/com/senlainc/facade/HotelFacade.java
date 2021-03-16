@@ -17,6 +17,7 @@ import com.senlainc.service.GuestService;
 import com.senlainc.service.MaintenanceService;
 import com.senlainc.service.OrderService;
 import com.senlainc.service.RoomService;
+import com.senlainc.util.SerializationHandler;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -134,6 +135,14 @@ public class HotelFacade {
     public Room getRoom(Integer roomId){
         Room room = roomService.getRoom(roomId);
         return room;
+    }
+
+    public void saveToFile(){
+        List<Guest> guests=guestDao.getAll();
+        List<Room> rooms=roomDao.getAll();
+        List<Order> orders=orderDao.getAll();
+        List<Maintenance> maintenances=maintenanceDao.getAll();
+        SerializationHandler.serialize(guests,rooms,orders,maintenances);
     }
 
 

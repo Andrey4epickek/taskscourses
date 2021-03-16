@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Room extends AEntity implements Serializable {
+    private Integer id;
     private Integer number;
     private Integer capacity;
     private Integer price;
@@ -22,6 +23,16 @@ public class Room extends AEntity implements Serializable {
     }
 
     public Room() {
+    }
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getStars() {

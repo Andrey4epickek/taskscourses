@@ -1,10 +1,11 @@
 package com.senlainc.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order extends AEntity {
+public class Order extends AEntity implements Serializable {
     private Integer id;
     private Room room;
     private Guest guest;

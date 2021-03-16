@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Guest extends AEntity implements Serializable {
+    private Integer id;
     private String name;
     private  Integer age;
     private List<Order> orders;
@@ -19,6 +20,16 @@ public class Guest extends AEntity implements Serializable {
     public Guest(String name, Integer age) {
         this.name = name;
         this.age = age;
+    }
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

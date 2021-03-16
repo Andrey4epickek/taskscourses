@@ -1,8 +1,10 @@
 package com.senlainc.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Maintenance extends AEntity {
+public class Maintenance extends AEntity implements Serializable {
+    private Integer id;
     private String name;
     private Integer price;
     private List<Order> orders;
@@ -18,6 +20,16 @@ public class Maintenance extends AEntity {
     public Maintenance(String name, int price) {
         this.name = name;
         this.price = price;
+    }
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

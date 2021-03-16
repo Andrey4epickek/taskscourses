@@ -32,13 +32,15 @@ public class Starter {
 //        List<Guest> guests=List.of(new Guest("vasya",20),new Guest("andrey",19));
 //        List<Room> rooms=List.of(new Room(1,2,30, RoomStatus.OPEN,4,guests));
 //        List<Order> orders=List.of(new Order());
-//        SerializationHandler.serialize(guests,rooms);
+//        SerializationHandler.serialize(orders);
 
 //        List<Guest> g2 =SerializationHandler.deserialize(Guest.class);
 //        System.out.println(g2);
 //
 //        List<Room> r2 =SerializationHandler.deserialize(Room.class);
 //        System.out.println(r2);
+//        List<Order> o2 =SerializationHandler.deserialize(Order.class);
+//        System.out.println(o2);
     }
 
 }
