@@ -1,18 +1,13 @@
 package com.senlainc.config;
 
-import java.io.FileInputStream;
-import java.util.logging.Logger;
-import java.util.logging.LogManager;
+import java.util.Date;
+import java.util.logging.Formatter;
+import java.util.logging.LogRecord;
 
-public class FileFormatter {
-    static Logger LOGGER;
-    static {
-        try(FileInputStream configreader = new FileInputStream("HotelServer/resources/logger.properties")){
-            LogManager.getLogManager().readConfiguration(configreader);
-            LOGGER = Logger.getLogger(FileFormatter.class.getName());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+public class FileFormatter extends Formatter {
+
+    @Override
+    public String format(LogRecord record) {
+        return ""+new Date(record.getMillis())+" - ["+record.getSourceClassName()+"] - "+record.getLevel()+" - "+record.getMessage()+"\n"+record.getThrown()+"\n";
     }
-
 }

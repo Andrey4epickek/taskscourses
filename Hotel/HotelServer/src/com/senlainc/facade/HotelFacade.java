@@ -1,13 +1,5 @@
 package com.senlainc.facade;
 
-import com.senlainc.api.dao.IGuestDao;
-import com.senlainc.api.dao.IMaintenanceDao;
-import com.senlainc.api.dao.IOrderDao;
-import com.senlainc.api.dao.IRoomDao;
-import com.senlainc.api.service.IGuestService;
-import com.senlainc.api.service.IMaintenanceService;
-import com.senlainc.api.service.IOrderService;
-import com.senlainc.api.service.IRoomService;
 import com.senlainc.dao.GuestDao;
 import com.senlainc.dao.MaintenanceDao;
 import com.senlainc.dao.OrderDao;
@@ -23,17 +15,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class HotelFacade {
-    private static final IGuestDao guestDao=new GuestDao();
-    private static final IGuestService guestService=new GuestService(guestDao);
-
-    private static final IRoomDao roomDao=new RoomDao();
-    private static final IRoomService roomService=new RoomService(roomDao,guestDao);
-
-    private static final IMaintenanceDao maintenanceDao=new MaintenanceDao();
-    private static final IOrderDao orderDao=new OrderDao();
-    private static final IOrderService orderService=new OrderService(roomDao, guestDao,maintenanceDao,orderDao);
-
-    private static final IMaintenanceService maintenanceService=new MaintenanceService(maintenanceDao,orderDao);
 
     private static HotelFacade instance;
     public static HotelFacade getInstance(){
@@ -43,105 +24,113 @@ public class HotelFacade {
         return instance;
     }
 
+     /**
+     *Guest
+     */
     public Guest addGuest(String name, Integer age){
-        Guest guest=guestService.addGuest(name, age);
+        Guest guest=GuestService.getInstance().addGuest(name, age);
         return guest;
     }
 
-    public List<Integer> getAllGuestId(){
-        return guestService.getAllGuestId();
-    }
 
     public Guest getGuest(Integer guestId){
-        Guest guest= guestService.getGuest(guestId);
+        Guest guest= GuestService.getInstance().getGuest(guestId);
         return guest;
     }
 
+    /**
+     *Order
+     */
+
     public Maintenance addService(String name, Integer price){
-        Maintenance maintenance=maintenanceService.addService(name, price);
+        Maintenance maintenance=MaintenanceService.getInstance().addService(name, price);
         return maintenance;
     }
 
     public Order createOrder(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate){
-        Order order=orderService.create(room, guest, checkInDate, checkOutDate);
+        Order order=OrderService.getInstance().create(room, guest, checkInDate, checkOutDate);
         return order;
     }
 
     public void evict(Integer guestId, Integer orderId,Integer roomId){
-        orderService.evict(guestId, orderId, roomId);
+        OrderService.getInstance().evict(guestId, orderId, roomId);
     }
 
     public void checkIn(Integer guestId,Integer roomId){
-        orderService.checkIn(guestId, roomId);
+        OrderService.getInstance().checkIn(guestId, roomId);
     }
 
     public int countCost(Integer orderId){
-        int cost= orderService.countCost(orderId);
+        int cost= OrderService.getInstance().countCost(orderId);
         return cost;
     }
 
     public void addService(Maintenance maintenance,Integer orderId){
-        orderService.addService(maintenance, orderId);
+        OrderService.getInstance().addService(maintenance, orderId);
     }
 
     public Order getOrder(Integer orderId){
-        Order order=orderService.getOrder(orderId);
+        Order order=OrderService.getInstance().getOrder(orderId);
         return order;
     }
 
     public List<Order> getSortedGuestsByName(){
-        return orderService.getSortedGuestsByName();
+        return OrderService.getInstance().getSortedGuestsByName();
     }
 
     public List<Order> ordersSortedByCheckOutDate(){
-        return orderService.ordersSortedByCheckOutDate();
+        return OrderService.getInstance().ordersSortedByCheckOutDate();
     }
 
     public List<Order> getThreeLastGuests(Integer roomId){
-        return orderService.getThreeLastGuests(roomId);
+        return OrderService.getInstance().getThreeLastGuests(roomId);
     }
+
+    /**
+     *Room
+     */
 
     public List<Room> getFreeRoomByFixedDate(LocalDate date){
-        return orderService.getFreeRoomByFixedDate(date);
+        return OrderService.getInstance().getFreeRoomByFixedDate(date);
     }
 
-    public Room getById(Integer roomId){return roomService.getById(roomId);}
+    public Room getById(Integer roomId){return RoomService.getInstance().getById(roomId);}
 
     public void changeStatus(RoomStatus status, Integer roomId){
-        roomService.changeStatus(status, roomId);
+        RoomService.getInstance().changeStatus(status, roomId);
     }
 
     public void changePrice(Integer roomId, Integer price){
-        roomService.changePrice(roomId, price);
+        RoomService.getInstance().changePrice(roomId, price);
     }
 
     public List<Room> getSortRoomByPrice(){
-        return roomService.getSortRoomByPrice();
+        return RoomService.getInstance().getSortRoomByPrice();
     }
 
     public List<Room> getSortRoomByCapacity(){
-        return roomService.getSortRoomByCapacity();
+        return RoomService.getInstance().getSortRoomByCapacity();
     }
 
     public List<Room> getSortRoomByStars(){
-        return roomService.getSortRoomByStars();
+        return RoomService.getInstance().getSortRoomByStars();
     }
 
     public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars,RoomStatus status){
-        Room room=roomService.addRoom(number, capacity, price, stars,status);
+        Room room=RoomService.getInstance().addRoom(number, capacity, price, stars,status);
         return room;
     }
 
     public Room getRoom(Integer roomId){
-        Room room = roomService.getRoom(roomId);
+        Room room = RoomService.getInstance().getRoom(roomId);
         return room;
     }
 
     public void saveToFile(){
-        List<Guest> guests=guestDao.getAll();
-        List<Room> rooms=roomDao.getAll();
-        List<Order> orders=orderDao.getAll();
-        List<Maintenance> maintenances=maintenanceDao.getAll();
+        List<Guest> guests=GuestDao.getInstance().getAll();
+        List<Room> rooms=RoomDao.getInstance().getAll();
+        List<Order> orders=OrderDao.getInstance().getAll();
+        List<Maintenance> maintenances=MaintenanceDao.getInstance().getAll();
         SerializationHandler.serialize(guests,rooms,orders,maintenances);
     }
 

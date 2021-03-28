@@ -18,7 +18,6 @@ public class GetThreeLastGuests extends AbstractAction implements IAction {
                     .map(Boolean::valueOf)
                     .orElse(false);
             if(prop1==true) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 System.out.println("Введите Id комнаты");
                 String roomIdString = reader.readLine();
                 Integer roomId = Integer.parseInt(roomIdString);

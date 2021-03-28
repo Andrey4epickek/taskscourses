@@ -6,12 +6,12 @@ import ui.actions.IAction;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.Level;
 
 public class CheckIn extends AbstractAction implements IAction {
     @Override
     public void execute() {
         try{
-            BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите Id гостя");
             String guestIdString =reader.readLine();
             Integer guestId=Integer.parseInt(guestIdString);
@@ -19,8 +19,8 @@ public class CheckIn extends AbstractAction implements IAction {
             String roomIdString =reader.readLine();
             Integer roomId=Integer.parseInt(roomIdString);
             hotelFacade.checkIn(guestId,roomId);
-        }catch (IOException e){
-            System.err.println(e.getMessage());
+        }catch (Exception e){
+            LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }
     }
 }

@@ -10,13 +10,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
+import java.util.logging.Level;
 
 
 public class CreateOrder extends AbstractAction implements IAction {
     @Override
     public void execute() {
         try{
-            BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите Id комнаты");
             String roomIdString=reader.readLine();
             Integer roomId=Integer.parseInt(roomIdString);
@@ -33,8 +33,8 @@ public class CreateOrder extends AbstractAction implements IAction {
             LocalDate checkOutDate=LocalDate.parse(checkOutDateString);
             Order order= hotelFacade.createOrder(room,guest,checkInDate,checkOutDate);
             System.out.println(order);
-        }catch (IOException e){
-            System.err.println(e.getMessage());
+        }catch (Exception e){
+            LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }
     }
 }

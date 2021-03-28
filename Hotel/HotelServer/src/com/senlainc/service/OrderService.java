@@ -1,10 +1,11 @@
 package com.senlainc.service;
 
-import com.senlainc.api.dao.IGuestDao;
-import com.senlainc.api.dao.IMaintenanceDao;
-import com.senlainc.api.dao.IOrderDao;
-import com.senlainc.api.dao.IRoomDao;
 import com.senlainc.api.service.IOrderService;
+import com.senlainc.config.CustomLogger;
+import com.senlainc.dao.GuestDao;
+import com.senlainc.dao.MaintenanceDao;
+import com.senlainc.dao.OrderDao;
+import com.senlainc.dao.RoomDao;
 import com.senlainc.exceptions.DaoException;
 import com.senlainc.exceptions.ServiceException;
 import com.senlainc.model.Guest;
@@ -25,26 +26,23 @@ import java.util.stream.Collectors;
 import static java.lang.Math.toIntExact;
 
 public class OrderService implements IOrderService {
-    private static final Logger LOGGER=Logger.getLogger(OrderService.class.getName());
-    private final IRoomDao roomDao;
-    private final IGuestDao guestDao;
-    private final IMaintenanceDao maintenanceDao;
-    private final IOrderDao orderDao;
+    private static OrderService instance;
+    private static final Logger LOGGER=Logger.getLogger(CustomLogger.class.getName());
 
-    public OrderService(IRoomDao roomDao, IGuestDao guestDao, IMaintenanceDao maintenanceDao, IOrderDao orderDao) {
-        this.roomDao = roomDao;
-        this.guestDao = guestDao;
-        this.maintenanceDao = maintenanceDao;
-        this.orderDao = orderDao;
+    public static OrderService getInstance(){
+        if(instance==null){
+            instance=new OrderService();
+        }
+        return instance;
     }
 
     @Override
     public Order create(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
         try {
             LOGGER.log(Level.INFO,String.format("Creating of order"));
-        Order order=new Order(room,guest,checkInDate,checkOutDate,maintenanceDao.getAll());
+        Order order=new Order(room,guest,checkInDate,checkOutDate, MaintenanceDao.getInstance().getAll());
         order.setId(IDGenerator.generateOrderId());
-        orderDao.save(order);
+        OrderDao.getInstance().save(order);
         return order;
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Creating failed",e);
@@ -56,8 +54,8 @@ public class OrderService implements IOrderService {
     public void evict(Integer guestId, Integer orderId,Integer roomId) {
         try {
             LOGGER.log(Level.INFO,String.format("Eviction of a guest %d, order %d, room %d",guestId,orderId,roomId));
-        Room room=roomDao.getByid(roomId);
-        Guest guest=guestDao.getByid(guestId);
+        Room room= RoomDao.getInstance().getByid(roomId);
+        Guest guest= GuestDao.getInstance().getByid(guestId);
         room.getGuests().remove(guest);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Eviction failed",e);
@@ -69,8 +67,8 @@ public class OrderService implements IOrderService {
     public void checkIn(Integer guestId,Integer roomId) {
         try {
             LOGGER.log(Level.INFO,String.format("checkIn  guest %d to room number %d",guestId,roomId));
-        Room room=roomDao.getByid(roomId);
-        Guest guest=guestDao.getByid(guestId);
+        Room room=RoomDao.getInstance().getByid(roomId);
+        Guest guest=GuestDao.getInstance().getByid(guestId);
         room.getGuests().add(guest);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"CheckIn failed",e);
@@ -82,7 +80,7 @@ public class OrderService implements IOrderService {
     public int countCost(Integer orderId) {
         try {
             LOGGER.log(Level.INFO,String.format("count cost for order %d",orderId));
-        Order costCountOrder=orderDao.getByid(orderId);
+        Order costCountOrder=OrderDao.getInstance().getByid(orderId);
         int cost=0;
         for(Maintenance maintenance:costCountOrder.getMaintenances()){
             cost=cost+getDaysBetweenDates(costCountOrder.getCheckInDate(),costCountOrder.getCheckOutDate())*maintenance.getPrice();
@@ -99,7 +97,7 @@ public class OrderService implements IOrderService {
     public void addService(Maintenance maintenance,Integer orderId) {
         try {
             LOGGER.log(Level.INFO,String.format("adding service for order %d",orderId));
-        orderDao.getByid(orderId).getMaintenances().add(maintenance);
+        OrderDao.getInstance().getByid(orderId).getMaintenances().add(maintenance);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Adding service failed",e);
             throw new ServiceException("Adding service failed",e);
@@ -110,7 +108,7 @@ public class OrderService implements IOrderService {
     public Order getOrder(Integer orderId) {
         try {
             LOGGER.log(Level.INFO,String.format("getting order %d",orderId));
-        return orderDao.getByid(orderId);
+        return OrderDao.getInstance().getByid(orderId);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Getting order failed",e);
             throw new ServiceException("Getting order failed",e);
@@ -126,7 +124,7 @@ public class OrderService implements IOrderService {
 
     @Override
     public List<Order> ordersSortedByCheckOutDate() {
-        List<Order> orders=orderDao.getAll();
+        List<Order> orders=OrderDao.getInstance().getAll();
         orders.sort(new OrderCheckOutDateComparator());
         return orders.stream().collect(Collectors.toList());
     }
@@ -139,17 +137,17 @@ public class OrderService implements IOrderService {
 
     @Override
     public List<Order> getAllOrderService() {
-        return orderDao.getAll();
+        return OrderDao.getInstance().getAll();
     }
 
     @Override
     public List<Guest> getAllGuestService() {
-        return guestDao.getAll();
+        return GuestDao.getInstance().getAll();
     }
 
     @Override
     public List<Room> getFreeRoomByFixedDate(LocalDate date) {
-        List<Order>orders=orderDao.getAll();
+        List<Order>orders=OrderDao.getInstance().getAll();
         return orders.stream().filter(o1->o1.getCheckOutDate().isBefore(date)).map(Order::getRoom).collect(Collectors.toList());
     }
 
@@ -168,13 +166,13 @@ public class OrderService implements IOrderService {
 
     @Override
     public List<Order> getThreeLastGuests(Integer roomId) {
-        List<Order> orders=orderDao.getAll().stream().filter(h1->h1.getRoom().getId().equals(roomId)).limit(3).collect(Collectors.toList());
+        List<Order> orders=OrderDao.getInstance().getAll().stream().filter(h1->h1.getRoom().getId().equals(roomId)).limit(3).collect(Collectors.toList());
         return orders;
     }
 
     @Override
     public List<Integer> getAllOrdersId() {
-        return (orderDao.getAll().stream().map(Order::getId).collect(Collectors.toList()));
+        return (OrderDao.getInstance().getAll().stream().map(Order::getId).collect(Collectors.toList()));
     }
 
 

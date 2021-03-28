@@ -2,7 +2,6 @@ package ui.menu;
 
 import ui.actions.SaveToFile;
 import ui.actions.guest.AddGuest;
-import ui.actions.guest.GetAllGuestId;
 import ui.actions.guest.GetGuest;
 import ui.actions.maintenance.AddMaintenance;
 import ui.actions.order.*;
@@ -32,7 +31,6 @@ public class MenuBuilderFactory {
     public Menu guestMenu(Menu rootMenu,Menu previousMenu){
         return new MenuBuilder(rootMenu)
                 .addItem(new MenuItem("Add guest",new AddGuest(),rootMenu))
-                .addItem(new MenuItem("Get all guest id",new GetAllGuestId(),rootMenu))
                 .addItem(new MenuItem("Get guest",new GetGuest(),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");

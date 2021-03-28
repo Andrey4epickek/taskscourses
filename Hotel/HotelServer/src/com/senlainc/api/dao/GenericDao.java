@@ -10,6 +10,5 @@ public interface GenericDao<T extends AEntity>{
     T getByid(Integer id);
     List<T> getAll();
     void delete(T entity);
-    T update(T entiy);
     void saveAll(List<T> entity);
 }

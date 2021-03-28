@@ -51,10 +51,4 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
         repository.remove(entity);
     }
 
-    @Override
-    public T update(T entity) {
-
-        return null;
-    }
-
 }

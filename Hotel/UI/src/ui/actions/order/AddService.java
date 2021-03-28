@@ -2,17 +2,13 @@ package ui.actions.order;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Maintenance;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import com.senlainc.model.Maintenance;;
+import java.util.logging.Level;
 
 public class AddService extends AbstractAction implements IAction {
     @Override
     public void execute() {
         try{
-            BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите название услуги");
             String MaintenanceNameString=reader.readLine();
             System.out.println("Ведите стоимость услуги");
@@ -23,8 +19,8 @@ public class AddService extends AbstractAction implements IAction {
             String orderIdString=reader.readLine();
             Integer orderId=Integer.parseInt(orderIdString);
             hotelFacade.addService(maintenance,orderId);
-        }catch (IOException e){
-            System.err.println(e.getMessage());
+        }catch (Exception e){
+            LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }
     }
 }

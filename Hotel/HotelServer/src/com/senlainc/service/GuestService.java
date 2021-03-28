@@ -1,42 +1,45 @@
 package com.senlainc.service;
 
-import com.senlainc.api.dao.IGuestDao;
+
 import com.senlainc.api.service.IGuestService;
+import com.senlainc.config.CustomLogger;
+import com.senlainc.dao.GuestDao;
+import com.senlainc.exceptions.DaoException;
+import com.senlainc.exceptions.ServiceException;
 import com.senlainc.model.Guest;
 import com.senlainc.util.IDGenerator;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class GuestService implements IGuestService {
-    private final IGuestDao guestDao;
+    private static GuestService instance;
+    private static final Logger LOGGER=Logger.getLogger(CustomLogger.class.getName());
 
-    public GuestService(IGuestDao guestDao) {
-        this.guestDao = guestDao;
+    public static GuestService getInstance(){
+        if(instance==null){
+            instance=new GuestService();
         }
-
-    @Override
-    public List<Integer> getAllGuestId() {
-        return (guestDao.getAll().stream().map(Guest::getId).collect(Collectors.toList()));
+        return instance;
     }
 
     @Override
         public Guest addGuest(String name, Integer age){
             Guest guest=new Guest(name,age);
             guest.setId(IDGenerator.generateGuestId());
-            guestDao.save(guest);
+            GuestDao.getInstance().save(guest);
             return guest;
     }
 
     @Override
     public Guest getGuest(Integer guestId) {
-        if(getAllGuestId().contains(guestId)){
-            return guestDao.getByid(guestId);
+        try {
+            LOGGER.log(Level.INFO,String.format("getting guest %d",guestId));
+            return GuestDao.getInstance().getByid(guestId);
+        }catch (DaoException e){
+            LOGGER.log(Level.WARNING,"Getting guest failed",e);
+            throw new ServiceException("Getting guest failed",e);
         }
-        else{
-            System.out.println("There is no such guest");
-        }
-        return null;
     }
 
 }

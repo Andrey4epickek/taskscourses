@@ -7,12 +7,12 @@ import com.senlainc.model.Maintenance;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.Level;
 
 public class AddMaintenance extends AbstractAction implements IAction {
     @Override
     public void execute() {
         try{
-            BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите название услуги");
             String name=reader.readLine();
             System.out.println("Ведите стоимость услуги");
@@ -20,8 +20,8 @@ public class AddMaintenance extends AbstractAction implements IAction {
             Integer price =Integer.parseInt(priceString);
             Maintenance maintenance=hotelFacade.addService(name,price);
             System.out.println(maintenance);
-        }catch (IOException e){
-            System.err.println(e.getMessage());
+        }catch (Exception e){
+            LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }
     }
 }

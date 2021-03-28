@@ -9,6 +9,7 @@ import com.senlainc.model.RoomStatus;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.Level;
 
 public class AddRoom extends AbstractAction implements IAction {
 
@@ -16,7 +17,6 @@ public class AddRoom extends AbstractAction implements IAction {
     @Override
     public void execute() {
         try{
-            BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите номер комнаты");
             String  numberString=reader.readLine();
             Integer number=Integer.parseInt(numberString);
@@ -32,8 +32,8 @@ public class AddRoom extends AbstractAction implements IAction {
             RoomStatus status=RoomStatus.OPEN;
             Room room= hotelFacade.addRoom(number,capacity,price,stars,status);
             System.out.println(room);
-        }catch (IOException e){
-            System.err.println(e.getMessage());
+        }catch (Exception e){
+            LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }
     }
 }

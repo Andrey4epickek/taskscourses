@@ -8,6 +8,14 @@ import com.senlainc.util.SerializationHandler;
 import java.util.List;
 
 public class MaintenanceDao extends AbstractDao<Maintenance> implements IMaintenanceDao {
+    private static MaintenanceDao instance;
+
+    public static MaintenanceDao getInstance(){
+        if(instance==null){
+            instance=new MaintenanceDao();
+        }
+        return instance;
+    }
 
     public MaintenanceDao() {
         List<Maintenance> maintenances= SerializationHandler.deserialize(Maintenance.class);

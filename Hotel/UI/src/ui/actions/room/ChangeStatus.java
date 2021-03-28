@@ -8,6 +8,7 @@ import com.senlainc.model.RoomStatus;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.Level;
 
 public class ChangeStatus extends AbstractAction implements IAction {
     @Override
@@ -17,7 +18,6 @@ public class ChangeStatus extends AbstractAction implements IAction {
                     .map(Boolean::valueOf)
                     .orElse(false);
             if(prop==true) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 System.out.println("Введите Id комнаты");
                 String roomIdString = reader.readLine();
                 Integer roomId = Integer.parseInt(roomIdString);
@@ -27,8 +27,8 @@ public class ChangeStatus extends AbstractAction implements IAction {
             else{
                 System.out.println("You cant change room status");
             }
-        }catch (IOException e){
-            System.err.println(e.getMessage());
+        }catch (Exception e){
+            LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }
     }
 }
