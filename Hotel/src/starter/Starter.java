@@ -1,20 +1,18 @@
 package starter;
 
-import com.senlainc.config.CustomLogger;
-import com.senlainc.model.Guest;
-import com.senlainc.model.Order;
-import com.senlainc.model.Room;
-import com.senlainc.model.RoomStatus;
-import com.senlainc.util.PropertiesHandler;
-import com.senlainc.util.SerializationHandler;
+import com.Load.LoadConfig;
+import com.config.CustomLogger;
+import com.configuration.ConfigController;
 import ui.menu.MenuController;
 
-import java.time.LocalDate;
-import java.util.List;
+
 
 public class Starter {
     public static void main(String[] args) {
         new CustomLogger();
+        ConfigController.getInstance().setConfig(LoadConfig.class);
+        System.out.println(LoadConfig.getStatus());
+        System.out.println(LoadConfig.getHistory());
         MenuController.getInstance().run();
 
 //        Boolean prop= PropertiesHandler.getProperty("server.room.change_status.enable")

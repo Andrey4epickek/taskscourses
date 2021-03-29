@@ -8,5 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="HotelServer" />
+    <orderEntry type="module" module-name="utility" />
+    <orderEntry type="module" module-name="DependencyInjection" />
   </component>
 </module>

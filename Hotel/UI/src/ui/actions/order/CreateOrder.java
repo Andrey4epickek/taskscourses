@@ -2,13 +2,10 @@ package ui.actions.order;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Guest;
-import com.senlainc.model.Order;
-import com.senlainc.model.Room;
+import com.model.Guest;
+import com.model.Order;
+import com.model.Room;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.util.logging.Level;
 

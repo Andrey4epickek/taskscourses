@@ -1,13 +1,10 @@
 package ui.actions.room;
 
 
-import com.senlainc.model.Room;
+import com.model.Room;
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.logging.Level;
 
 public class GetRoom extends AbstractAction implements IAction {

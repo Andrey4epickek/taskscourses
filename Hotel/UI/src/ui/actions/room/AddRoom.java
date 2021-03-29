@@ -3,12 +3,9 @@ package ui.actions.room;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Room;
-import com.senlainc.model.RoomStatus;
+import com.model.Room;
+import com.model.RoomStatus;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.logging.Level;
 
 public class AddRoom extends AbstractAction implements IAction {
@@ -23,6 +20,9 @@ public class AddRoom extends AbstractAction implements IAction {
             System.out.println("Ведите вместимость комнаты");
             String capacityString=reader.readLine();
             Integer capacity=Integer.parseInt(capacityString);
+            System.out.println("Введите id гостя,которого надо заселить в комнату");
+            String  guestIdString=reader.readLine();
+            Integer guestId=Integer.parseInt(guestIdString);
             System.out.println("Введите цену комнаты");
             String  priceString=reader.readLine();
             Integer price=Integer.parseInt(priceString);
@@ -30,7 +30,7 @@ public class AddRoom extends AbstractAction implements IAction {
             String  starsString=reader.readLine();
             Integer stars=Integer.parseInt(starsString);
             RoomStatus status=RoomStatus.OPEN;
-            Room room= hotelFacade.addRoom(number,capacity,price,stars,status);
+            Room room= hotelFacade.addRoom(number,capacity,price,stars,status,guestId);
             System.out.println(room);
         }catch (Exception e){
             LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);

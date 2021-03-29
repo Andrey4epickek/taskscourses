@@ -2,7 +2,7 @@ package ui.actions.order;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Maintenance;;
+import com.model.Maintenance;;
 import java.util.logging.Level;
 
 public class AddService extends AbstractAction implements IAction {

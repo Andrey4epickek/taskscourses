@@ -2,7 +2,7 @@ package ui.actions.room;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Room;
+import com.model.Room;
 
 import java.util.List;
 

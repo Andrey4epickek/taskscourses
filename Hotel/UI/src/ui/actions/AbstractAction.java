@@ -1,8 +1,8 @@
 package ui.actions;
 
 
-import com.senlainc.config.CustomLogger;
-import com.senlainc.facade.HotelFacade;
+import com.config.CustomLogger;
+import com.facade.HotelFacade;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

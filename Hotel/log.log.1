@@ -1,0 +1,2724 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T18:55:18.010670500Z</date>
+  <millis>1617044118010</millis>
+  <nanos>670500</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>getRoom</method>
+  <thread>1</thread>
+  <message>getting room 2</message>
+</record>
+<record>
+  <date>2021-03-29T18:55:18.116676700Z</date>
+  <millis>1617044118116</millis>
+  <nanos>676700</nanos>
+  <sequence>1</sequence>
+  <logger>com.util.SerializationHandler</logger>
+  <level>WARNING</level>
+  <class>com.util.SerializationHandler</class>
+  <method>deserialize</method>
+  <thread>1</thread>
+  <message>Deserialization failed com.senlainc.model.Guest</message>
+</record>
+<record>
+  <date>2021-03-29T18:55:18.118676300Z</date>
+  <millis>1617044118118</millis>
+  <nanos>676300</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.GetRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>java.lang.ClassNotFoundException: com.senlainc.model.Guest</message>
+  <exception>
+    <message>com.exceptions.ServiceException: java.lang.ClassNotFoundException: com.senlainc.model.Guest</message>
+    <frame>
+      <class>com.util.SerializationHandler</class>
+      <method>deserialize</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>com.dao.RoomDao</class>
+      <method>&lt;init&gt;</method>
+      <line>21</line>
+    </frame>
+    <frame>
+      <class>com.dao.RoomDao</class>
+      <method>getInstance</method>
+      <line>15</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>getRoom</method>
+      <line>90</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getRoom</method>
+      <line>125</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.GetRoom</class>
+      <method>execute</method>
+      <line>18</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>12</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T18:56:10.138781600Z</date>
+  <millis>1617044170138</millis>
+  <nanos>781600</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 2</message>
+</record>
+<record>
+  <date>2021-03-29T18:56:10.146780700Z</date>
+  <millis>1617044170146</millis>
+  <nanos>780700</nanos>
+  <sequence>4</sequence>
+  <logger>com.util.SerializationHandler</logger>
+  <level>WARNING</level>
+  <class>com.util.SerializationHandler</class>
+  <method>deserialize</method>
+  <thread>1</thread>
+  <message>Deserialization failed com.senlainc.model.Guest</message>
+</record>
+<record>
+  <date>2021-03-29T18:56:10.147779200Z</date>
+  <millis>1617044170147</millis>
+  <nanos>779200</nanos>
+  <sequence>5</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.GetOrder</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>java.lang.ClassNotFoundException: com.senlainc.model.Guest</message>
+  <exception>
+    <message>com.exceptions.ServiceException: java.lang.ClassNotFoundException: com.senlainc.model.Guest</message>
+    <frame>
+      <class>com.util.SerializationHandler</class>
+      <method>deserialize</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>com.dao.OrderDao</class>
+      <method>&lt;init&gt;</method>
+      <line>21</line>
+    </frame>
+    <frame>
+      <class>com.dao.OrderDao</class>
+      <method>getInstance</method>
+      <line>15</line>
+    </frame>
+    <frame>
+      <class>com.service.OrderService</class>
+      <method>getOrder</method>
+      <line>111</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getOrder</method>
+      <line>73</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.GetOrder</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>12</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T18:56:48.135986200Z</date>
+  <millis>1617044208135</millis>
+  <nanos>986200</nanos>
+  <sequence>0</sequence>
+  <logger>com.util.SerializationHandler</logger>
+  <level>WARNING</level>
+  <class>com.util.SerializationHandler</class>
+  <method>deserialize</method>
+  <thread>1</thread>
+  <message>Deserialization failed HotelServer\resources\serialization_file.txt (Не удается найти указанный файл)</message>
+</record>
+<record>
+  <date>2021-03-29T18:56:48.180987200Z</date>
+  <millis>1617044208180</millis>
+  <nanos>987200</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.guest.AddGuest</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>java.io.FileNotFoundException: HotelServer\resources\serialization_file.txt (Не удается найти указанный файл)</message>
+  <exception>
+    <message>com.exceptions.ServiceException: java.io.FileNotFoundException: HotelServer\resources\serialization_file.txt (Не удается найти указанный файл)</message>
+    <frame>
+      <class>com.util.SerializationHandler</class>
+      <method>deserialize</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>com.dao.GuestDao</class>
+      <method>&lt;init&gt;</method>
+      <line>20</line>
+    </frame>
+    <frame>
+      <class>com.dao.GuestDao</class>
+      <method>getInstance</method>
+      <line>14</line>
+    </frame>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>addGuest</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addGuest</method>
+      <line>31</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.AddGuest</class>
+      <method>execute</method>
+      <line>18</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>12</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T18:57:45.043685700Z</date>
+  <millis>1617044265043</millis>
+  <nanos>685700</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T18:57:53.309045300Z</date>
+  <millis>1617044273309</millis>
+  <nanos>45300</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T18:58:05.136161100Z</date>
+  <millis>1617044285136</millis>
+  <nanos>161100</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T18:58:27.654216900Z</date>
+  <millis>1617044307654</millis>
+  <nanos>216900</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T18:59:04.454098500Z</date>
+  <millis>1617044344454</millis>
+  <nanos>98500</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>getRoom</method>
+  <thread>1</thread>
+  <message>getting room 1</message>
+</record>
+<record>
+  <date>2021-03-29T18:59:10.956626400Z</date>
+  <millis>1617044350956</millis>
+  <nanos>626400</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:03:22.347516200Z</date>
+  <millis>1617048202347</millis>
+  <nanos>516200</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:03:25.533165300Z</date>
+  <millis>1617048205533</millis>
+  <nanos>165300</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:03:25.534666100Z</date>
+  <millis>1617048205534</millis>
+  <nanos>666100</nanos>
+  <sequence>2</sequence>
+  <logger>com.dao.GuestDao</logger>
+  <level>WARNING</level>
+  <class>com.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:03:25.535667300Z</date>
+  <millis>1617048205535</millis>
+  <nanos>667300</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>Getting guest failed</message>
+  <exception>
+    <message>com.exceptions.DaoException: could not find an entity by id: 2</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>getGuest</method>
+      <line>38</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getGuest</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.GetGuest</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:03:25.538166300Z</date>
+  <millis>1617048205538</millis>
+  <nanos>166300</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.guest.GetGuest</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Getting guest failed</message>
+  <exception>
+    <message>com.exceptions.ServiceException: Getting guest failed</message>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>getGuest</method>
+      <line>41</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getGuest</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.GetGuest</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:09:42.352655600Z</date>
+  <millis>1617048582352</millis>
+  <nanos>655600</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:09:42.406663600Z</date>
+  <millis>1617048582406</millis>
+  <nanos>663600</nanos>
+  <sequence>1</sequence>
+  <logger>com.dao.GuestDao</logger>
+  <level>WARNING</level>
+  <class>com.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:09:42.408164400Z</date>
+  <millis>1617048582408</millis>
+  <nanos>164400</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>CheckIn failed</message>
+  <exception>
+    <message>com.exceptions.DaoException: could not find an entity by id: 2</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>com.service.OrderService</class>
+      <method>checkIn</method>
+      <line>71</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>checkIn</method>
+      <line>60</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CheckIn</class>
+      <method>execute</method>
+      <line>21</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:09:42.410663500Z</date>
+  <millis>1617048582410</millis>
+  <nanos>663500</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CheckIn</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>CheckIn failed</message>
+  <exception>
+    <message>com.exceptions.ServiceException: CheckIn failed</message>
+    <frame>
+      <class>com.service.OrderService</class>
+      <method>checkIn</method>
+      <line>75</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>checkIn</method>
+      <line>60</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CheckIn</class>
+      <method>execute</method>
+      <line>21</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:10:14.718521600Z</date>
+  <millis>1617048614718</millis>
+  <nanos>521600</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:10:14.720022400Z</date>
+  <millis>1617048614720</millis>
+  <nanos>22400</nanos>
+  <sequence>5</sequence>
+  <logger>com.dao.GuestDao</logger>
+  <level>WARNING</level>
+  <class>com.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:10:14.721021500Z</date>
+  <millis>1617048614721</millis>
+  <nanos>21500</nanos>
+  <sequence>6</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>Getting guest failed</message>
+  <exception>
+    <message>com.exceptions.DaoException: could not find an entity by id: 2</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>getGuest</method>
+      <line>38</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getGuest</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.GetGuest</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:10:14.722021800Z</date>
+  <millis>1617048614722</millis>
+  <nanos>21800</nanos>
+  <sequence>7</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.guest.GetGuest</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Getting guest failed</message>
+  <exception>
+    <message>com.exceptions.ServiceException: Getting guest failed</message>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>getGuest</method>
+      <line>41</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getGuest</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.GetGuest</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:10:17.024037500Z</date>
+  <millis>1617048617024</millis>
+  <nanos>37500</nanos>
+  <sequence>8</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:10:34.729814900Z</date>
+  <millis>1617048634729</millis>
+  <nanos>814900</nanos>
+  <sequence>9</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:10:40.318790700Z</date>
+  <millis>1617048640318</millis>
+  <nanos>790700</nanos>
+  <sequence>10</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:11:42.870540200Z</date>
+  <millis>1617048702870</millis>
+  <nanos>540200</nanos>
+  <sequence>11</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:11:47.864634900Z</date>
+  <millis>1617048707864</millis>
+  <nanos>634900</nanos>
+  <sequence>12</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:12:25.777537400Z</date>
+  <millis>1617048745777</millis>
+  <nanos>537400</nanos>
+  <sequence>13</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CheckIn</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>For input string: ""</message>
+  <exception>
+    <message>java.lang.NumberFormatException: For input string: ""</message>
+    <frame>
+      <class>java.lang.NumberFormatException</class>
+      <method>forInputString</method>
+      <line>65</line>
+    </frame>
+    <frame>
+      <class>java.lang.Integer</class>
+      <method>parseInt</method>
+      <line>662</line>
+    </frame>
+    <frame>
+      <class>java.lang.Integer</class>
+      <method>parseInt</method>
+      <line>770</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CheckIn</class>
+      <method>execute</method>
+      <line>17</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:12:34.427732200Z</date>
+  <millis>1617048754427</millis>
+  <nanos>732200</nanos>
+  <sequence>14</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 3 to room number 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:12:39.663757Z</date>
+  <millis>1617048759663</millis>
+  <nanos>757000</nanos>
+  <sequence>15</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:13:12.147986300Z</date>
+  <millis>1617048792147</millis>
+  <nanos>986300</nanos>
+  <sequence>16</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:13:45.542765Z</date>
+  <millis>1617048825542</millis>
+  <nanos>765000</nanos>
+  <sequence>17</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 2 with capacity 5, price 30, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T20:13:58.994114900Z</date>
+  <millis>1617048838994</millis>
+  <nanos>114900</nanos>
+  <sequence>18</sequence>
+  <logger>com.dao.RoomDao</logger>
+  <level>WARNING</level>
+  <class>com.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:13:58.995114600Z</date>
+  <millis>1617048838995</millis>
+  <nanos>114600</nanos>
+  <sequence>19</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CreateOrder</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 2</message>
+  <exception>
+    <message>com.exceptions.DaoException: could not find an entity by id: 2</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>getById</method>
+      <line>99</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getById</method>
+      <line>97</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CreateOrder</class>
+      <method>execute</method>
+      <line>20</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:14:16.935351900Z</date>
+  <millis>1617048856935</millis>
+  <nanos>351900</nanos>
+  <sequence>20</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:14:22.731231200Z</date>
+  <millis>1617048862731</millis>
+  <nanos>231200</nanos>
+  <sequence>21</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CreateOrder</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Text '2020-29-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 29</message>
+  <exception>
+    <message>java.time.format.DateTimeParseException: Text '2020-29-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 29</message>
+    <frame>
+      <class>java.time.format.DateTimeFormatter</class>
+      <method>createError</method>
+      <line>2017</line>
+    </frame>
+    <frame>
+      <class>java.time.format.DateTimeFormatter</class>
+      <method>parse</method>
+      <line>1952</line>
+    </frame>
+    <frame>
+      <class>java.time.LocalDate</class>
+      <method>parse</method>
+      <line>428</line>
+    </frame>
+    <frame>
+      <class>java.time.LocalDate</class>
+      <method>parse</method>
+      <line>413</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CreateOrder</class>
+      <method>execute</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:15:21.918720800Z</date>
+  <millis>1617048921918</millis>
+  <nanos>720800</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T20:15:29.548070600Z</date>
+  <millis>1617048929548</millis>
+  <nanos>70600</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:15:38.556791200Z</date>
+  <millis>1617048938556</millis>
+  <nanos>791200</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T20:15:43.559091800Z</date>
+  <millis>1617048943559</millis>
+  <nanos>91800</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:16:51.575823800Z</date>
+  <millis>1617049011575</millis>
+  <nanos>823800</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>addService</method>
+  <thread>1</thread>
+  <message>adding service for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:16:54.894908900Z</date>
+  <millis>1617049014894</millis>
+  <nanos>908900</nanos>
+  <sequence>5</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:17:23.312300300Z</date>
+  <millis>1617049043312</millis>
+  <nanos>300300</nanos>
+  <sequence>6</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:17:29.487489Z</date>
+  <millis>1617049049487</millis>
+  <nanos>489000</nanos>
+  <sequence>7</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:18:07.825124300Z</date>
+  <millis>1617049087825</millis>
+  <nanos>124300</nanos>
+  <sequence>8</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 2 with capacity 3, price 45, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:27:12.565381800Z</date>
+  <millis>1617049632565</millis>
+  <nanos>381800</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:29:03.364399700Z</date>
+  <millis>1617049743364</millis>
+  <nanos>399700</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T20:29:03.418908900Z</date>
+  <millis>1617049743418</millis>
+  <nanos>908900</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.AddRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>class com.model.Guest cannot be cast to class java.util.List (com.model.Guest is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')</message>
+  <exception>
+    <message>java.lang.ClassCastException: class com.model.Guest cannot be cast to class java.util.List (com.model.Guest is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')</message>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>addRoom</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addRoom</method>
+      <line>120</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.AddRoom</class>
+      <method>execute</method>
+      <line>33</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:30:11.493393400Z</date>
+  <millis>1617049811493</millis>
+  <nanos>393400</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:35:49.122617700Z</date>
+  <millis>1617050149122</millis>
+  <nanos>617700</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:37:00.462609Z</date>
+  <millis>1617050220462</millis>
+  <nanos>609000</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T20:37:22.697477900Z</date>
+  <millis>1617050242697</millis>
+  <nanos>477900</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:37:33.686906300Z</date>
+  <millis>1617050253686</millis>
+  <nanos>906300</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T20:37:41.498422200Z</date>
+  <millis>1617050261498</millis>
+  <nanos>422200</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:37:41.499923100Z</date>
+  <millis>1617050261499</millis>
+  <nanos>923100</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CheckIn</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <exception>
+    <message>java.lang.NullPointerException</message>
+    <frame>
+      <class>com.service.OrderService</class>
+      <method>checkIn</method>
+      <line>72</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>checkIn</method>
+      <line>60</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CheckIn</class>
+      <method>execute</method>
+      <line>21</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:37:44.378560700Z</date>
+  <millis>1617050264378</millis>
+  <nanos>560700</nanos>
+  <sequence>5</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:43:25.053513900Z</date>
+  <millis>1617050605053</millis>
+  <nanos>513900</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:44:03.571698200Z</date>
+  <millis>1617050643571</millis>
+  <nanos>698200</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T20:44:17.685307400Z</date>
+  <millis>1617050657685</millis>
+  <nanos>307400</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:44:27.601879700Z</date>
+  <millis>1617050667601</millis>
+  <nanos>879700</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T20:44:34.999306Z</date>
+  <millis>1617050674999</millis>
+  <nanos>306000</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>addService</method>
+  <thread>1</thread>
+  <message>adding service for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:44:40.180309600Z</date>
+  <millis>1617050680180</millis>
+  <nanos>309600</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 1</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:45:50.818863300Z</date>
+  <millis>1617050750818</millis>
+  <nanos>863300</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T20:45:57.571870500Z</date>
+  <millis>1617050757571</millis>
+  <nanos>870500</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:46:06.059813300Z</date>
+  <millis>1617050766059</millis>
+  <nanos>813300</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T20:46:12.305335700Z</date>
+  <millis>1617050772305</millis>
+  <nanos>335700</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>addService</method>
+  <thread>1</thread>
+  <message>adding service for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:46:15.078928500Z</date>
+  <millis>1617050775078</millis>
+  <nanos>928500</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T20:46:40.289405Z</date>
+  <millis>1617050800289</millis>
+  <nanos>405000</nanos>
+  <sequence>5</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 2 with capacity 4, price 25, stars 3</message>
+</record>
+<record>
+  <date>2021-03-29T20:46:59.175773800Z</date>
+  <millis>1617050819175</millis>
+  <nanos>773800</nanos>
+  <sequence>6</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:47:10.053889900Z</date>
+  <millis>1617050830053</millis>
+  <nanos>889900</nanos>
+  <sequence>7</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T20:47:19.617116100Z</date>
+  <millis>1617050839617</millis>
+  <nanos>116100</nanos>
+  <sequence>8</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>evict</method>
+  <thread>1</thread>
+  <message>Eviction of a guest 1, order 2, room 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:47:22.935607Z</date>
+  <millis>1617050842935</millis>
+  <nanos>607000</nanos>
+  <sequence>9</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:47:39.648623200Z</date>
+  <millis>1617050859648</millis>
+  <nanos>623200</nanos>
+  <sequence>10</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>addService</method>
+  <thread>1</thread>
+  <message>adding service for order 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:47:43.656882100Z</date>
+  <millis>1617050863656</millis>
+  <nanos>882100</nanos>
+  <sequence>11</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 2</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:48:21.470918200Z</date>
+  <millis>1617050901470</millis>
+  <nanos>918200</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:48:28.378070700Z</date>
+  <millis>1617050908378</millis>
+  <nanos>70700</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>getRoom</method>
+  <thread>1</thread>
+  <message>getting room 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:48:40.421838Z</date>
+  <millis>1617050920421</millis>
+  <nanos>838000</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 2</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:54:51.533545300Z</date>
+  <millis>1617051291533</millis>
+  <nanos>545300</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:54:51.588048700Z</date>
+  <millis>1617051291588</millis>
+  <nanos>48700</nanos>
+  <sequence>1</sequence>
+  <logger>com.dao.GuestDao</logger>
+  <level>WARNING</level>
+  <class>com.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 2</message>
+</record>
+<record>
+  <date>2021-03-29T20:54:51.589548900Z</date>
+  <millis>1617051291589</millis>
+  <nanos>548900</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>Getting guest failed</message>
+  <exception>
+    <message>com.exceptions.DaoException: could not find an entity by id: 2</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>getGuest</method>
+      <line>38</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getGuest</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.GetGuest</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T20:54:51.592051200Z</date>
+  <millis>1617051291592</millis>
+  <nanos>51200</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.guest.GetGuest</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Getting guest failed</message>
+  <exception>
+    <message>com.exceptions.ServiceException: Getting guest failed</message>
+    <frame>
+      <class>com.service.GuestService</class>
+      <method>getGuest</method>
+      <line>41</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getGuest</method>
+      <line>37</line>
+    </frame>
+    <frame>
+      <class>ui.actions.guest.GetGuest</class>
+      <method>execute</method>
+      <line>16</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:55:22.073260400Z</date>
+  <millis>1617051322073</millis>
+  <nanos>260400</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 35, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T20:58:28.345687100Z</date>
+  <millis>1617051508345</millis>
+  <nanos>687100</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 35, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:02:02.126920100Z</date>
+  <millis>1617051722126</millis>
+  <nanos>920100</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 35, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T21:02:02.181929200Z</date>
+  <millis>1617051722181</millis>
+  <nanos>929200</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.AddRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <exception>
+    <message>java.lang.NullPointerException</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByidlist</method>
+      <line>45</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>addRoom</method>
+      <line>108</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addRoom</method>
+      <line>120</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.AddRoom</class>
+      <method>execute</method>
+      <line>33</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:10:33.106018800Z</date>
+  <millis>1617052233106</millis>
+  <nanos>18800</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 35, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:11:56.946851500Z</date>
+  <millis>1617052316946</millis>
+  <nanos>851500</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 34, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:14:37.295097Z</date>
+  <millis>1617052477295</millis>
+  <nanos>97000</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 35, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T21:14:37.351102900Z</date>
+  <millis>1617052477351</millis>
+  <nanos>102900</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.AddRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Illegal Capacity: -1</message>
+  <exception>
+    <message>java.lang.IllegalArgumentException: Illegal Capacity: -1</message>
+    <frame>
+      <class>java.util.ArrayList</class>
+      <method>&lt;init&gt;</method>
+      <line>158</line>
+    </frame>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByidlist</method>
+      <line>46</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>addRoom</method>
+      <line>108</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addRoom</method>
+      <line>120</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.AddRoom</class>
+      <method>execute</method>
+      <line>33</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T21:14:59.442109700Z</date>
+  <millis>1617052499442</millis>
+  <nanos>109700</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 5, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:14:59.443610500Z</date>
+  <millis>1617052499443</millis>
+  <nanos>610500</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.AddRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Illegal Capacity: -1</message>
+  <exception>
+    <message>java.lang.IllegalArgumentException: Illegal Capacity: -1</message>
+    <frame>
+      <class>java.util.ArrayList</class>
+      <method>&lt;init&gt;</method>
+      <line>158</line>
+    </frame>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByidlist</method>
+      <line>46</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>addRoom</method>
+      <line>108</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addRoom</method>
+      <line>120</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.AddRoom</class>
+      <method>execute</method>
+      <line>33</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:16:14.866084Z</date>
+  <millis>1617052574866</millis>
+  <nanos>84000</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:16:14.921590800Z</date>
+  <millis>1617052574921</millis>
+  <nanos>590800</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.AddRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Index 1 out of bounds for length 1</message>
+  <exception>
+    <message>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1</message>
+    <frame>
+      <class>jdk.internal.util.Preconditions</class>
+      <method>outOfBounds</method>
+      <line>64</line>
+    </frame>
+    <frame>
+      <class>jdk.internal.util.Preconditions</class>
+      <method>outOfBoundsCheckIndex</method>
+      <line>70</line>
+    </frame>
+    <frame>
+      <class>jdk.internal.util.Preconditions</class>
+      <method>checkIndex</method>
+      <line>248</line>
+    </frame>
+    <frame>
+      <class>java.util.Objects</class>
+      <method>checkIndex</method>
+      <line>372</line>
+    </frame>
+    <frame>
+      <class>java.util.ArrayList</class>
+      <method>remove</method>
+      <line>535</line>
+    </frame>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByidlist</method>
+      <line>45</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>addRoom</method>
+      <line>108</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addRoom</method>
+      <line>120</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.AddRoom</class>
+      <method>execute</method>
+      <line>33</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:17:32.043763800Z</date>
+  <millis>1617052652043</millis>
+  <nanos>763800</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:17:32.106749Z</date>
+  <millis>1617052652106</millis>
+  <nanos>749000</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.room.AddRoom</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Illegal Capacity: -1</message>
+  <exception>
+    <message>java.lang.IllegalArgumentException: Illegal Capacity: -1</message>
+    <frame>
+      <class>java.util.ArrayList</class>
+      <method>&lt;init&gt;</method>
+      <line>158</line>
+    </frame>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByidlist</method>
+      <line>45</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>addRoom</method>
+      <line>108</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>addRoom</method>
+      <line>120</line>
+    </frame>
+    <frame>
+      <class>ui.actions.room.AddRoom</class>
+      <method>execute</method>
+      <line>33</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:18:00.486352700Z</date>
+  <millis>1617052680486</millis>
+  <nanos>352700</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 34, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:20:21.221812900Z</date>
+  <millis>1617052821221</millis>
+  <nanos>812900</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:21:17.896286300Z</date>
+  <millis>1617052877896</millis>
+  <nanos>286300</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:26:04.831682900Z</date>
+  <millis>1617053164831</millis>
+  <nanos>682900</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:26:18.499360200Z</date>
+  <millis>1617053178499</millis>
+  <nanos>360200</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 5</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:26:45.265293200Z</date>
+  <millis>1617053205265</millis>
+  <nanos>293200</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:26:53.673480200Z</date>
+  <millis>1617053213673</millis>
+  <nanos>480200</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 2 with capacity 3, price 40, stars 5</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:28:15.884375900Z</date>
+  <millis>1617053295884</millis>
+  <nanos>375900</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 2, price 30, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T21:28:27.553821100Z</date>
+  <millis>1617053307553</millis>
+  <nanos>821100</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 2 with capacity 4, price 50, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T21:28:50.372042200Z</date>
+  <millis>1617053330372</millis>
+  <nanos>42200</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 3 with capacity 4, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:28:58.769437Z</date>
+  <millis>1617053338769</millis>
+  <nanos>437000</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 2</message>
+</record>
+<record>
+  <date>2021-03-29T21:29:11.050218500Z</date>
+  <millis>1617053351050</millis>
+  <nanos>218500</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 3</message>
+</record>
+<record>
+  <date>2021-03-29T21:29:22.516432100Z</date>
+  <millis>1617053362516</millis>
+  <nanos>432100</nanos>
+  <sequence>5</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T21:29:33.148281500Z</date>
+  <millis>1617053373148</millis>
+  <nanos>281500</nanos>
+  <sequence>6</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 3</message>
+</record>
+<record>
+  <date>2021-03-29T21:29:36.052578900Z</date>
+  <millis>1617053376052</millis>
+  <nanos>578900</nanos>
+  <sequence>7</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 1</message>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-29T21:31:24.829131500Z</date>
+  <millis>1617053484829</millis>
+  <nanos>131500</nanos>
+  <sequence>0</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 1 with capacity 3, price 30, stars 4</message>
+</record>
+<record>
+  <date>2021-03-29T21:31:38.382496200Z</date>
+  <millis>1617053498382</millis>
+  <nanos>496200</nanos>
+  <sequence>1</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>addRoom</method>
+  <thread>1</thread>
+  <message>Adding of room 2 with capacity 4, price 45, stars 5</message>
+</record>
+<record>
+  <date>2021-03-29T21:31:54.325758Z</date>
+  <millis>1617053514325</millis>
+  <nanos>758000</nanos>
+  <sequence>2</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T21:31:59.699618800Z</date>
+  <millis>1617053519699</millis>
+  <nanos>618800</nanos>
+  <sequence>3</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CreateOrder</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>Text '2020-30-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 30</message>
+  <exception>
+    <message>java.time.format.DateTimeParseException: Text '2020-30-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 30</message>
+    <frame>
+      <class>java.time.format.DateTimeFormatter</class>
+      <method>createError</method>
+      <line>2017</line>
+    </frame>
+    <frame>
+      <class>java.time.format.DateTimeFormatter</class>
+      <method>parse</method>
+      <line>1952</line>
+    </frame>
+    <frame>
+      <class>java.time.LocalDate</class>
+      <method>parse</method>
+      <line>428</line>
+    </frame>
+    <frame>
+      <class>java.time.LocalDate</class>
+      <method>parse</method>
+      <line>413</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CreateOrder</class>
+      <method>execute</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T21:32:06.576089500Z</date>
+  <millis>1617053526576</millis>
+  <nanos>89500</nanos>
+  <sequence>4</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 1</message>
+</record>
+<record>
+  <date>2021-03-29T21:32:15.615611200Z</date>
+  <millis>1617053535615</millis>
+  <nanos>611200</nanos>
+  <sequence>5</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T21:32:23.804142300Z</date>
+  <millis>1617053543804</millis>
+  <nanos>142300</nanos>
+  <sequence>6</sequence>
+  <logger>com.dao.RoomDao</logger>
+  <level>WARNING</level>
+  <class>com.dao.AbstractDao</class>
+  <method>getByid</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 3</message>
+</record>
+<record>
+  <date>2021-03-29T21:32:23.805641400Z</date>
+  <millis>1617053543805</millis>
+  <nanos>641400</nanos>
+  <sequence>7</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>WARNING</level>
+  <class>ui.actions.order.CreateOrder</class>
+  <method>execute</method>
+  <thread>1</thread>
+  <message>could not find an entity by id: 3</message>
+  <exception>
+    <message>com.exceptions.DaoException: could not find an entity by id: 3</message>
+    <frame>
+      <class>com.dao.AbstractDao</class>
+      <method>getByid</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>com.service.RoomService</class>
+      <method>getById</method>
+      <line>100</line>
+    </frame>
+    <frame>
+      <class>com.facade.HotelFacade</class>
+      <method>getById</method>
+      <line>97</line>
+    </frame>
+    <frame>
+      <class>ui.actions.order.CreateOrder</class>
+      <method>execute</method>
+      <line>20</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuItem</class>
+      <method>doAction</method>
+      <line>26</line>
+    </frame>
+    <frame>
+      <class>ui.menu.Navigator</class>
+      <method>navigate</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>ui.menu.MenuController</class>
+      <method>run</method>
+      <line>30</line>
+    </frame>
+    <frame>
+      <class>ui.Starter</class>
+      <method>main</method>
+      <line>17</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2021-03-29T21:32:28.232601800Z</date>
+  <millis>1617053548232</millis>
+  <nanos>601800</nanos>
+  <sequence>8</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.GuestService</class>
+  <method>getGuest</method>
+  <thread>1</thread>
+  <message>getting guest 3</message>
+</record>
+<record>
+  <date>2021-03-29T21:32:35.995833700Z</date>
+  <millis>1617053555995</millis>
+  <nanos>833700</nanos>
+  <sequence>9</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>create</method>
+  <thread>1</thread>
+  <message>Creating of order</message>
+</record>
+<record>
+  <date>2021-03-29T21:32:48.536108700Z</date>
+  <millis>1617053568536</millis>
+  <nanos>108700</nanos>
+  <sequence>10</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>checkIn</method>
+  <thread>1</thread>
+  <message>checkIn  guest 2 to room number 2</message>
+</record>
+<record>
+  <date>2021-03-29T21:32:52.576590600Z</date>
+  <millis>1617053572576</millis>
+  <nanos>590600</nanos>
+  <sequence>11</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>getOrder</method>
+  <thread>1</thread>
+  <message>getting order 2</message>
+</record>
+<record>
+  <date>2021-03-29T21:33:02.721788300Z</date>
+  <millis>1617053582721</millis>
+  <nanos>788300</nanos>
+  <sequence>12</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>addService</method>
+  <thread>1</thread>
+  <message>adding service for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T21:33:11.740690200Z</date>
+  <millis>1617053591740</millis>
+  <nanos>690200</nanos>
+  <sequence>13</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>addService</method>
+  <thread>1</thread>
+  <message>adding service for order 2</message>
+</record>
+<record>
+  <date>2021-03-29T21:33:15.570191200Z</date>
+  <millis>1617053595570</millis>
+  <nanos>191200</nanos>
+  <sequence>14</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 1</message>
+</record>
+<record>
+  <date>2021-03-29T21:33:19.580753200Z</date>
+  <millis>1617053599580</millis>
+  <nanos>753200</nanos>
+  <sequence>15</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.OrderService</class>
+  <method>countCost</method>
+  <thread>1</thread>
+  <message>count cost for order 2</message>
+</record>
+<record>
+  <date>2021-03-29T21:33:55.029834200Z</date>
+  <millis>1617053635029</millis>
+  <nanos>834200</nanos>
+  <sequence>16</sequence>
+  <logger>com.config.CustomLogger</logger>
+  <level>INFO</level>
+  <class>com.service.RoomService</class>
+  <method>getRoom</method>
+  <thread>1</thread>
+  <message>getting room 2</message>
+</record>
+</log>

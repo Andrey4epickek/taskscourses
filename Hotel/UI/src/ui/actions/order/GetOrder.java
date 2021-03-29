@@ -2,7 +2,7 @@ package ui.actions.order;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Order;
+import com.model.Order;
 import java.util.logging.Level;
 
 

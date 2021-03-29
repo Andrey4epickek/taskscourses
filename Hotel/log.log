@@ -1,0 +1,246 @@
+Mon Mar 29 21:55:18 MSK 2021 - [com.service.RoomService] - INFO - getting room 2
+null
+Mon Mar 29 21:55:18 MSK 2021 - [ui.actions.room.GetRoom] - WARNING - java.lang.ClassNotFoundException: com.senlainc.model.Guest
+com.exceptions.ServiceException: java.lang.ClassNotFoundException: com.senlainc.model.Guest
+Mon Mar 29 21:56:10 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null
+Mon Mar 29 21:56:10 MSK 2021 - [ui.actions.order.GetOrder] - WARNING - java.lang.ClassNotFoundException: com.senlainc.model.Guest
+com.exceptions.ServiceException: java.lang.ClassNotFoundException: com.senlainc.model.Guest
+Mon Mar 29 21:56:48 MSK 2021 - [ui.actions.guest.AddGuest] - WARNING - java.io.FileNotFoundException: HotelServer\resources\serialization_file.txt (Не удается найти указанный файл)
+com.exceptions.ServiceException: java.io.FileNotFoundException: HotelServer\resources\serialization_file.txt (Не удается найти указанный файл)
+Mon Mar 29 21:57:45 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 4
+null
+Mon Mar 29 21:57:53 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 21:58:05 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Mar 29 21:58:27 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 21:59:04 MSK 2021 - [com.service.RoomService] - INFO - getting room 1
+null
+Mon Mar 29 21:59:10 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Mon Mar 29 23:03:22 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 23:03:25 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Mon Mar 29 23:03:25 MSK 2021 - [com.service.GuestService] - WARNING - Getting guest failed
+com.exceptions.DaoException: could not find an entity by id: 2
+Mon Mar 29 23:03:25 MSK 2021 - [ui.actions.guest.GetGuest] - WARNING - Getting guest failed
+com.exceptions.ServiceException: Getting guest failed
+Mon Mar 29 23:09:42 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 1
+null
+Mon Mar 29 23:09:42 MSK 2021 - [com.service.OrderService] - WARNING - CheckIn failed
+com.exceptions.DaoException: could not find an entity by id: 2
+Mon Mar 29 23:09:42 MSK 2021 - [ui.actions.order.CheckIn] - WARNING - CheckIn failed
+com.exceptions.ServiceException: CheckIn failed
+Mon Mar 29 23:10:14 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Mon Mar 29 23:10:14 MSK 2021 - [com.service.GuestService] - WARNING - Getting guest failed
+com.exceptions.DaoException: could not find an entity by id: 2
+Mon Mar 29 23:10:14 MSK 2021 - [ui.actions.guest.GetGuest] - WARNING - Getting guest failed
+com.exceptions.ServiceException: Getting guest failed
+Mon Mar 29 23:10:17 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 23:10:34 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 1
+null
+Mon Mar 29 23:10:40 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Mon Mar 29 23:11:42 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 1
+null
+Mon Mar 29 23:11:47 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Mon Mar 29 23:12:25 MSK 2021 - [ui.actions.order.CheckIn] - WARNING - For input string: ""
+java.lang.NumberFormatException: For input string: ""
+Mon Mar 29 23:12:34 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 3 to room number 1
+null
+Mon Mar 29 23:12:39 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Mon Mar 29 23:13:12 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Mon Mar 29 23:13:45 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 5, price 30, stars 5
+null
+Mon Mar 29 23:13:58 MSK 2021 - [ui.actions.order.CreateOrder] - WARNING - could not find an entity by id: 2
+com.exceptions.DaoException: could not find an entity by id: 2
+Mon Mar 29 23:14:16 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Mon Mar 29 23:14:22 MSK 2021 - [ui.actions.order.CreateOrder] - WARNING - Text '2020-29-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 29
+java.time.format.DateTimeParseException: Text '2020-29-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 29
+Mon Mar 29 23:15:21 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 5
+null
+Mon Mar 29 23:15:29 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 23:15:38 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Mar 29 23:15:43 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Mon Mar 29 23:16:51 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 1
+null
+Mon Mar 29 23:16:54 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Mon Mar 29 23:17:23 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 1
+null
+Mon Mar 29 23:17:29 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Mon Mar 29 23:18:07 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 3, price 45, stars 4
+null
+Mon Mar 29 23:27:12 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 4
+null
+Mon Mar 29 23:29:03 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:29:03 MSK 2021 - [ui.actions.room.AddRoom] - WARNING - class com.model.Guest cannot be cast to class java.util.List (com.model.Guest is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class com.model.Guest cannot be cast to class java.util.List (com.model.Guest is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+Mon Mar 29 23:30:11 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:35:49 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:37:00 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:37:22 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 23:37:33 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Mar 29 23:37:41 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 1
+null
+Mon Mar 29 23:37:41 MSK 2021 - [ui.actions.order.CheckIn] - WARNING - null
+java.lang.NullPointerException
+Mon Mar 29 23:37:44 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Mon Mar 29 23:43:25 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:44:03 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:44:17 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 23:44:27 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Mar 29 23:44:34 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 1
+null
+Mon Mar 29 23:44:40 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Mon Mar 29 23:45:50 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Mon Mar 29 23:45:57 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Mon Mar 29 23:46:06 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Mar 29 23:46:12 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 1
+null
+Mon Mar 29 23:46:15 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Mon Mar 29 23:46:40 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 4, price 25, stars 3
+null
+Mon Mar 29 23:46:59 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Mon Mar 29 23:47:10 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Mar 29 23:47:19 MSK 2021 - [com.service.OrderService] - INFO - Eviction of a guest 1, order 2, room 2
+null
+Mon Mar 29 23:47:22 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null
+Mon Mar 29 23:47:39 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 2
+null
+Mon Mar 29 23:47:43 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 2
+null
+Mon Mar 29 23:48:21 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Mon Mar 29 23:48:28 MSK 2021 - [com.service.RoomService] - INFO - getting room 2
+null
+Mon Mar 29 23:48:40 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null
+Mon Mar 29 23:54:51 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Mon Mar 29 23:54:51 MSK 2021 - [com.service.GuestService] - WARNING - Getting guest failed
+com.exceptions.DaoException: could not find an entity by id: 2
+Mon Mar 29 23:54:51 MSK 2021 - [ui.actions.guest.GetGuest] - WARNING - Getting guest failed
+com.exceptions.ServiceException: Getting guest failed
+Mon Mar 29 23:55:22 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 35, stars 4
+null
+Mon Mar 29 23:58:28 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 35, stars 4
+null
+Tue Mar 30 00:02:02 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 35, stars 5
+null
+Tue Mar 30 00:02:02 MSK 2021 - [ui.actions.room.AddRoom] - WARNING - null
+java.lang.NullPointerException
+Tue Mar 30 00:10:33 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 35, stars 4
+null
+Tue Mar 30 00:11:56 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 34, stars 4
+null
+Tue Mar 30 00:14:37 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 35, stars 5
+null
+Tue Mar 30 00:14:37 MSK 2021 - [ui.actions.room.AddRoom] - WARNING - Illegal Capacity: -1
+java.lang.IllegalArgumentException: Illegal Capacity: -1
+Tue Mar 30 00:14:59 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 5, price 30, stars 4
+null
+Tue Mar 30 00:14:59 MSK 2021 - [ui.actions.room.AddRoom] - WARNING - Illegal Capacity: -1
+java.lang.IllegalArgumentException: Illegal Capacity: -1
+Tue Mar 30 00:16:14 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 4
+null
+Tue Mar 30 00:16:14 MSK 2021 - [ui.actions.room.AddRoom] - WARNING - Index 1 out of bounds for length 1
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+Tue Mar 30 00:17:32 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 4
+null
+Tue Mar 30 00:17:32 MSK 2021 - [ui.actions.room.AddRoom] - WARNING - Illegal Capacity: -1
+java.lang.IllegalArgumentException: Illegal Capacity: -1
+Tue Mar 30 00:18:00 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 34, stars 4
+null
+Tue Mar 30 00:20:21 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Tue Mar 30 00:21:17 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Tue Mar 30 00:26:04 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Tue Mar 30 00:26:18 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 5
+null
+Tue Mar 30 00:26:45 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Tue Mar 30 00:26:53 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 3, price 40, stars 5
+null
+Tue Mar 30 00:28:15 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 5
+null
+Tue Mar 30 00:28:27 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 4, price 50, stars 5
+null
+Tue Mar 30 00:28:50 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 3 with capacity 4, price 30, stars 4
+null
+Tue Mar 30 00:28:58 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Tue Mar 30 00:29:11 MSK 2021 - [com.service.GuestService] - INFO - getting guest 3
+null
+Tue Mar 30 00:29:22 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Tue Mar 30 00:29:33 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 3
+null
+Tue Mar 30 00:29:36 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null
+Tue Mar 30 00:31:24 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 4
+null
+Tue Mar 30 00:31:38 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 4, price 45, stars 5
+null
+Tue Mar 30 00:31:54 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Tue Mar 30 00:31:59 MSK 2021 - [ui.actions.order.CreateOrder] - WARNING - Text '2020-30-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 30
+java.time.format.DateTimeParseException: Text '2020-30-03' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 30
+Tue Mar 30 00:32:06 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Tue Mar 30 00:32:15 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Tue Mar 30 00:32:23 MSK 2021 - [ui.actions.order.CreateOrder] - WARNING - could not find an entity by id: 3
+com.exceptions.DaoException: could not find an entity by id: 3
+Tue Mar 30 00:32:28 MSK 2021 - [com.service.GuestService] - INFO - getting guest 3
+null
+Tue Mar 30 00:32:35 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Tue Mar 30 00:32:48 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 2
+null
+Tue Mar 30 00:32:52 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null
+Tue Mar 30 00:33:02 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 1
+null
+Tue Mar 30 00:33:11 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 2
+null
+Tue Mar 30 00:33:15 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Tue Mar 30 00:33:19 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 2
+null
+Tue Mar 30 00:33:55 MSK 2021 - [com.service.RoomService] - INFO - getting room 2
+null

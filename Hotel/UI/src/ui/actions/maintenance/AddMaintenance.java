@@ -2,11 +2,8 @@ package ui.actions.maintenance;
 
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
-import com.senlainc.model.Maintenance;
+import com.model.Maintenance;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.logging.Level;
 
 public class AddMaintenance extends AbstractAction implements IAction {
