@@ -1,5 +1,6 @@
 package ui.actions.order;
 
+import com.facade.HotelFacade;
 import ui.actions.AbstractAction;
 import ui.actions.IAction;
 import com.model.Guest;

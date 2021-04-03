@@ -13,7 +13,7 @@ private static DependencyInject instance;
         return instance;
     }
 
-    public Constructor<?> injection(Field field){
-        return null;
+    public Constructor<?> injection(Field field) throws NoSuchMethodException {
+        return field.getType().getDeclaredConstructor();
     }
 }

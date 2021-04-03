@@ -1,6 +1,7 @@
 package com.service;
 
 
+import com.api.dao.IGuestDao;
 import com.api.service.IGuestService;
 import com.config.CustomLogger;
 import com.dao.GuestDao;
@@ -13,8 +14,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GuestService implements IGuestService {
-    private static GuestService instance;
+
     private static final Logger LOGGER=Logger.getLogger(CustomLogger.class.getName());
+
+    private static GuestService instance;
 
     public static GuestService getInstance(){
         if(instance==null){

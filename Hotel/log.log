@@ -244,3 +244,43 @@ Tue Mar 30 00:33:19 MSK 2021 - [com.service.OrderService] - INFO - count cost fo
 null
 Tue Mar 30 00:33:55 MSK 2021 - [com.service.RoomService] - INFO - getting room 2
 null
+Sat Apr 03 14:27:21 MSK 2021 - [ui.actions.room.GetRoom] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:27:34 MSK 2021 - [ui.actions.guest.GetGuest] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:28:13 MSK 2021 - [ui.actions.room.GetRoom] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:28:33 MSK 2021 - [ui.actions.guest.GetGuest] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:29:12 MSK 2021 - [ui.actions.guest.AddGuest] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:30:43 MSK 2021 - [ui.actions.guest.AddGuest] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:36:22 MSK 2021 - [ui.actions.guest.AddGuest] - WARNING - null
+java.lang.NullPointerException
+Sat Apr 03 14:43:22 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 2, price 30, stars 4
+null
+Sat Apr 03 14:43:37 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 2 with capacity 3, price 25, stars 3
+null
+Sat Apr 03 14:43:44 MSK 2021 - [com.service.GuestService] - INFO - getting guest 1
+null
+Sat Apr 03 14:43:54 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Sat Apr 03 14:44:00 MSK 2021 - [com.service.GuestService] - INFO - getting guest 3
+null
+Sat Apr 03 14:44:10 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Sat Apr 03 14:44:18 MSK 2021 - [com.service.OrderService] - INFO - checkIn  guest 2 to room number 2
+null
+Sat Apr 03 14:44:22 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null
+Sat Apr 03 14:44:34 MSK 2021 - [com.service.OrderService] - INFO - adding service for order 1
+null
+Sat Apr 03 14:44:39 MSK 2021 - [com.service.OrderService] - INFO - count cost for order 1
+null
+Sat Apr 03 14:45:10 MSK 2021 - [com.service.RoomService] - INFO - getting room 2
+null
+Sat Apr 03 14:45:17 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null
+Sat Apr 03 14:45:21 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
+null

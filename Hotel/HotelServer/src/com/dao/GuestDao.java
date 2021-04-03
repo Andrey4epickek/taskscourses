@@ -16,10 +16,10 @@ public class GuestDao extends AbstractDao<Guest> implements IGuestDao {
         return instance;
     }
 
-//   public GuestDao() {
-//        List<Guest> guests= SerializationHandler.deserialize(Guest.class);
-//        this.saveAll(guests);
-//    }
+   public GuestDao() {
+        List<Guest> guests= SerializationHandler.deserialize(Guest.class);
+        this.saveAll(guests);
+    }
 
     public void saveAll(List<Guest> entity) {
         getRepository().addAll(entity);

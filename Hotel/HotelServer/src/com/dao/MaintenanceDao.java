@@ -16,10 +16,10 @@ public class MaintenanceDao extends AbstractDao<Maintenance> implements IMainten
         return instance;
     }
 
-//    public MaintenanceDao() {
-//        List<Maintenance> maintenances= SerializationHandler.deserialize(Maintenance.class);
-//        this.saveAll(maintenances);
-//    }
+    public MaintenanceDao() {
+        List<Maintenance> maintenances= SerializationHandler.deserialize(Maintenance.class);
+        this.saveAll(maintenances);
+    }
 
     @Override
     public void saveAll(List<Maintenance> entity) {

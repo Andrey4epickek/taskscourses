@@ -17,10 +17,10 @@ public class OrderDao extends AbstractDao<Order> implements IOrderDao {
         return instance;
     }
 
-//    public OrderDao() {
-//        List<Order> orders= SerializationHandler.deserialize(Order.class);
-//        this.saveAll(orders);
-//    }
+    public OrderDao() {
+        List<Order> orders= SerializationHandler.deserialize(Order.class);
+        this.saveAll(orders);
+    }
 
     @Override
     public void saveAll(List<Order> entity) {

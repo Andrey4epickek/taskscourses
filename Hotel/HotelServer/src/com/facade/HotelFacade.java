@@ -1,22 +1,43 @@
 package com.facade;
 
+import com.api.service.IGuestService;
+import com.api.service.IMaintenanceService;
+import com.api.service.IOrderService;
+import com.api.service.IRoomService;
 import com.dao.GuestDao;
 import com.dao.MaintenanceDao;
 import com.dao.OrderDao;
 import com.dao.RoomDao;
+import com.injection.annotation.DependencyClass;
+import com.injection.annotation.DependencyComponent;
 import com.model.*;
 import com.service.GuestService;
 import com.service.MaintenanceService;
 import com.service.OrderService;
 import com.service.RoomService;
 import com.util.SerializationHandler;
-
 import java.time.LocalDate;
 import java.util.List;
 
+@DependencyClass
 public class HotelFacade {
-
     private static HotelFacade instance;
+    @DependencyComponent
+    private  IGuestService guestService;
+    @DependencyComponent
+    private  IRoomService roomService;
+    @DependencyComponent
+    private  IOrderService orderService;
+    @DependencyComponent
+    private  IMaintenanceService maintenanceService;
+
+//    public HotelFacade(IGuestService guestService, IRoomService roomService, IOrderService orderService, IMaintenanceService maintenanceService) {
+//        this.guestService = guestService;
+//        this.roomService = roomService;
+//        this.orderService = orderService;
+//        this.maintenanceService = maintenanceService;
+//    }
+
     public static HotelFacade getInstance(){
         if(instance==null){
             instance=new HotelFacade();
@@ -24,7 +45,7 @@ public class HotelFacade {
         return instance;
     }
 
-     /**
+    /**
      *Guest
      */
     public Guest addGuest(String name, Integer age){
@@ -38,14 +59,16 @@ public class HotelFacade {
         return guest;
     }
 
+
+
+    public Maintenance addService(String name, Integer price){
+        Maintenance maintenance= MaintenanceService.getInstance().addService(name, price);
+        return maintenance;
+    }
+
     /**
      *Order
      */
-
-    public Maintenance addService(String name, Integer price){
-        Maintenance maintenance=MaintenanceService.getInstance().addService(name, price);
-        return maintenance;
-    }
 
     public Order createOrder(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate){
         Order order= OrderService.getInstance().create(room, guest, checkInDate, checkOutDate);
@@ -94,7 +117,7 @@ public class HotelFacade {
         return OrderService.getInstance().getFreeRoomByFixedDate(date);
     }
 
-    public Room getById(Integer roomId){return RoomService.getInstance().getById(roomId);}
+    public  Room getById(Integer roomId){return RoomService.getInstance().getById(roomId);}
 
     public void changeStatus(RoomStatus status, Integer roomId){
         RoomService.getInstance().changeStatus(status, roomId);

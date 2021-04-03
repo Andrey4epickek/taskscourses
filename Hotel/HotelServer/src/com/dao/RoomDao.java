@@ -17,10 +17,10 @@ public class RoomDao extends AbstractDao<Room> implements IRoomDao {
         return instance;
     }
 
-//    public RoomDao() {
-//        List<Room> rooms= SerializationHandler.deserialize(Room.class);
-//       this.saveAll(rooms);
-//    }
+    public RoomDao() {
+        List<Room> rooms= SerializationHandler.deserialize(Room.class);
+       this.saveAll(rooms);
+    }
 
 
 
