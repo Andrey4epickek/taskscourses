@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `task10`.`laptop` (
   `speed` SMALLINT NOT NULL,
   `ram` SMALLINT NOT NULL,
   `hd` REAL NOT NULL,
-  `price` DECIMAL(5,2) NOT NULL,
+  `price` INT NOT NULL,
   `SCREEN` TINYINT NOT NULL,
   PRIMARY KEY (`code`),
   UNIQUE INDEX `model_UNIQUE` (`model` ASC),
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `task10`.`pc` (
   `ram` SMALLINT NOT NULL,
   `hd` REAL NOT NULL,
   `cd` VARCHAR(10) NOT NULL,
-  `price` DECIMAL(5,2) NOT NULL,
+  `price` INT NOT NULL,
   PRIMARY KEY (`code`),
   UNIQUE INDEX `model_UNIQUE` (`model` ASC),
   CONSTRAINT `mod2`
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `task10`.`printer` (
   `model` VARCHAR(50) NOT NULL,
   `color` CHAR(1) NOT NULL,
   `type` VARCHAR(10) NOT NULL,
-  `price` DECIMAL(5,2) NOT NULL,
+  `price` INT NOT NULL,
   PRIMARY KEY (`code`),
   UNIQUE INDEX `model_UNIQUE` (`model` ASC),
   CONSTRAINT `mod`
