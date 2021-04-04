@@ -2,8 +2,11 @@ package ui.menu;
 
 import ui.actions.SaveToFile;
 import ui.actions.guest.AddGuest;
+import ui.actions.guest.GetAllGuests;
 import ui.actions.guest.GetGuest;
+import ui.actions.guest.GetQuantityOfGuest;
 import ui.actions.maintenance.AddMaintenance;
+import ui.actions.maintenance.GetAllServices;
 import ui.actions.order.*;
 import ui.actions.room.*;
 
@@ -32,12 +35,15 @@ public class MenuBuilderFactory {
         return new MenuBuilder(rootMenu)
                 .addItem(new MenuItem("Add guest",new AddGuest(),rootMenu))
                 .addItem(new MenuItem("Get guest",new GetGuest(),rootMenu))
+                .addItem(new MenuItem("Get quantity of guests",new GetQuantityOfGuest(),rootMenu))
+                .addItem(new MenuItem("Get all guests",new GetAllGuests(),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");
     }
     public Menu maintenanceMenu(Menu rootMenu,Menu previousMenu){
         return new MenuBuilder(rootMenu)
                 .addItem(new MenuItem("Add maintenance",new AddMaintenance(),rootMenu))
+                .addItem(new MenuItem("Get all maintenances",new GetAllServices(),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");
     }
@@ -64,6 +70,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get order",new GetOrder(),rootMenu))
                 .addItem(new MenuItem("Sort by date",new GetSortedByDate(),rootMenu))
                 .addItem(new MenuItem("Sort by name",new GetSortedByName(),rootMenu))
+                .addItem(new MenuItem("Get order services sorted by price",new GetServicesSortByPrice(),rootMenu))
                 .addItem(new MenuItem("Get three last guests at room",new GetThreeLastGuests(),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Hotel Application menu (0-Exit)");

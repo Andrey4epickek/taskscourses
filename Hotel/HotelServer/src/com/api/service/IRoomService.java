@@ -13,7 +13,6 @@ public interface IRoomService {
     List<Room> getSortRoomByPrice();
     List<Room> getSortRoomByCapacity();
     List<Room> getSortRoomByStars();
-    List<Integer> getAllRoomsId();
     Room getRoom(Integer orderId);
     Room getById(Integer roomId);
 }

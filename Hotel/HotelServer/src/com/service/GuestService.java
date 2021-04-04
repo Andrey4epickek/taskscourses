@@ -10,8 +10,10 @@ import com.exceptions.ServiceException;
 import com.model.Guest;
 import com.util.IDGenerator;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 public class GuestService implements IGuestService {
 
@@ -24,6 +26,17 @@ public class GuestService implements IGuestService {
             instance=new GuestService();
         }
         return instance;
+    }
+
+    @Override
+    public int getQuantityGuests() {
+        List<Guest> guests=getAllGuestService().stream().collect(Collectors.toList());
+        return guests.size();
+    }
+
+    @Override
+    public List<Guest> getAllGuestService() {
+        return GuestDao.getInstance().getAll();
     }
 
     @Override

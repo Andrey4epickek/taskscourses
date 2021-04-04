@@ -80,11 +80,6 @@ public class RoomService implements IRoomService {
     }
 
     @Override
-    public List<Integer> getAllRoomsId() {
-        return RoomDao.getInstance().getAll().stream().map(Room::getId).collect(Collectors.toList());
-    }
-
-    @Override
     public Room getRoom(Integer roomId) {
         try {
             LOGGER.log(Level.INFO,String.format("getting room %d",roomId));

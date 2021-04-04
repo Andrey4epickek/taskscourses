@@ -59,11 +59,25 @@ public class HotelFacade {
         return guest;
     }
 
+    public int getQuantityOfGuest(){
+        return GuestService.getInstance().getQuantityGuests();
+    }
 
+    public List<Guest> getAllGuests(){
+        return GuestService.getInstance().getAllGuestService();
+    }
+
+    /**
+     *Maintenance
+     */
 
     public Maintenance addService(String name, Integer price){
         Maintenance maintenance= MaintenanceService.getInstance().addService(name, price);
         return maintenance;
+    }
+
+    public List<Maintenance> getAllServices(){
+        return MaintenanceService.getInstance().getAllServices();
     }
 
     /**
@@ -88,8 +102,8 @@ public class HotelFacade {
         return cost;
     }
 
-    public void addService(Maintenance maintenance,Integer orderId){
-        OrderService.getInstance().addService(maintenance, orderId);
+    public void addService(Integer maintenanceId,Integer orderId){
+        OrderService.getInstance().addService(maintenanceId, orderId);
     }
 
     public Order getOrder(Integer orderId){
@@ -107,6 +121,10 @@ public class HotelFacade {
 
     public List<Order> getThreeLastGuests(Integer roomId){
         return OrderService.getInstance().getThreeLastGuests(roomId);
+    }
+
+    public List<Maintenance> getGuestServicesSortByPrice(Integer orderId){
+        return OrderService.getInstance().getGuestServicesSortByPrice(orderId);
     }
 
     /**

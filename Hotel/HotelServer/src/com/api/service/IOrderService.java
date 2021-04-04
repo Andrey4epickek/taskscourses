@@ -13,15 +13,12 @@ public interface IOrderService {
     void evict(Integer guestId,Integer orderId,Integer roomId);
     void checkIn(Integer guestId, Integer roomId);
     int countCost(Integer orderId);
-    void addService( Maintenance maintenance,Integer orderId);
+    void addService( Integer maintenanceId,Integer orderId);
     Order getOrder(Integer orderId);
     List<Order> getSortedGuestsByName();
     List<Order> ordersSortedByCheckOutDate();
-    int getQuantityGuests();
     List<Order> getAllOrderService();
-    List<Guest> getAllGuestService();
     List<Room> getFreeRoomByFixedDate(LocalDate date);
     List<Maintenance> getGuestServicesSortByPrice(Integer orderId);
     List<Order> getThreeLastGuests(Integer roomId);
-    List<Integer> getAllOrdersId();
 }

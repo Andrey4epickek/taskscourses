@@ -4,6 +4,7 @@ public class IDGenerator {
     private static Integer guestId = 1;
     private static Integer roomId=1;
     private static Integer orderId=1;
+    private static Integer maintenanceId=1;
 
     public static  Integer generateGuestId()
     {
@@ -16,5 +17,9 @@ public class IDGenerator {
     public static Integer generateOrderId()
     {
         return orderId++;
+    }
+    public static Integer generateMaintenanceId()
+    {
+        return maintenanceId++;
     }
 }

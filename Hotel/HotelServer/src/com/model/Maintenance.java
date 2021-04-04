@@ -7,15 +7,6 @@ public class Maintenance extends AEntity implements Serializable {
     private Integer id;
     private String name;
     private Integer price;
-    private List<Order> orders;
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
 
     public Maintenance(String name, int price) {
         this.name = name;
@@ -50,6 +41,6 @@ public class Maintenance extends AEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "Maintenance{"+" name="+name+", price="+price+'}';
+        return "Maintenance{"+" id="+getId()+", name="+name+", price="+price+'}';
     }
 }

@@ -94,10 +94,12 @@ public class OrderService implements IOrderService {
     }
 
     @Override
-    public void addService(Maintenance maintenance,Integer orderId) {
+    public void addService(Integer maintenanceId,Integer orderId) {
         try {
             LOGGER.log(Level.INFO,String.format("adding service for order %d",orderId));
-        OrderDao.getInstance().getByid(orderId).getMaintenances().add(maintenance);
+            Order order=OrderDao.getInstance().getByid(orderId);
+            Maintenance maintenance=MaintenanceDao.getInstance().getByid(maintenanceId);
+            order.getMaintenances().add(maintenance);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Adding service failed",e);
             throw new ServiceException("Adding service failed",e);
@@ -129,21 +131,14 @@ public class OrderService implements IOrderService {
         return orders.stream().collect(Collectors.toList());
     }
 
-    @Override
-    public int getQuantityGuests() {
-        List<Guest> guests=getAllGuestService().stream().collect(Collectors.toList());
-        return guests.size();
-    }
+
 
     @Override
     public List<Order> getAllOrderService() {
         return OrderDao.getInstance().getAll();
     }
 
-    @Override
-    public List<Guest> getAllGuestService() {
-        return GuestDao.getInstance().getAll();
-    }
+
 
     @Override
     public List<Room> getFreeRoomByFixedDate(LocalDate date) {
@@ -169,12 +164,6 @@ public class OrderService implements IOrderService {
         List<Order> orders=OrderDao.getInstance().getAll().stream().filter(h1->h1.getRoom().getId().equals(roomId)).limit(3).collect(Collectors.toList());
         return orders;
     }
-
-    @Override
-    public List<Integer> getAllOrdersId() {
-        return (OrderDao.getInstance().getAll().stream().map(Order::getId).collect(Collectors.toList()));
-    }
-
 
     public int getDaysBetweenDates(LocalDate checkInDate,LocalDate checkOutDate){
         long daysBetween =  Duration.between(checkInDate.atStartOfDay(), checkOutDate.atStartOfDay()).toDays();
