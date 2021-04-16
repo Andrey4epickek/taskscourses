@@ -284,3 +284,23 @@ Sat Apr 03 14:45:17 MSK 2021 - [com.service.OrderService] - INFO - getting order
 null
 Sat Apr 03 14:45:21 MSK 2021 - [com.service.OrderService] - INFO - getting order 1
 null
+Fri Apr 16 14:12:33 MSK 2021 - [ui.actions.room.GetRoom] - WARNING - null
+java.lang.NullPointerException
+Fri Apr 16 14:27:57 MSK 2021 - [ui.actions.room.GetRoom] - WARNING - null
+java.lang.NullPointerException
+Fri Apr 16 14:28:54 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Fri Apr 16 14:30:07 MSK 2021 - [com.service.GuestService] - INFO - getting guest 2
+null
+Fri Apr 16 14:31:48 MSK 2021 - [com.service.RoomService] - INFO - getting room 2
+null
+Fri Apr 16 14:49:15 MSK 2021 - [com.service.RoomService] - INFO - getting room 1
+null
+Fri Apr 16 14:49:23 MSK 2021 - [com.service.OrderService] - INFO - getting order 3
+null
+Fri Apr 16 14:49:23 MSK 2021 - [com.service.OrderService] - WARNING - Getting order failed
+com.exceptions.DaoException: could not find an entity by id: 3
+Fri Apr 16 14:49:23 MSK 2021 - [ui.actions.order.GetOrder] - WARNING - Getting order failed
+com.exceptions.ServiceException: Getting order failed
+Fri Apr 16 14:49:27 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
+null

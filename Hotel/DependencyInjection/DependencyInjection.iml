@@ -20,5 +20,6 @@
         <jarDirectory url="file://$MODULE_DIR$/../../../apache-log4j-2.14.1-bin" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="HotelServer" />
   </component>
 </module>

@@ -1,7 +1,6 @@
 package starter;
 
 import com.Load.LoadConfig;
-import com.Load.LoadData;
 import com.config.CustomLogger;
 import com.configuration.ConfigController;
 import com.facade.HotelFacade;
@@ -14,7 +13,6 @@ public class Starter {
 //        ConfigController.getInstance().setConfig(LoadConfig.class);
 //        System.out.println(LoadConfig.getStatus());
 //        System.out.println(LoadConfig.getHistory());
-//        LoadData.execute(HotelFacade.class);
         MenuController.getInstance().run();
 
 //        Boolean prop= PropertiesHandler.getProperty("server.room.change_status.enable")

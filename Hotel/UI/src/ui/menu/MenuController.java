@@ -1,5 +1,8 @@
 package ui.menu;
 
+import com.facade.HotelFacade;
+import com.injection.ApplicationContext;
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,11 +11,13 @@ public class MenuController {
     private static MenuController instance;
     private Builder builder;
     private Navigator navigator;
+    private ApplicationContext applicationContext;
 
     private MenuController() {
         builder=Builder.getInstance();
         builder.buildMenu();
         navigator=Navigator.getInstance();
+        applicationContext=new ApplicationContext();
     }
 
     public static MenuController getInstance() {

@@ -18,15 +18,12 @@ import java.util.stream.Collectors;
 public class GuestService implements IGuestService {
 
     private static final Logger LOGGER=Logger.getLogger(CustomLogger.class.getName());
+    private IGuestDao guestDao;
 
-    private static GuestService instance;
-
-    public static GuestService getInstance(){
-        if(instance==null){
-            instance=new GuestService();
-        }
-        return instance;
+    public GuestService(IGuestDao guestDao){
+        this.guestDao=guestDao;
     }
+
 
     @Override
     public int getQuantityGuests() {
@@ -36,14 +33,14 @@ public class GuestService implements IGuestService {
 
     @Override
     public List<Guest> getAllGuestService() {
-        return GuestDao.getInstance().getAll();
+        return guestDao.getAll();
     }
 
     @Override
         public Guest addGuest(String name, Integer age){
             Guest guest=new Guest(name,age);
             guest.setId(IDGenerator.generateGuestId());
-            GuestDao.getInstance().save(guest);
+            guestDao.save(guest);
             return guest;
     }
 
@@ -51,7 +48,7 @@ public class GuestService implements IGuestService {
     public Guest getGuest(Integer guestId) {
         try {
             LOGGER.log(Level.INFO,String.format("getting guest %d",guestId));
-            return GuestDao.getInstance().getByid(guestId);
+            return guestDao.getByid(guestId);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Getting guest failed",e);
             throw new ServiceException("Getting guest failed",e);
