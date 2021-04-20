@@ -55,4 +55,9 @@ public class GuestService implements IGuestService {
         }
     }
 
+    @Override
+    public void deleteGuest(Integer guestId) {
+       guestDao.delete(guestId);
+    }
+
 }

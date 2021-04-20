@@ -304,3 +304,173 @@ Fri Apr 16 14:49:23 MSK 2021 - [ui.actions.order.GetOrder] - WARNING - Getting o
 com.exceptions.ServiceException: Getting order failed
 Fri Apr 16 14:49:27 MSK 2021 - [com.service.OrderService] - INFO - getting order 2
 null
+Sat Apr 17 18:16:20 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:19:17 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:19:43 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:19:43 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLSyntaxErrorException: Unknown column 'guests' in 'field list'
+Sat Apr 17 18:22:22 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:22:22 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Sat Apr 17 18:22:58 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:22:58 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Sat Apr 17 18:23:39 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:24:59 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Sat Apr 17 18:25:12 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:25:12 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Field 'guests_id' doesn't have a default value
+Sat Apr 17 18:25:47 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 17 18:26:35 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Field 'guests_id' doesn't have a default value
+Sun Apr 18 14:07:55 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:07:55 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Field 'guests_id' doesn't have a default value
+Sun Apr 18 14:10:51 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:10:51 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLSyntaxErrorException: Unknown column 'guest_id' in 'field list'
+Sun Apr 18 14:11:07 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:11:07 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Parameter index out of range (5 > number of parameters, which is 4).
+Sun Apr 18 14:11:24 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:11:24 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Field 'guests_id' doesn't have a default value
+Sun Apr 18 14:25:07 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:28:12 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:28:12 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Sun Apr 18 14:29:24 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:38:00 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:40:07 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:40:07 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`hotel`.`rooms`, CONSTRAINT `guestid` FOREIGN KEY (`id`) REFERENCES `mydb`.`guests` (`id`))
+Sun Apr 18 14:42:11 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:45:12 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:45:12 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Sun Apr 18 14:47:09 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:47:09 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Sun Apr 18 14:48:33 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:50:09 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 14:50:10 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Field 'guestid' doesn't have a default value
+Sun Apr 18 14:51:31 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 15:05:39 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 15:05:39 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Field 'guestid' doesn't have a default value
+Sun Apr 18 15:13:46 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sun Apr 18 15:15:01 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 12:51:29 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 12:56:33 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 12:56:33 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Mon Apr 19 12:57:10 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 12:57:10 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Mon Apr 19 12:58:59 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 12:58:59 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Mon Apr 19 12:59:21 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:01:24 MSK 2021 - [com.service.RoomService] - INFO - changePrice of room 1 with price 35
+null
+Mon Apr 19 13:01:25 MSK 2021 - [com.service.RoomService] - WARNING - Change price failed
+com.exceptions.DaoException: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+Mon Apr 19 13:02:37 MSK 2021 - [com.service.RoomService] - INFO - changePrice of room 1 with price 35
+null
+Mon Apr 19 13:03:01 MSK 2021 - [com.service.RoomService] - INFO - changePrice of room 1 with price 30
+null
+Mon Apr 19 13:17:49 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:17:49 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 2
+Mon Apr 19 13:19:37 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:19:37 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 2
+Mon Apr 19 13:20:01 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:20:01 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 2
+Mon Apr 19 13:20:34 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:20:34 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 2
+Mon Apr 19 13:21:55 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:29:28 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:29:28 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:29:28 MSK 2021 - [com.service.OrderService] - WARNING - Creating failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 1
+Mon Apr 19 13:33:10 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:33:10 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:33:10 MSK 2021 - [com.service.OrderService] - WARNING - Creating failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 1
+Mon Apr 19 13:33:29 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:33:35 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:34:13 MSK 2021 - [com.service.OrderService] - WARNING - Creating failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 1
+Mon Apr 19 13:34:17 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:34:18 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:34:19 MSK 2021 - [com.service.OrderService] - WARNING - Creating failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 1
+Mon Apr 19 13:34:24 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:34:27 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:35:33 MSK 2021 - [com.service.OrderService] - WARNING - Creating failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 1
+Mon Apr 19 13:35:36 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:35:39 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:35:46 MSK 2021 - [com.service.OrderService] - WARNING - Creating failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 1
+Mon Apr 19 13:35:53 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:35:55 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null
+Mon Apr 19 13:36:51 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Mon Apr 19 13:36:51 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
+null

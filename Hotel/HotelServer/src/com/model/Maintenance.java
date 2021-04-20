@@ -13,6 +13,8 @@ public class Maintenance extends AEntity implements Serializable {
         this.price = price;
     }
 
+    public Maintenance(){}
+
     @Override
     public Integer getId() {
         return id;

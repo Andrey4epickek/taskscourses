@@ -48,6 +48,7 @@ public class RoomService implements IRoomService {
             LOGGER.log(Level.INFO,String.format("changePrice of room %d with price %d",roomId,price));
         Room room=roomDao.getByid(roomId);
         room.setPrice(price);
+        roomDao.update(room);
         }catch (DaoException e){
             LOGGER.log(Level.WARNING,"Change price failed",e);
             throw new ServiceException("Change price failed",e);

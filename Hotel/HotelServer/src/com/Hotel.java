@@ -1,14 +1,45 @@
 package com;
 
 
+import com.api.dao.IGuestDao;
+import com.api.service.IGuestService;
 import com.config.CustomLogger;
+import com.injection.ApplicationContext;
+import com.model.*;
+import com.service.GuestService;
+
+import java.time.LocalDate;
 
 
 public class Hotel {
+    private static final ApplicationContext applicationContext=ApplicationContext.getInstance();
 
     public static void main(String[] args) {
         new CustomLogger();
 
+//        Maintenance maintenance=applicationContext.maintenanceService().addService("lunch",10);
+//        System.out.println(maintenance);
+//        Maintenance maintenance1=applicationContext.maintenanceService().addService("dinner",10);
+//        System.out.println(maintenance1);
+//        System.out.println(applicationContext.maintenanceDao().getAll());
+
+//        Guest guest=applicationContext.guestService().addGuest("vasya",20);
+//        System.out.println(guest);
+//        Guest guest2=applicationContext.guestService().addGuest("andrey",23);
+//        System.out.println(guest2);
+//        System.out.println(applicationContext.guestDao().getByid(1));
+//        System.out.println(applicationContext.guestDao().getByIdList(1));
+//        applicationContext.guestService().deleteGuest(3);
+        System.out.println(applicationContext.guestDao().getAll());
+//
+//        Room room=applicationContext.roomService().addRoom(1,3,30,3, RoomStatus.OPEN,1);
+//        System.out.println(room);
+//        applicationContext.roomService().changePrice(1,35);
+        System.out.println(applicationContext.roomDao().getAll());
+
+//        Order order=applicationContext.orderService().create(room,guest, LocalDate.of(2020,04,19),LocalDate.of(2020,04,25));
+//        System.out.println(order);
+        System.out.println(applicationContext.orderDao().getAll());
 //        System.out.println(RoomDao.getInstance().getAll());
 //        System.out.println(OrderDao.getInstance().getAll());
 //
