@@ -65,7 +65,7 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
     @Override
     public T getByid(Integer id) {
         Connection connection=connector.getConnection();
-        String sql=String.format("SELECT * FROM %s WHERE id=?",getTableName());
+        String sql=String.format("SELECT * FROM %s WHERE id=? ",getTableName());
         try(PreparedStatement statement=connection.prepareStatement(sql)){
             statement.setInt(1,id);
             ResultSet resultSet=statement.executeQuery();
@@ -83,6 +83,8 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
 //        LOGGER.log(Level.WARNING,String.format(GET_BY_ID_ERROR_MESSAGE,id));
 //        throw new DaoException(String.format(GET_BY_ID_ERROR_MESSAGE,id));
     }
+
+
 
     @Override
     public List<T> getByIdList(Integer id) {

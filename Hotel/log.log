@@ -474,3 +474,95 @@ Mon Apr 19 13:36:51 MSK 2021 - [com.service.RoomService] - INFO - Adding of room
 null
 Mon Apr 19 13:36:51 MSK 2021 - [com.service.OrderService] - INFO - Creating of order
 null
+Fri Apr 23 13:00:21 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:34:54 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:34:54 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: No value specified for parameter 5
+Fri Apr 23 13:35:16 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:35:16 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:37:21 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:37:21 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:38:20 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:38:20 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:39:16 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:39:25 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:40:43 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:40:44 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:48:56 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:48:56 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:51:26 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:51:26 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:52:12 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:52:12 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 13:52:34 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:53:54 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 13:53:54 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLException: Incorrect string value: '\xAC\xED\x00\x05sr...' for column 'guests' at row 1
+Fri Apr 23 14:06:48 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 14:06:49 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLSyntaxErrorException: Unknown column 'guests' in 'field list'
+Fri Apr 23 14:07:51 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 14:26:19 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 14:28:10 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 14:29:19 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 14:30:03 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Fri Apr 23 14:31:09 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 12:22:06 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 12:35:40 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 13:15:41 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 13:21:41 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 13:22:43 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 13:23:04 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 13:41:32 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 13:42:26 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:05:32 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:05:33 MSK 2021 - [com.service.RoomService] - WARNING - Adding of room failed
+com.exceptions.DaoException: java.sql.SQLFeatureNotSupportedException
+Sat Apr 24 14:12:40 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:13:05 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:13:25 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:13:49 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:19:40 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null
+Sat Apr 24 14:22:42 MSK 2021 - [com.service.RoomService] - INFO - Adding of room 1 with capacity 3, price 30, stars 3
+null

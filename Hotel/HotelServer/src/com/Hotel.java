@@ -23,8 +23,8 @@ public class Hotel {
 //        System.out.println(maintenance1);
 //        System.out.println(applicationContext.maintenanceDao().getAll());
 
-//        Guest guest=applicationContext.guestService().addGuest("vasya",20);
-//        System.out.println(guest);
+        Guest guest=applicationContext.guestService().addGuest("vasya",20);
+        System.out.println(guest);
 //        Guest guest2=applicationContext.guestService().addGuest("andrey",23);
 //        System.out.println(guest2);
 //        System.out.println(applicationContext.guestDao().getByid(1));
@@ -32,10 +32,11 @@ public class Hotel {
 //        applicationContext.guestService().deleteGuest(3);
         System.out.println(applicationContext.guestDao().getAll());
 //
-//        Room room=applicationContext.roomService().addRoom(1,3,30,3, RoomStatus.OPEN,1);
-//        System.out.println(room);
+        Room room=applicationContext.roomService().addRoom(1,3,30,3, RoomStatus.OPEN,1);
+        System.out.println(room);
 //        applicationContext.roomService().changePrice(1,35);
-        System.out.println(applicationContext.roomDao().getAll());
+        System.out.println(applicationContext.roomDao().getByid(1));
+
 
 //        Order order=applicationContext.orderService().create(room,guest, LocalDate.of(2020,04,19),LocalDate.of(2020,04,25));
 //        System.out.println(order);

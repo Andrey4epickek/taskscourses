@@ -4,6 +4,7 @@ import com.model.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EntityMapper {
@@ -37,11 +38,17 @@ public class EntityMapper {
 
     private static Room createRoom(ResultSet resultSet) throws  SQLException{
         Room room=new Room();
+        Guest guest=new Guest();
+        guest.setId(resultSet.getInt("guests_id"));
         room.setId(resultSet.getInt("id"));
         room.setNumber(resultSet.getInt("number"));
         room.setCapacity(resultSet.getInt("capacity"));
         room.setPrice(resultSet.getInt("price"));
         room.setStars(resultSet.getInt("stars"));
+        room.setStatus(RoomStatus.valueOf(resultSet.getString("status")));
+        List<Guest>guests=new ArrayList<>();
+        guests.add(guest);
+        room.setGuests(guests);
         return room;
     }
 

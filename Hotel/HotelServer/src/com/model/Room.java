@@ -11,7 +11,7 @@ public class Room extends AEntity implements Serializable {
     private RoomStatus status;
     private Integer stars;
     private List<Guest> guests;
-    private List<Order> orders;
+
 
 
     public Room(Integer number, Integer capacity, Integer price, RoomStatus status, Integer stars, List<Guest> guests) {
@@ -44,13 +44,7 @@ public class Room extends AEntity implements Serializable {
         this.stars = stars;
     }
 
-    public List<Order> getOrders() {
-        return orders;
-    }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
 
     public RoomStatus getStatus() {
         return status;
