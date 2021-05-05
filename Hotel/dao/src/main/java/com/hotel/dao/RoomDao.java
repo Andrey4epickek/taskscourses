@@ -10,7 +10,7 @@ import java.util.List;
 
 public class RoomDao extends AbstractDao<Room> implements IRoomDao {
     private static final String INSERT_QUERY="INSERT INTO rooms (number,capacity,price,stars,status,guests_id) VALUES (?,?,?,?,?,?);";
-    private static final String UPDATE_QUERY="UPDATE rooms SET name=?,age=?";
+    private static final String UPDATE_QUERY="UPDATE rooms SET number=?,capacity=?,price=?,stars=?,status=?,guests_id=?";
     private static final String TABLE_NAME="rooms";
 
 //    public RoomDao() {

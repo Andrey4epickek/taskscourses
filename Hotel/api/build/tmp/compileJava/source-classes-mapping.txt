@@ -6,10 +6,10 @@ com/hotel/api/service/IOrderService.java
  com.hotel.api.service.IOrderService
 com/hotel/api/dao/IRoomDao.java
  com.hotel.api.dao.IRoomDao
-com/hotel/PropertiesHandler.java
- com.hotel.PropertiesHandler
-com/hotel/SerializationHandler.java
- com.hotel.SerializationHandler
+com/hotel/api/dao/IGuestDao.java
+ com.hotel.api.dao.IGuestDao
+com/hotel/api/dao/GenericDao.java
+ com.hotel.api.dao.GenericDao
 com/hotel/exceptions/DaoException.java
  com.hotel.exceptions.DaoException
 com/hotel/IDGenerator.java
@@ -22,7 +22,7 @@ com/hotel/api/dao/IOrderDao.java
  com.hotel.api.dao.IOrderDao
 com/hotel/exceptions/ServiceException.java
  com.hotel.exceptions.ServiceException
-com/hotel/api/dao/GenericDao.java
- com.hotel.api.dao.GenericDao
-com/hotel/api/dao/IGuestDao.java
- com.hotel.api.dao.IGuestDao
+com/hotel/PropertiesHandler.java
+ com.hotel.PropertiesHandler
+com/hotel/SerializationHandler.java
+ com.hotel.SerializationHandler

@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Target(value = ElementType.TYPE)
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface ConfigClass {
-    String configPath() default "HotelServer/resources";
+    String configPath() default "util/src/main/resources";
 }

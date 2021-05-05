@@ -2,8 +2,8 @@ com/hotel/configuration/Config.java
  com.hotel.configuration.Config
 com/hotel/Load/LoadConfig.java
  com.hotel.Load.LoadConfig
-com/hotel/injection/ApplicationContext.java
- com.hotel.injection.ApplicationContext
+com/hotel/configuration/annotation/ConfigClass.java
+ com.hotel.configuration.annotation.ConfigClass
 com/hotel/configuration/annotation/ConfigProperty.java
  com.hotel.configuration.annotation.ConfigProperty
 com/hotel/facade/HotelFacade.java
@@ -14,5 +14,5 @@ com/hotel/configuration/ConfigReader.java
  com.hotel.configuration.ConfigReader
 com/hotel/configuration/ConfigService.java
  com.hotel.configuration.ConfigService
-com/hotel/configuration/annotation/ConfigClass.java
- com.hotel.configuration.annotation.ConfigClass
+com/hotel/injection/ApplicationContext.java
+ com.hotel.injection.ApplicationContext

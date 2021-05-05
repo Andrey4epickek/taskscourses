@@ -2,14 +2,15 @@ package com.hotel;
 
 import com.hotel.exceptions.ServiceException;
 import com.hotel.model.AEntity;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class SerializationHandler {
-    private static final Logger LOGGER =Logger.getLogger(SerializationHandler.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(SerializationHandler.class.getName());
     private static final String PATH_TO_FILE= com.hotel.PropertiesHandler.getProperty("server.serialization.path_to_file")
             .orElseThrow(()->new ServiceException("Serialization file path not found"));
 
@@ -19,7 +20,7 @@ public class SerializationHandler {
         try(ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream(PATH_TO_FILE))){
             outputStream.writeObject(marshalingList);
         }catch (IOException e){
-            LOGGER.warning("Serialization to file failed " + e.getLocalizedMessage());
+            LOGGER.warn("Serialization to file failed " + e.getLocalizedMessage());
             throw new ServiceException(e);
         }
     }
@@ -33,7 +34,7 @@ public class SerializationHandler {
                 }
             }
         }catch (IOException|ClassNotFoundException e){
-            LOGGER.warning("Deserialization failed " +e.getLocalizedMessage());
+            LOGGER.warn("Deserialization failed " +e.getLocalizedMessage());
             throw new ServiceException(e);
         }
         return Collections.emptyList();

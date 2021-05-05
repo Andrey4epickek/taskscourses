@@ -1,16 +1,17 @@
 package com.hotel;
 
 import com.hotel.exceptions.ServiceException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 public class PropertiesHandler {
-    private static final Logger LOGGER =Logger.getLogger(PropertiesHandler.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(PropertiesHandler.class.getName());
     private static final String FAILED_READ_PROPERTIES_ERROR_MESSAGE="Failed to read properties";
     private static Properties properties;
     private static final String PROPERTIES_FILE_PATH="util/src/main/resources/application.properties";
@@ -30,7 +31,7 @@ public class PropertiesHandler {
             properties=new Properties();
             properties.load(inputStream);
         }catch (IOException e){
-            LOGGER.warning(FAILED_READ_PROPERTIES_ERROR_MESSAGE+e.getMessage());
+            LOGGER.warn(FAILED_READ_PROPERTIES_ERROR_MESSAGE+e.getMessage());
             throw new ServiceException(FAILED_READ_PROPERTIES_ERROR_MESSAGE,e);
         }
     }

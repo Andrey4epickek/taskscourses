@@ -1,14 +1,16 @@
 package com.hotel.dao.util;
 
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 public class Connector {
 
-    private static final Logger logger =Logger.getLogger(Connector.class.getName());
+    private static final Logger logger = LogManager.getLogger(Connector.class.getName());
     private static final String URL ="jdbc:mysql://127.0.0.1:3306/hotel?user="+"root"+"&password="+"root";
     private static final String NAME ="root";
     private static final String PASSWORD="root";
@@ -27,7 +29,7 @@ public class Connector {
             }
             return connection;
         }catch (SQLException e){
-            logger.warning(e.getMessage());
+            logger.warn(e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -46,7 +48,7 @@ public class Connector {
             connection= DriverManager.getConnection(URL,NAME,PASSWORD);
         }
         catch (SQLException | ClassNotFoundException e){
-            logger.warning(e.getMessage());
+            logger.warn(e.getMessage());
             throw new RuntimeException(e);
         }
     }

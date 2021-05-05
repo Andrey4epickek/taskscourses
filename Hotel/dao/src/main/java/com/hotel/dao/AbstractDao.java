@@ -5,17 +5,18 @@ import com.hotel.dao.util.EntityMapper;
 import com.hotel.exceptions.DaoException;
 import com.hotel.api.dao.GenericDao;
 import com.hotel.model.AEntity;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
 
     private static final String GET_BY_ID_ERROR_MESSAGE="could not find an entity by id: %d";
-    protected final Logger LOGGER=Logger.getLogger(this.getClass().getName());
+    protected final Logger LOGGER= LogManager.getLogger(this.getClass().getName());
     @Deprecated
     private List<T> repository=new ArrayList<>();
     private List<T> repository1=new ArrayList<>();
@@ -71,9 +72,9 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
             ResultSet resultSet=statement.executeQuery();
             resultSet.next();
             return (T) EntityMapper.parseResultSet(resultSet,getTableName());
-        }catch (SQLException e){
-            LOGGER.log(Level.WARNING,String.format(GET_BY_ID_ERROR_MESSAGE,id));
-            throw new DaoException(String.format(GET_BY_ID_ERROR_MESSAGE,id));
+        }catch ( SQLException e){
+            LOGGER.warn(String.format(GET_BY_ID_ERROR_MESSAGE,id),e);
+            throw new DaoException(String.format(GET_BY_ID_ERROR_MESSAGE,id),e);
         }
 //        for(T entity:repository){
 //            if(id.equals(entity.getId())){
@@ -98,7 +99,7 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
             repository1.add((T) EntityMapper.parseResultSet(resultSet,getTableName()));
             return new ArrayList<>(repository1);
         }catch (SQLException e){
-            LOGGER.log(Level.WARNING,String.format(GET_BY_ID_ERROR_MESSAGE,id));
+            LOGGER.warn(String.format(GET_BY_ID_ERROR_MESSAGE,id));
             throw new DaoException(String.format(GET_BY_ID_ERROR_MESSAGE,id));
         }
 //        repository1.removeAll(repository1);
@@ -134,7 +135,7 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T> {
             statement.setInt(1,Id);
             statement.executeUpdate();
         }catch (SQLException e){
-            LOGGER.log(Level.WARNING,String.format(GET_BY_ID_ERROR_MESSAGE,Id));
+            LOGGER.warn(String.format(GET_BY_ID_ERROR_MESSAGE,Id));
             throw new DaoException(String.format(GET_BY_ID_ERROR_MESSAGE,Id));
         }
 //        repository.remove(entity);

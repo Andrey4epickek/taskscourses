@@ -1,3 +1,7 @@
+com/hotel/dao/RoomDao.java
+ com.hotel.dao.RoomDao
+com/hotel/dao/util/EntityMapper.java
+ com.hotel.dao.util.EntityMapper
 com/hotel/dao/GuestDao.java
  com.hotel.dao.GuestDao
 com/hotel/dao/MaintenanceDao.java
@@ -6,9 +10,5 @@ com/hotel/dao/OrderDao.java
  com.hotel.dao.OrderDao
 com/hotel/dao/AbstractDao.java
  com.hotel.dao.AbstractDao
-com/hotel/dao/RoomDao.java
- com.hotel.dao.RoomDao
-com/hotel/dao/util/EntityMapper.java
- com.hotel.dao.util.EntityMapper
 com/hotel/dao/util/Connector.java
  com.hotel.dao.util.Connector

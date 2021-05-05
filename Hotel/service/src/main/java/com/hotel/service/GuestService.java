@@ -8,15 +8,16 @@ import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Guest;
 import com.hotel.IDGenerator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class GuestService implements IGuestService {
 
-    private static final Logger LOGGER=Logger.getLogger(CustomLogger.class.getName());
+    private static final Logger LOGGER= LogManager.getLogger(GuestService.class.getName());
+
     private IGuestDao guestDao;
 
     public GuestService(IGuestDao guestDao){
@@ -46,10 +47,10 @@ public class GuestService implements IGuestService {
     @Override
     public Guest getGuest(Integer guestId) {
         try {
-            LOGGER.log(Level.INFO,String.format("getting guest %d",guestId));
+            LOGGER.info(String.format("getting guest %d",guestId));
             return guestDao.getByid(guestId);
         }catch (DaoException e){
-            LOGGER.log(Level.WARNING,"Getting guest failed",e);
+            LOGGER.warn("Getting guest failed",e);
             throw new ServiceException("Getting guest failed",e);
         }
     }
