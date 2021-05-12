@@ -29,15 +29,15 @@ public class RoomService implements IRoomService {
 
     @Override
     public void changeStatus(RoomStatus status,Integer roomId) {
-        try {
-                LOGGER.info(String.format("changeStatus of room %d", roomId));
-                Room room = roomDao.getByid(roomId);
-                room.setStatus(status);
-            roomDao.update(room);
-        }catch (DaoException e){
-            LOGGER.warn("Change status failed",e);
-            throw new ServiceException("Change status failed",e);
-        }
+//        try {
+//                LOGGER.info(String.format("changeStatus of room %d", roomId));
+//                Room room = roomDao.getByid(roomId);
+//                room.setStatus(status);
+//            roomDao.update(room);
+//        }catch (DaoException e){
+//            LOGGER.warn("Change status failed",e);
+//            throw new ServiceException("Change status failed",e);
+//        }
     }
 
     @Override
@@ -97,10 +97,14 @@ public class RoomService implements IRoomService {
     }
 
     @Override
-    public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars, RoomStatus status,Integer guestId) {
+    public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars, RoomStatus status) {
         try {
             LOGGER.info(String.format("Adding of room %d with capacity %d, price %d, stars %d",number,capacity,price,stars));
-        Room room =new Room(number,capacity,price,status,stars, guestDao.getByIdList(guestId));
+        Room room =new Room();
+        room.setNumber(number);
+        room.setCapacity(capacity);
+        room.setPrice(price);
+        room.setStars(stars);
         room.setId(IDGenerator.generateRoomId());
         roomDao.save(room);
         return room;

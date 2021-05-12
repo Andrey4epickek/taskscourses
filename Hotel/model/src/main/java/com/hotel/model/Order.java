@@ -1,22 +1,30 @@
 package com.hotel.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import lombok.Data;
+
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 @Data
+@Entity
+@Table(name = "orders")
 public class Order extends AEntity implements Serializable {
-    private Integer id;
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "room_id")
     private Room room;
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "guest_id")
     private Guest guest;
+    @Column(name = "checkInDate")
     private LocalDate checkInDate;
+    @Column(name = "checkOutDate")
     private LocalDate checkOutDate;
     private Integer cost;
-    private List<Maintenance> maintenances=new ArrayList<>();
+    @OneToMany(mappedBy = "order",fetch = FetchType.LAZY)
+    private List<Maintenance> maintenances;
 
     public Order(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate, List<Maintenance> maintenances) {
         this.room = room;
@@ -29,8 +37,7 @@ public class Order extends AEntity implements Serializable {
     public Order() {
     }
 
-    public Order(Integer id, Room room, Guest guest) {
-        this.id = id;
+    public Order( Room room, Guest guest) {
         this.room = room;
         this.guest = guest;
     }

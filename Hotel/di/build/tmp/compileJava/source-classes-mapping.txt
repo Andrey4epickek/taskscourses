@@ -6,13 +6,13 @@ com/hotel/configuration/annotation/ConfigClass.java
  com.hotel.configuration.annotation.ConfigClass
 com/hotel/configuration/annotation/ConfigProperty.java
  com.hotel.configuration.annotation.ConfigProperty
-com/hotel/facade/HotelFacade.java
- com.hotel.facade.HotelFacade
+com/hotel/configuration/ConfigService.java
+ com.hotel.configuration.ConfigService
 com/hotel/configuration/ConfigController.java
  com.hotel.configuration.ConfigController
 com/hotel/configuration/ConfigReader.java
  com.hotel.configuration.ConfigReader
-com/hotel/configuration/ConfigService.java
- com.hotel.configuration.ConfigService
 com/hotel/injection/ApplicationContext.java
  com.hotel.injection.ApplicationContext
+com/hotel/facade/HotelFacade.java
+ com.hotel.facade.HotelFacade

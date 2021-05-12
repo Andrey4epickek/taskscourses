@@ -12,15 +12,19 @@ import com.hotel.dao.GuestDao;
 import com.hotel.dao.MaintenanceDao;
 import com.hotel.dao.OrderDao;
 import com.hotel.dao.RoomDao;
+import com.hotel.dao.util.EntityManagerUtil;
 import com.hotel.facade.HotelFacade;
 import com.hotel.service.GuestService;
 import com.hotel.service.MaintenanceService;
 import com.hotel.service.OrderService;
 import com.hotel.service.RoomService;
 
+import javax.persistence.EntityManager;
+
 public class ApplicationContext {
     private static ApplicationContext instance;
-
+    private static final EntityManagerUtil emu=new EntityManagerUtil();
+    EntityManager entityManager= emu.getEntityManager();
     public static ApplicationContext getInstance(){
         if(instance==null){
             instance=new ApplicationContext();
@@ -43,7 +47,7 @@ public class ApplicationContext {
 
     public IRoomDao roomDao(){
         if(roomDao==null){
-            roomDao=new RoomDao();
+            roomDao=  new RoomDao();
         }
         return roomDao;
     }
@@ -57,7 +61,7 @@ public class ApplicationContext {
 
     public IGuestDao guestDao(){
         if(guestDao==null){
-            guestDao=new GuestDao();
+            guestDao= (IGuestDao) new GuestDao(entityManager);
         }
         return guestDao;
     }
@@ -71,7 +75,7 @@ public class ApplicationContext {
 
     public IMaintenanceDao maintenanceDao(){
         if(maintenanceDao==null){
-            maintenanceDao=new MaintenanceDao();
+            maintenanceDao=  new MaintenanceDao();
         }
         return maintenanceDao;
     }
@@ -85,7 +89,7 @@ public class ApplicationContext {
 
     public IOrderDao orderDao(){
         if(orderDao==null){
-            orderDao=new OrderDao();
+            orderDao=  new OrderDao();
         }
         return orderDao;
     }

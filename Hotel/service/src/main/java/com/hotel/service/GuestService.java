@@ -8,6 +8,7 @@ import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Guest;
 import com.hotel.IDGenerator;
+import com.hotel.model.Room;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -37,8 +38,8 @@ public class GuestService implements IGuestService {
     }
 
     @Override
-        public Guest addGuest(String name, Integer age){
-            Guest guest=new Guest(name,age);
+        public Guest addGuest(String name, Integer age, Room room){
+            Guest guest=new Guest(name,age,room);
             guest.setId(IDGenerator.generateGuestId());
             guestDao.save(guest);
             return guest;

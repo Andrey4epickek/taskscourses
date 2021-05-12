@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IRoomService {
 
-    Room addRoom(Integer number, Integer capacity, Integer price,Integer stars, RoomStatus status,Integer guestId);
+    Room addRoom(Integer number, Integer capacity, Integer price,Integer stars, RoomStatus status);
     void changeStatus(RoomStatus status,Integer roomId);
     void changePrice(Integer roomId,Integer price);
     List<Room> getSortRoomByPrice();

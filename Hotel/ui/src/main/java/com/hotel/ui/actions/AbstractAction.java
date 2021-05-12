@@ -1,11 +1,13 @@
 package com.hotel.ui.actions;
 
 import com.hotel.config.CustomLogger;
+import com.hotel.dao.util.EntityManagerUtil;
 import com.hotel.facade.HotelFacade;
 import com.hotel.injection.ApplicationContext;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import javax.persistence.EntityManager;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 

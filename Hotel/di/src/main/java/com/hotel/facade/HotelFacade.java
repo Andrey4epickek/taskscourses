@@ -33,8 +33,8 @@ public class HotelFacade {
     /**
      *Guest
      */
-    public Guest addGuest(String name, Integer age){
-        Guest guest=applicationContext.guestService().addGuest(name, age);
+    public Guest addGuest(String name, Integer age,Room room){
+        Guest guest=applicationContext.guestService().addGuest(name, age,room);
         return guest;
     }
 
@@ -143,7 +143,7 @@ public class HotelFacade {
     }
 
     public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars,RoomStatus status,Integer guestId){
-        Room room=applicationContext.roomService().addRoom(number, capacity, price, stars,status,guestId);
+        Room room=applicationContext.roomService().addRoom(number, capacity, price, stars,status);
         return room;
     }
 
@@ -152,13 +152,13 @@ public class HotelFacade {
         return room;
     }
 
-    public void saveToFile(){
-        List<Guest> guests= applicationContext.guestDao().getAll();
-        List<Room> rooms=applicationContext.roomDao().getAll();
-        List<Order> orders=applicationContext.orderDao().getAll();
-        List<Maintenance> maintenances=applicationContext.maintenanceDao().getAll();
-        SerializationHandler.serialize(guests,rooms,orders,maintenances);
-    }
+//    public void saveToFile(){
+//        List<Guest> guests= applicationContext.guestDao().getAll();
+//        List<Room> rooms=applicationContext.roomDao().getAll();
+//        List<Order> orders=applicationContext.orderDao().getAll();
+//        List<Maintenance> maintenances=applicationContext.maintenanceDao().getAll();
+//        SerializationHandler.serialize(guests,rooms,orders,maintenances);
+//    }
 
 
 }
