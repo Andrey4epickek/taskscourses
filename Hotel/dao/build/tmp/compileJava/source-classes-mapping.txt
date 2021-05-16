@@ -1,10 +1,12 @@
 com/hotel/dao/GuestDao.java
  com.hotel.dao.GuestDao
-com/hotel/dao/MaintenanceDao.java
- com.hotel.dao.MaintenanceDao
-com/hotel/dao/OrderDao.java
- com.hotel.dao.OrderDao
-com/hotel/dao/AbstractDao.java
- com.hotel.dao.AbstractDao
 com/hotel/dao/RoomDao.java
  com.hotel.dao.RoomDao
+com/hotel/dao/AbstractDao.java
+ com.hotel.dao.AbstractDao
+com/hotel/dao/util/EntityManagerUtil.java
+ com.hotel.dao.util.EntityManagerUtil
+com/hotel/dao/OrderDao.java
+ com.hotel.dao.OrderDao
+com/hotel/dao/MaintenanceDao.java
+ com.hotel.dao.MaintenanceDao

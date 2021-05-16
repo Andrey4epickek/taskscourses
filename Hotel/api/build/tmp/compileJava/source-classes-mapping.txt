@@ -18,11 +18,11 @@ com/hotel/SerializationHandler.java
  com.hotel.SerializationHandler
 com/hotel/api/dao/IOrderDao.java
  com.hotel.api.dao.IOrderDao
-com/hotel/api/service/IMaintenanceService.java
- com.hotel.api.service.IMaintenanceService
 com/hotel/api/service/IRoomService.java
  com.hotel.api.service.IRoomService
-com/hotel/api/service/IGuestService.java
- com.hotel.api.service.IGuestService
 com/hotel/api/service/IOrderService.java
  com.hotel.api.service.IOrderService
+com/hotel/api/service/IGuestService.java
+ com.hotel.api.service.IGuestService
+com/hotel/api/service/IMaintenanceService.java
+ com.hotel.api.service.IMaintenanceService

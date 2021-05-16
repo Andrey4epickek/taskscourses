@@ -22,7 +22,7 @@ public class Guest extends AEntity implements Serializable {
     private Room room;
 
     public String toString() {
-        return "Guest [name=" + name + ", age="+age+"]";
+        return "Guest [id="+getId()+", name=" + name + ", age="+age+"]";
     }
 
     public Guest(String name, Integer age) {

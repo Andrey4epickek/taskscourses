@@ -12,7 +12,7 @@ import com.hotel.dao.GuestDao;
 import com.hotel.dao.MaintenanceDao;
 import com.hotel.dao.OrderDao;
 import com.hotel.dao.RoomDao;
-import com.hotel.config.EntityManagerUtil;
+import com.hotel.dao.util.EntityManagerUtil;
 import com.hotel.facade.HotelFacade;
 import com.hotel.service.GuestService;
 import com.hotel.service.MaintenanceService;

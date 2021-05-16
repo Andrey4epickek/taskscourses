@@ -1,7 +1,9 @@
 package com.hotel.model;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 import javax.persistence.*;
@@ -9,6 +11,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "maintenances")
 @Data
+@AllArgsConstructor
 public class Maintenance extends AEntity implements Serializable {
     @Column(name = "name")
     private String name;

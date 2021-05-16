@@ -56,8 +56,8 @@ public class HotelFacade {
      *Maintenance
      */
 
-    public Maintenance addService(String name, Integer price){
-        Maintenance maintenance= applicationContext.maintenanceService().addService(name, price);
+    public Maintenance addService(String name, Integer price,Order order){
+        Maintenance maintenance= applicationContext.maintenanceService().addService(name, price,order);
         return maintenance;
     }
 

@@ -4,5 +4,3 @@ com/hotel/config/ConsoleFormatter.java
  com.hotel.config.ConsoleFormatter
 com/hotel/config/FileFormatter.java
  com.hotel.config.FileFormatter
-com/hotel/config/EntityManagerUtil.java
- com.hotel.config.EntityManagerUtil

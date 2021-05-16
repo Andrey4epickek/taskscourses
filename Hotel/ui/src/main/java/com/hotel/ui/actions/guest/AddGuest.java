@@ -1,7 +1,7 @@
 package com.hotel.ui.actions.guest;
 
 import com.hotel.dao.RoomDao;
-import com.hotel.config.EntityManagerUtil;
+import com.hotel.dao.util.EntityManagerUtil;
 import com.hotel.model.Guest;
 import com.hotel.ui.actions.AbstractAction;
 import com.hotel.ui.actions.IAction;

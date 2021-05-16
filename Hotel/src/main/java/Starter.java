@@ -1,12 +1,8 @@
 
-import com.hotel.dao.GuestDao;
-import com.hotel.dao.RoomDao;
-import com.hotel.config.EntityManagerUtil;
+import com.hotel.dao.util.EntityManagerUtil;
 import com.hotel.injection.ApplicationContext;
-import com.hotel.model.*;
 import com.hotel.ui.menu.MenuController;
 
-import javax.persistence.EntityManager;
 import java.io.IOException;
 
 public class Starter {
@@ -18,23 +14,21 @@ public class Starter {
 //            ConfigController.getInstance().setConfig(LoadConfig.class);
 //            System.out.println(LoadConfig.getStatus());
 //            System.out.println(LoadConfig.getHistory());
-//            MenuController.getInstance().run();
-                EntityManager entityManager=emu.getEntityManager();
+              MenuController.getInstance().run();
+
+//                EntityManager entityManager=emu.getEntityManager();
 //                GuestDao guestDao=new GuestDao(entityManager);
-                RoomDao roomDao=new RoomDao(entityManager);
-                Room room=new Room();
-                room.setNumber(101);
-                room.setCapacity(3);
-                room.setPrice(45);
-                room.setStars(4);
-                emu.beginTransaction();
-                roomDao.save(room);
-                emu.commit();
+//                RoomDao roomDao=new RoomDao(entityManager);
+//                Room room=new Room();
+//                room.setNumber(101);
+//                room.setCapacity(3);
+//                room.setPrice(44);
+//                room.setStars(4);
+//                emu.beginTransaction();
+//                roomDao.save(room);
+//                emu.commit();
 //
 //
-
-
-
 //                Guest guest2=new Guest();
 //                guest2.setName("dfgdfg");
 //                guest2.setAge(15);
@@ -42,6 +36,7 @@ public class Starter {
 //                emu.beginTransaction();
 //                guestDao.save(guest2);
 //                emu.commit();
+
 //                MaintenanceDao maintenanceDao=new MaintenanceDao(entityManager);
 //                Order order=new Order();
 //                order.setCheckInDate(LocalDate.of(2021,05,12));

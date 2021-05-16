@@ -26,12 +26,11 @@ public class Order extends AEntity implements Serializable {
     @OneToMany(mappedBy = "order",fetch = FetchType.LAZY)
     private List<Maintenance> maintenances;
 
-    public Order(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate, List<Maintenance> maintenances) {
+    public Order(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
         this.room = room;
         this.guest = guest;
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
-        this.maintenances = maintenances;
     }
 
     public Order() {
@@ -41,6 +40,7 @@ public class Order extends AEntity implements Serializable {
         this.room = room;
         this.guest = guest;
     }
+
 
     public String toString() {
         return "Order [room=" + room + ", guest="+guest+", checkInDate="+checkInDate+", checkOutDate="+checkOutDate+", maintenances="+maintenances+"]";

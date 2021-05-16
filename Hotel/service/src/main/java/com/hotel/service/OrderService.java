@@ -5,7 +5,7 @@ import com.hotel.api.dao.IMaintenanceDao;
 import com.hotel.api.dao.IOrderDao;
 import com.hotel.api.dao.IRoomDao;
 import com.hotel.api.service.IOrderService;
-import com.hotel.config.CustomLogger;
+
 import com.hotel.comparators.GuestNameComparator;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
@@ -44,7 +44,7 @@ public class OrderService implements IOrderService {
     public Order create(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
         try {
             LOGGER.info(String.format("Creating of order"));
-        Order order=new Order(room,guest,checkInDate,checkOutDate, maintenanceDao.getAll());
+        Order order=new Order(room,guest,checkInDate,checkOutDate);
         orderDao.save(order);
         return order;
         }catch (DaoException e){
