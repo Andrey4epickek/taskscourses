@@ -1,17 +1,17 @@
 com/hotel/ui/menu/Menu.java
  com.hotel.ui.menu.Menu
-com/hotel/ui/menu/Builder.java
- com.hotel.ui.menu.Builder
+com/hotel/ui/menu/MenuBuilder.java
+ com.hotel.ui.menu.MenuBuilder
 com/hotel/ui/menu/Navigator.java
  com.hotel.ui.menu.Navigator
 com/hotel/ui/actions/IAction.java
  com.hotel.ui.actions.IAction
-com/hotel/ui/menu/MenuBuilderFactory.java
- com.hotel.ui.menu.MenuBuilderFactory
-com/hotel/ui/menu/MenuBuilder.java
- com.hotel.ui.menu.MenuBuilder
 com/hotel/ui/menu/MenuItem.java
  com.hotel.ui.menu.MenuItem
+com/hotel/ui/menu/MenuBuilderFactory.java
+ com.hotel.ui.menu.MenuBuilderFactory
+com/hotel/ui/menu/Builder.java
+ com.hotel.ui.menu.Builder
 com/hotel/ui/actions/room/GetSortRoomByPrice.java
  com.hotel.ui.actions.room.GetSortRoomByPrice
 com/hotel/ui/actions/order/GetSortedByName.java

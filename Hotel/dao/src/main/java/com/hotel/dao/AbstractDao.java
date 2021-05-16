@@ -1,6 +1,7 @@
 package com.hotel.dao;
 
 import com.hotel.api.dao.GenericDao;
+import com.hotel.config.EntityManagerUtil;
 import com.hotel.model.AEntity;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

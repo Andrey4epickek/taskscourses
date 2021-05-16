@@ -12,7 +12,7 @@ import com.hotel.dao.GuestDao;
 import com.hotel.dao.MaintenanceDao;
 import com.hotel.dao.OrderDao;
 import com.hotel.dao.RoomDao;
-import com.hotel.dao.util.EntityManagerUtil;
+import com.hotel.config.EntityManagerUtil;
 import com.hotel.facade.HotelFacade;
 import com.hotel.service.GuestService;
 import com.hotel.service.MaintenanceService;
@@ -47,7 +47,7 @@ public class ApplicationContext {
 
     public IRoomDao roomDao(){
         if(roomDao==null){
-            roomDao=  new RoomDao();
+            roomDao=  new RoomDao(entityManager);
         }
         return roomDao;
     }
@@ -61,7 +61,7 @@ public class ApplicationContext {
 
     public IGuestDao guestDao(){
         if(guestDao==null){
-            guestDao= (IGuestDao) new GuestDao(entityManager);
+            guestDao=  new GuestDao(entityManager);
         }
         return guestDao;
     }
@@ -75,7 +75,7 @@ public class ApplicationContext {
 
     public IMaintenanceDao maintenanceDao(){
         if(maintenanceDao==null){
-            maintenanceDao=  new MaintenanceDao();
+            maintenanceDao=  new MaintenanceDao(entityManager);
         }
         return maintenanceDao;
     }
@@ -89,7 +89,7 @@ public class ApplicationContext {
 
     public IOrderDao orderDao(){
         if(orderDao==null){
-            orderDao=  new OrderDao();
+            orderDao=  new OrderDao(entityManager);
         }
         return orderDao;
     }

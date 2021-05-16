@@ -20,9 +20,6 @@ public class AddRoom extends AbstractAction implements IAction {
             System.out.println("Ведите вместимость комнаты");
             String capacityString=reader.readLine();
             Integer capacity=Integer.parseInt(capacityString);
-            System.out.println("Введите id гостя,которого надо заселить в комнату");
-            String  guestIdString=reader.readLine();
-            Integer guestId=Integer.parseInt(guestIdString);
             System.out.println("Введите цену комнаты");
             String  priceString=reader.readLine();
             Integer price=Integer.parseInt(priceString);
@@ -30,7 +27,7 @@ public class AddRoom extends AbstractAction implements IAction {
             String  starsString=reader.readLine();
             Integer stars=Integer.parseInt(starsString);
             RoomStatus status=RoomStatus.OPEN;
-            Room room= hotelFacade.addRoom(number,capacity,price,stars,status,guestId);
+            Room room= hotelFacade.addRoom(number,capacity,price,stars,status);
             System.out.println(room);
         }catch (Exception e){
             LOGGER.warn(e.getLocalizedMessage(),e);

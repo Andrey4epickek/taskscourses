@@ -4,6 +4,7 @@ import com.hotel.api.dao.IGuestDao;
 import com.hotel.api.dao.IRoomDao;
 import com.hotel.api.service.IRoomService;
 import com.hotel.config.CustomLogger;
+import com.hotel.config.EntityManagerUtil;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Room;
@@ -19,6 +20,7 @@ import java.util.logging.Level;
 public class RoomService implements IRoomService {
 
     private static final Logger LOGGER= LogManager.getLogger(RoomService.class.getName());
+    private static final EntityManagerUtil emu=new EntityManagerUtil();
     private IRoomDao roomDao;
     private IGuestDao guestDao;
 
@@ -105,8 +107,9 @@ public class RoomService implements IRoomService {
         room.setCapacity(capacity);
         room.setPrice(price);
         room.setStars(stars);
-        room.setId(IDGenerator.generateRoomId());
-        roomDao.save(room);
+            emu.beginTransaction();
+            roomDao.save(room);
+            emu.commit();
         return room;
     }catch (DaoException e){
         LOGGER.warn("Adding of room failed",e);

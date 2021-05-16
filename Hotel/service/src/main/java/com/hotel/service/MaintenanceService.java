@@ -18,7 +18,6 @@ public class MaintenanceService implements IMaintenanceService {
     @Override
     public Maintenance addService(String name, Integer price) {
         Maintenance maintenance=new Maintenance(name,price);
-        maintenance.setId(IDGenerator.generateMaintenanceId());
         maintenanceDao.save(maintenance);
         return maintenance;
     }

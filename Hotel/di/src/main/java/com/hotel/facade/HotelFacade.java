@@ -142,7 +142,7 @@ public class HotelFacade {
         return applicationContext.roomService().getSortRoomByStars();
     }
 
-    public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars,RoomStatus status,Integer guestId){
+    public Room addRoom(Integer number, Integer capacity, Integer price,Integer stars,RoomStatus status){
         Room room=applicationContext.roomService().addRoom(number, capacity, price, stars,status);
         return room;
     }

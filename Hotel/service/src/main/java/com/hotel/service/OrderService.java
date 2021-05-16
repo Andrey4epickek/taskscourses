@@ -45,7 +45,6 @@ public class OrderService implements IOrderService {
         try {
             LOGGER.info(String.format("Creating of order"));
         Order order=new Order(room,guest,checkInDate,checkOutDate, maintenanceDao.getAll());
-        order.setId(IDGenerator.generateOrderId());
         orderDao.save(order);
         return order;
         }catch (DaoException e){

@@ -1,14 +1,12 @@
 package com.hotel.ui.actions.guest;
 
 import com.hotel.dao.RoomDao;
-import com.hotel.dao.util.EntityManagerUtil;
+import com.hotel.config.EntityManagerUtil;
 import com.hotel.model.Guest;
-import com.hotel.model.Room;
 import com.hotel.ui.actions.AbstractAction;
 import com.hotel.ui.actions.IAction;
 
 import javax.persistence.EntityManager;
-import java.util.logging.Level;
 
 public class AddGuest extends AbstractAction implements IAction {
     private static final EntityManagerUtil emu=new EntityManagerUtil();

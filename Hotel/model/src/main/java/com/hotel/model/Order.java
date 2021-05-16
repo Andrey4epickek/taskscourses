@@ -42,5 +42,8 @@ public class Order extends AEntity implements Serializable {
         this.guest = guest;
     }
 
+    public String toString() {
+        return "Order [room=" + room + ", guest="+guest+", checkInDate="+checkInDate+", checkOutDate="+checkOutDate+", maintenances="+maintenances+"]";
+    }
 
 }

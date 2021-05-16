@@ -26,4 +26,9 @@ public class Room extends AEntity implements Serializable {
     @OneToMany(mappedBy = "room",fetch = FetchType.LAZY)
     private List<Guest> guests;
 
+    public String toString() {
+        return "Room [number=" + number + ", capacity="+capacity+", price="+price+", stars="+stars+", guests="+guests+"]";
+    }
+
+
 }

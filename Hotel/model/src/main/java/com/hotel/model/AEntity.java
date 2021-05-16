@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Data
 @MappedSuperclass
+
 public abstract class AEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
