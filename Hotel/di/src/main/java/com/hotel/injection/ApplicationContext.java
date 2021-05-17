@@ -25,6 +25,7 @@ public class ApplicationContext {
     private static ApplicationContext instance;
     private static final EntityManagerUtil emu=new EntityManagerUtil();
     EntityManager entityManager= emu.getEntityManager();
+
     public static ApplicationContext getInstance(){
         if(instance==null){
             instance=new ApplicationContext();

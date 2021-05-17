@@ -59,7 +59,8 @@ public class GuestService implements IGuestService {
 
     @Override
     public void deleteGuest(Integer guestId) {
-       guestDao.delete(guestId);
+        Guest guest=guestDao.getByid(guestId);
+       guestDao.delete(guest);
     }
 
 }

@@ -1,9 +1,9 @@
 com/hotel/service/RoomService.java
  com.hotel.service.RoomService
-com/hotel/service/GuestService.java
- com.hotel.service.GuestService
 com/hotel/comparators/GuestNameComparator.java
  com.hotel.comparators.GuestNameComparator
+com/hotel/service/GuestService.java
+ com.hotel.service.GuestService
 com/hotel/comparators/OrderCheckOutDateComparator.java
  com.hotel.comparators.OrderCheckOutDateComparator
 com/hotel/service/MaintenanceService.java

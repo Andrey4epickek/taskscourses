@@ -6,7 +6,7 @@ com/hotel/model/Room.java
  com.hotel.model.Room
 com/hotel/model/Guest.java
  com.hotel.model.Guest
-com/hotel/model/Order.java
- com.hotel.model.Order
 com/hotel/model/Maintenance.java
  com.hotel.model.Maintenance
+com/hotel/model/Order.java
+ com.hotel.model.Order

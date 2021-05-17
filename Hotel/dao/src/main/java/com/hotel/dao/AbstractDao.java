@@ -5,7 +5,13 @@ import com.hotel.model.AEntity;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+import javax.transaction.Transactional;
 import java.util.List;
 
 
@@ -27,19 +33,25 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T>{
     }
 
     public List<T> getAll(){
-//        CriteriaBuilder builder=entityManager.getCriteriaBuilder();
-//        CriteriaQuery<T> query=builder.createQuery(getClazz());
-//        return entityManager.createQuery(query).getResultList();
-       return entityManager.createQuery("Select g from Guest g",getClazz()).getResultList();
+        CriteriaBuilder builder=entityManager.getCriteriaBuilder();
+        CriteriaQuery<T> query=builder.createQuery(getClazz());
+        Root<T>root=query.from(getClazz());
+        CriteriaQuery<T> all=query.select(root);
+
+        TypedQuery<T> allQuery=entityManager.createQuery(all);
+        return allQuery.getResultList();
     }
 
     public void   update(T entity){
+        entityManager.getTransaction().begin();
         entityManager.merge(entity);
+        entityManager.getTransaction().commit();
     }
 
-    public void delete(Integer Id){
-        T entity=getByid(Id);
+    public void delete(T entity){
+        entityManager.getTransaction().begin();
         entityManager.remove(entity);
+        entityManager.getTransaction().commit();
     }
 
 

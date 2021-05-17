@@ -20,15 +20,4 @@ public class EntityManagerUtil {
         this.entityManager=factory.createEntityManager();
     }
 
-    public void beginTransaction(){
-        entityManager.getTransaction().begin();
-    }
-
-    public void commit(){
-        entityManager.getTransaction().commit();
-    }
-
-    public void rollback(){
-        entityManager.getTransaction().rollback();
-    }
 }

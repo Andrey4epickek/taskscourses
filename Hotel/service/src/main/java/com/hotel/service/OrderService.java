@@ -57,9 +57,12 @@ public class OrderService implements IOrderService {
     public void evict(Integer guestId, Integer orderId,Integer roomId) {
         try {
             LOGGER.info(String.format("Eviction of a guest %d, order %d, room %d",guestId,orderId,roomId));
+
         Room room= roomDao.getByid(roomId);
         Guest guest= guestDao.getByid(guestId);
         room.getGuests().remove(guest);
+        guest.setRoom(null);
+        guestDao.update(guest);
         }catch (DaoException e){
             LOGGER.warn("Eviction failed",e);
             throw new ServiceException("Eviction failed",e);
@@ -73,6 +76,9 @@ public class OrderService implements IOrderService {
         Room room=roomDao.getByid(roomId);
         Guest guest=guestDao.getByid(guestId);
         room.getGuests().add(guest);
+        guest.setRoom(room);
+        roomDao.update(room);
+        guestDao.update(guest);
         }catch (DaoException e){
             LOGGER.warn("CheckIn failed",e);
             throw new ServiceException("CheckIn failed",e);

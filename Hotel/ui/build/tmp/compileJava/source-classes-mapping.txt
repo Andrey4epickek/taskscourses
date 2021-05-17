@@ -10,6 +10,8 @@ com/hotel/ui/menu/MenuItem.java
  com.hotel.ui.menu.MenuItem
 com/hotel/ui/menu/Builder.java
  com.hotel.ui.menu.Builder
+com/hotel/ui/menu/MenuBuilderFactory.java
+ com.hotel.ui.menu.MenuBuilderFactory
 com/hotel/ui/actions/room/GetSortRoomByPrice.java
  com.hotel.ui.actions.room.GetSortRoomByPrice
 com/hotel/ui/actions/order/GetSortedByName.java
@@ -18,8 +20,6 @@ com/hotel/ui/actions/room/GetSortRoomByCapacity.java
  com.hotel.ui.actions.room.GetSortRoomByCapacity
 com/hotel/ui/actions/room/ChangeStatus.java
  com.hotel.ui.actions.room.ChangeStatus
-com/hotel/ui/actions/order/AddService.java
- com.hotel.ui.actions.order.AddService
 com/hotel/ui/actions/order/CountCost.java
  com.hotel.ui.actions.order.CountCost
 com/hotel/ui/actions/order/CreateOrder.java
@@ -42,8 +42,8 @@ com/hotel/ui/actions/guest/GetAllGuests.java
  com.hotel.ui.actions.guest.GetAllGuests
 com/hotel/ui/actions/guest/AddGuest.java
  com.hotel.ui.actions.guest.AddGuest
-com/hotel/ui/menu/MenuController.java
- com.hotel.ui.menu.MenuController
+com/hotel/ui/actions/maintenance/AddMaintenance.java
+ com.hotel.ui.actions.maintenance.AddMaintenance
 com/hotel/ui/actions/room/AddRoom.java
  com.hotel.ui.actions.room.AddRoom
 com/hotel/ui/actions/maintenance/GetAllServices.java
@@ -62,7 +62,7 @@ com/hotel/ui/actions/order/GetServicesSortByPrice.java
  com.hotel.ui.actions.order.GetServicesSortByPrice
 com/hotel/ui/actions/order/GetFreeRoomByDate.java
  com.hotel.ui.actions.order.GetFreeRoomByDate
-com/hotel/ui/menu/MenuBuilderFactory.java
- com.hotel.ui.menu.MenuBuilderFactory
-com/hotel/ui/actions/maintenance/AddMaintenance.java
- com.hotel.ui.actions.maintenance.AddMaintenance
+com/hotel/ui/menu/MenuController.java
+ com.hotel.ui.menu.MenuController
+com/hotel/ui/actions/order/AddService.java
+ com.hotel.ui.actions.order.AddService

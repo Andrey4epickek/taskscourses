@@ -17,7 +17,7 @@ public class Guest extends AEntity implements Serializable {
     @Column(name = "age")
     private  Integer age;
 
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
     @JoinColumn(name = "room_id")
     private Room room;
 
@@ -25,8 +25,4 @@ public class Guest extends AEntity implements Serializable {
         return "Guest [id="+getId()+", name=" + name + ", age="+age+"]";
     }
 
-    public Guest(String name, Integer age) {
-        this.name = name;
-        this.age = age;
-    }
 }
