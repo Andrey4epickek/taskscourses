@@ -1,7 +1,8 @@
 package com.hotel.ui.menu;
 
-import com.hotel.injection.ApplicationContext;
 
+
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -10,13 +11,12 @@ public class MenuController {
     private static MenuController instance;
     private Builder builder;
     private Navigator navigator;
-    private ApplicationContext applicationContext;
+
 
     private MenuController() {
         builder=Builder.getInstance();
         builder.buildMenu();
         navigator=Navigator.getInstance();
-        applicationContext=new ApplicationContext();
     }
 
     public static MenuController getInstance() {
@@ -24,7 +24,7 @@ public class MenuController {
         return instance;
     }
 
-    public void run(){
+    public void run() throws IOException {
         Scanner scanner=new Scanner(System.in);
         navigator.setCurrentMenu(builder.getRootMenu());
         navigator.printMenu();

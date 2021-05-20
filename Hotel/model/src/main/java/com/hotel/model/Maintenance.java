@@ -17,7 +17,7 @@ public class Maintenance extends AEntity implements Serializable {
     private String name;
     @Column(name = "price")
     private Integer price;
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
     @JoinColumn(name = "order_id")
     private Order order;
 
@@ -29,7 +29,11 @@ public class Maintenance extends AEntity implements Serializable {
 
     public Maintenance(){}
 
+    @Override
     public String toString() {
-        return "Maintenance [name=" + name + ", price="+price+"]";
+        return "Maintenance{id=" +getId()+
+                ", name=" + name + '\'' +
+                ", price=" + price +
+                "}";
     }
 }

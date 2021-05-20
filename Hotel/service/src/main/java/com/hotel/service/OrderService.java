@@ -5,7 +5,6 @@ import com.hotel.api.dao.IMaintenanceDao;
 import com.hotel.api.dao.IOrderDao;
 import com.hotel.api.dao.IRoomDao;
 import com.hotel.api.service.IOrderService;
-
 import com.hotel.comparators.GuestNameComparator;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
@@ -13,33 +12,30 @@ import com.hotel.model.Guest;
 import com.hotel.model.Maintenance;
 import com.hotel.model.Order;
 import com.hotel.model.Room;
-import com.hotel.IDGenerator;
 import com.hotel.comparators.OrderCheckOutDateComparator;
+import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.stream.Collectors;
-
 import static java.lang.Math.toIntExact;
 
+@Service
+@RequiredArgsConstructor
+@Transactional
 public class OrderService implements IOrderService {
 
     private static final Logger LOGGER= LogManager.getLogger(OrderService.class.getName());
-    private IOrderDao orderDao;
-    private IMaintenanceDao maintenanceDao;
-    private IRoomDao roomDao;
-    private IGuestDao guestDao;
+    private final IOrderDao orderDao;
+    private final IMaintenanceDao maintenanceDao;
+    private final IRoomDao roomDao;
+    private final IGuestDao guestDao;
 
-    public OrderService(IOrderDao orderDao, IMaintenanceDao maintenanceDao,IRoomDao roomDao,IGuestDao guestDao){
-        this.orderDao=orderDao;
-        this.maintenanceDao=maintenanceDao;
-        this.roomDao=roomDao;
-        this.guestDao=guestDao;
-    }
     @Override
     public Order create(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
         try {

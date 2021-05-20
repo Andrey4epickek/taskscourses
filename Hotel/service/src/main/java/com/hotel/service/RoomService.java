@@ -1,29 +1,28 @@
 package com.hotel.service;
 
-import com.hotel.api.dao.IGuestDao;
 import com.hotel.api.dao.IRoomDao;
 import com.hotel.api.service.IRoomService;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Room;
 import com.hotel.model.RoomStatus;
+import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
-
+@Service
+@RequiredArgsConstructor
+@Transactional
 public class RoomService implements IRoomService {
 
     private static final Logger LOGGER= LogManager.getLogger(RoomService.class.getName());
 
-    private IRoomDao roomDao;
-    private IGuestDao guestDao;
+    private final IRoomDao roomDao;
 
-    public RoomService(IRoomDao roomDao,IGuestDao guestDao) {
-        this.roomDao=roomDao;
-        this.guestDao=guestDao;
-    }
 
     @Override
     public void changeStatus(RoomStatus status,Integer roomId) {

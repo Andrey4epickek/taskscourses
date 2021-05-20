@@ -1,5 +1,6 @@
 package com.hotel.ui.menu;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class Navigator {
@@ -29,7 +30,7 @@ public class Navigator {
         }
     }
 
-    public void navigate(int index){
+    public void navigate(int index) throws IOException {
         if(index<=currentMenu.getMenuItems().size()&&index>0){
             MenuItem item=currentMenu.getMenuItems().get(index-1);
             if(item.getNextMenu()!=null){

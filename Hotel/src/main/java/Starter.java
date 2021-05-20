@@ -1,13 +1,11 @@
 
-import com.hotel.dao.util.EntityManagerUtil;
-import com.hotel.injection.ApplicationContext;
+
 import com.hotel.ui.menu.MenuController;
 
 import java.io.IOException;
 
 public class Starter {
-    private static final ApplicationContext applicationContext=ApplicationContext.getInstance();
-    private static final EntityManagerUtil emu=new EntityManagerUtil();
+
     public static void main(String[] args) throws IOException {
 
 //            new CustomLogger();

@@ -23,12 +23,17 @@ public class Room extends AEntity implements Serializable {
 //    private RoomStatus status;
     @Column(name = "stars")
     private Integer stars;
-    @OneToMany(mappedBy = "room",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "room",fetch = FetchType.EAGER)
     private List<Guest> guests;
 
+    @Override
     public String toString() {
-        return "Room [number=" + number + ", capacity="+capacity+", price="+price+", stars="+stars+", guests="+guests+"]";
+        return "Room{id=" +getId()+
+                ", number=" + number +
+                ", capacity=" + capacity +
+                ", price=" + price +
+                ", stars=" + stars +
+                ", guests=" + guests +
+                "}";
     }
-
-
 }

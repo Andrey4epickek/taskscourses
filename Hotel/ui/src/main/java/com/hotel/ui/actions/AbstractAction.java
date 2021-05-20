@@ -1,7 +1,7 @@
 package com.hotel.ui.actions;
 
 import com.hotel.facade.HotelFacade;
-import com.hotel.injection.ApplicationContext;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -10,9 +10,8 @@ import java.io.InputStreamReader;
 
 public abstract class AbstractAction {
 
-private ApplicationContext applicationContext=ApplicationContext.getInstance();
 
-    protected HotelFacade hotelFacade=applicationContext.hotelFacade();
+    protected HotelFacade hotelFacade;
     protected BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
     protected Logger LOGGER= LogManager.getLogger(AbstractAction.class.getName());
 

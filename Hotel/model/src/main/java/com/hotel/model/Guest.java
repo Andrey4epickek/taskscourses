@@ -17,12 +17,15 @@ public class Guest extends AEntity implements Serializable {
     @Column(name = "age")
     private  Integer age;
 
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
     @JoinColumn(name = "room_id")
     private Room room;
 
+    @Override
     public String toString() {
-        return "Guest [id="+getId()+", name=" + name + ", age="+age+"]";
+        return "Guest{id=" +getId()+
+                ", name=" + name +
+                ", age=" + age +
+                "}";
     }
-
 }

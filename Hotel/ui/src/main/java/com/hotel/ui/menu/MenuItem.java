@@ -2,6 +2,8 @@ package com.hotel.ui.menu;
 
 import com.hotel.ui.actions.IAction;
 
+import java.io.IOException;
+
 public class MenuItem {
 
     private String title;
@@ -22,7 +24,7 @@ public class MenuItem {
         return action;
     }
 
-    public void doAction(){
+    public void doAction() throws IOException {
         action.execute();
     }
 

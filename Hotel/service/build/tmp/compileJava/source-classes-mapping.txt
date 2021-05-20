@@ -1,5 +1,5 @@
-com/hotel/service/RoomService.java
- com.hotel.service.RoomService
+com/hotel/facade/HotelFacade.java
+ com.hotel.facade.HotelFacade
 com/hotel/comparators/GuestNameComparator.java
  com.hotel.comparators.GuestNameComparator
 com/hotel/service/GuestService.java
@@ -8,5 +8,7 @@ com/hotel/comparators/OrderCheckOutDateComparator.java
  com.hotel.comparators.OrderCheckOutDateComparator
 com/hotel/service/MaintenanceService.java
  com.hotel.service.MaintenanceService
+com/hotel/service/RoomService.java
+ com.hotel.service.RoomService
 com/hotel/service/OrderService.java
  com.hotel.service.OrderService

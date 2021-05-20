@@ -8,22 +8,23 @@ import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Guest;
 
 import com.hotel.model.Room;
+import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
+@RequiredArgsConstructor
+@Transactional
 public class GuestService implements IGuestService {
 
     private static final Logger LOGGER= LogManager.getLogger(GuestService.class.getName());
 
-    private IGuestDao guestDao;
 
-    public GuestService(IGuestDao guestDao){
-        this.guestDao=guestDao;
-    }
-
+    private final IGuestDao guestDao;
 
     @Override
     public int getQuantityGuests() {

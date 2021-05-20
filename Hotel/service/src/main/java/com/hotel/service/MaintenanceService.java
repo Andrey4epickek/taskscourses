@@ -6,15 +6,17 @@ import com.hotel.api.service.IMaintenanceService;
 import com.hotel.model.Maintenance;
 import com.hotel.IDGenerator;
 import com.hotel.model.Order;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
+@Transactional
 public class MaintenanceService implements IMaintenanceService {
-    private IMaintenanceDao maintenanceDao;
-
-    public MaintenanceService(IMaintenanceDao maintenanceDao){
-        this.maintenanceDao=maintenanceDao;
-    }
+    private final IMaintenanceDao maintenanceDao;
 
     @Override
     public Maintenance addService(String name, Integer price, Order order) {

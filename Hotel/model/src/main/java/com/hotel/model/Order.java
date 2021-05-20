@@ -12,10 +12,10 @@ import java.util.List;
 @Entity
 @Table(name = "orders")
 public class Order extends AEntity implements Serializable {
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
     @JoinColumn(name = "room_id")
     private Room room;
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE)
     @JoinColumn(name = "guest_id")
     private Guest guest;
     @Column(name = "checkInDate")
@@ -23,7 +23,7 @@ public class Order extends AEntity implements Serializable {
     @Column(name = "checkOutDate")
     private LocalDate checkOutDate;
     private Integer cost;
-    @OneToMany(mappedBy = "order",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "order",fetch = FetchType.EAGER)
     private List<Maintenance> maintenances;
 
     public Order(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
@@ -42,8 +42,14 @@ public class Order extends AEntity implements Serializable {
     }
 
 
+    @Override
     public String toString() {
-        return "Order [room=" + room + ", guest="+guest+", checkInDate="+checkInDate+", checkOutDate="+checkOutDate+", maintenances="+maintenances+"]";
+        return "Order{id=" +getId()+
+                ", room=" + room +
+                ", guest=" + guest +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                ", maintenances=" + maintenances +
+                "}";
     }
-
 }
