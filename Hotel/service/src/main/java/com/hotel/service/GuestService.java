@@ -8,9 +8,11 @@ import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Guest;
 
 import com.hotel.model.Room;
+import com.hotel.model.dto.GuestDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -23,8 +25,9 @@ public class GuestService implements IGuestService {
 
     private static final Logger LOGGER= LogManager.getLogger(GuestService.class.getName());
 
-
     private final IGuestDao guestDao;
+    private final ModelMapper mapper;
+
 
     @Override
     public int getQuantityGuests() {
@@ -56,6 +59,12 @@ public class GuestService implements IGuestService {
             LOGGER.warn("Getting guest failed",e);
             throw new ServiceException("Getting guest failed",e);
         }
+    }
+
+    @Override
+    public GuestDto getById(Integer guestId) {
+        Guest guest=guestDao.getByid(guestId);
+        return mapper.map(guest,GuestDto.class);
     }
 
     @Override

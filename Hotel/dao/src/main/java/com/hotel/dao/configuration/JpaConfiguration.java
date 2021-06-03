@@ -18,7 +18,7 @@ import java.util.Properties;
 @PropertySource("classpath:application.properties")
 public class JpaConfiguration {
 
-    @Value("${database.driverClassName}")
+    @Value("com.mysql.jdbc.Drive")
     private String driverClassName;
     @Value("${database.url}")
     private String databaseUrl;
@@ -38,12 +38,13 @@ public class JpaConfiguration {
     private String hibernateTempUseJdbcMetadataDefaults;
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() throws ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Drive");
         return new DriverManagerDataSource(databaseUrl,username,password);
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManager(){
+    public LocalContainerEntityManagerFactoryBean entityManager() throws ClassNotFoundException {
         LocalContainerEntityManagerFactoryBean entityManager=new LocalContainerEntityManagerFactoryBean();
         entityManager.setDataSource(dataSource());
         entityManager.setPackagesToScan("com.hotel.model");

@@ -5,6 +5,7 @@ import com.hotel.api.service.IMaintenanceService;
 import com.hotel.api.service.IOrderService;
 import com.hotel.api.service.IRoomService;
 import com.hotel.model.*;
+import com.hotel.model.dto.RoomDto;
 
 
 import java.time.LocalDate;
@@ -115,7 +116,7 @@ public class HotelFacade {
         return orderService.getFreeRoomByFixedDate(date);
     }
 
-    public  Room getById(Integer roomId){return roomService.getById(roomId);}
+    public RoomDto getById(Integer roomId){return roomService.getById(roomId);}
 
     public void changeStatus(RoomStatus status, Integer roomId){
         roomService.changeStatus(status, roomId);

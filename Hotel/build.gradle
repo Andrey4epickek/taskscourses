@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'groovy'
     id 'application'
+    id 'war'
 }
 
 group 'org.example'

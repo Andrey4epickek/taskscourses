@@ -10,3 +10,11 @@ com/hotel/model/Maintenance.java
  com.hotel.model.Maintenance
 com/hotel/model/Order.java
  com.hotel.model.Order
+com/hotel/model/dto/GuestDto.java
+ com.hotel.model.dto.GuestDto
+com/hotel/model/dto/MaintenanceDto.java
+ com.hotel.model.dto.MaintenanceDto
+com/hotel/model/dto/OrderDto.java
+ com.hotel.model.dto.OrderDto
+com/hotel/model/dto/RoomDto.java
+ com.hotel.model.dto.RoomDto

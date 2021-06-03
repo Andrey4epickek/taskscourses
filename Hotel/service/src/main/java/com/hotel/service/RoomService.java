@@ -6,9 +6,11 @@ import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.hotel.model.Room;
 import com.hotel.model.RoomStatus;
+import com.hotel.model.dto.RoomDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -22,7 +24,7 @@ public class RoomService implements IRoomService {
     private static final Logger LOGGER= LogManager.getLogger(RoomService.class.getName());
 
     private final IRoomDao roomDao;
-
+    private final ModelMapper mapper;
 
     @Override
     public void changeStatus(RoomStatus status,Integer roomId) {
@@ -88,9 +90,9 @@ public class RoomService implements IRoomService {
     }
 
     @Override
-    public Room getById(Integer roomId) {
+    public RoomDto getById(Integer roomId) {
         Room room=roomDao.getByid(roomId);
-        return room;
+        return mapper.map(room,RoomDto.class);
     }
 
     @Override

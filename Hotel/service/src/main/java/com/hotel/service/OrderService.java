@@ -13,9 +13,11 @@ import com.hotel.model.Maintenance;
 import com.hotel.model.Order;
 import com.hotel.model.Room;
 import com.hotel.comparators.OrderCheckOutDateComparator;
+import com.hotel.model.dto.OrderDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -35,6 +37,7 @@ public class OrderService implements IOrderService {
     private final IMaintenanceDao maintenanceDao;
     private final IRoomDao roomDao;
     private final IGuestDao guestDao;
+    private final ModelMapper mapper;
 
     @Override
     public Order create(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
@@ -120,6 +123,12 @@ public class OrderService implements IOrderService {
             LOGGER.warn("Getting order failed",e);
             throw new ServiceException("Getting order failed",e);
         }
+    }
+
+    @Override
+    public OrderDto getById(Integer orderId) {
+        Order order=orderDao.getByid(orderId);
+        return mapper.map(order,OrderDto.class);
     }
 
     @Override

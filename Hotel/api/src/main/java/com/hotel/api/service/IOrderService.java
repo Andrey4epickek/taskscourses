@@ -4,6 +4,7 @@ import com.hotel.model.Guest;
 import com.hotel.model.Maintenance;
 import com.hotel.model.Order;
 import com.hotel.model.Room;
+import com.hotel.model.dto.OrderDto;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -15,6 +16,7 @@ public interface IOrderService {
     int countCost(Integer orderId);
     void addService( Integer maintenanceId,Integer orderId);
     Order getOrder(Integer orderId);
+    OrderDto getById(Integer orderId);
     List<Order> getSortedGuestsByName();
     List<Order> ordersSortedByCheckOutDate();
     List<Order> getAllOrderService();

@@ -2,6 +2,7 @@ package com.hotel.api.service;
 
 import com.hotel.model.Room;
 import com.hotel.model.RoomStatus;
+import com.hotel.model.dto.RoomDto;
 
 import java.util.List;
 
@@ -14,5 +15,5 @@ public interface IRoomService {
     List<Room> getSortRoomByCapacity();
     List<Room> getSortRoomByStars();
     Room getRoom(Integer orderId);
-    Room getById(Integer roomId);
+    RoomDto getById(Integer roomId);
 }

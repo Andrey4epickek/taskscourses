@@ -17,7 +17,7 @@ public class CreateOrder extends AbstractAction implements IAction {
             System.out.println("Введите Id комнаты");
             String roomIdString=reader.readLine();
             Integer roomId=Integer.parseInt(roomIdString);
-            Room room= hotelFacade.getById(roomId);
+//            Room room= hotelFacade.getById(roomId);
             System.out.println("Введите Id гостя");
             String guestIdString=reader.readLine();
             Integer guestId=Integer.parseInt(guestIdString);
@@ -28,8 +28,8 @@ public class CreateOrder extends AbstractAction implements IAction {
             System.out.println("Введите checkOutDate");
             String checkOutDateString=reader.readLine();
             LocalDate checkOutDate=LocalDate.parse(checkOutDateString);
-            Order order= hotelFacade.createOrder(room,guest,checkInDate,checkOutDate);
-            System.out.println(order);
+//            Order order= hotelFacade.createOrder(room,guest,checkInDate,checkOutDate);
+//            System.out.println(order);
         }catch (Exception e){
             LOGGER.warn(e.getLocalizedMessage(),e);
         }
