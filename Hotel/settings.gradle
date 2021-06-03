@@ -1,0 +1,11 @@
+rootProject.name = 'Hotel'
+include 'util'
+include 'model'
+include 'model'
+include 'util'
+include 'service'
+include 'dao'
+include 'api'
+include 'controller'
+include 'ui'
+
