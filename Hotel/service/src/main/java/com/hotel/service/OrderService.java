@@ -13,7 +13,9 @@ import com.hotel.model.Maintenance;
 import com.hotel.model.Order;
 import com.hotel.model.Room;
 import com.hotel.comparators.OrderCheckOutDateComparator;
+import com.hotel.model.dto.GuestDto;
 import com.hotel.model.dto.OrderDto;
+import com.hotel.model.dto.RoomDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -40,10 +42,12 @@ public class OrderService implements IOrderService {
     private final ModelMapper mapper;
 
     @Override
-    public Order create(Room room, Guest guest, LocalDate checkInDate, LocalDate checkOutDate) {
+    public Order create(RoomDto room, GuestDto guest, LocalDate checkInDate, LocalDate checkOutDate) {
         try {
             LOGGER.info(String.format("Creating of order"));
-            Order order=new Order(room,guest,checkInDate,checkOutDate);
+            Room room1=mapper.map(room,Room.class);
+            Guest guest1=mapper.map(guest,Guest.class);
+            Order order=new Order(room1,guest1,checkInDate,checkOutDate);
             orderDao.save(order);
             return order;
         }catch (DaoException e){

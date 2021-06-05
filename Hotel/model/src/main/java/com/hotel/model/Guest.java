@@ -28,4 +28,6 @@ public class Guest extends AEntity implements Serializable {
                 ", age=" + age +
                 "}";
     }
+
+
 }

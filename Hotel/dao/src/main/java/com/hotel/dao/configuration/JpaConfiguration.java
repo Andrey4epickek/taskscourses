@@ -12,13 +12,14 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.sql.DriverManager;
 import java.util.Properties;
 
 @Configuration
 @PropertySource("classpath:application.properties")
 public class JpaConfiguration {
 
-    @Value("com.mysql.jdbc.Drive")
+    @Value("${database.driverClassName}")
     private String driverClassName;
     @Value("${database.url}")
     private String databaseUrl;
@@ -28,7 +29,7 @@ public class JpaConfiguration {
     private String password;
     @Value("${hibernate.hbm2ddl.auto}")
     private String hibernateHbm2ddlAuto;
-    @Value("${hibernate.show_sql:false}")
+    @Value("${hibernate.show_sql:true}")
     private String showSql;
     @Value("${hibernate.dialect}")
     private String hibernateDialect;
@@ -38,13 +39,17 @@ public class JpaConfiguration {
     private String hibernateTempUseJdbcMetadataDefaults;
 
     @Bean
-    public DataSource dataSource() {
-//        Class.forName("com.mysql.jdbc.Drive");
-        return new DriverManagerDataSource(databaseUrl,username,password);
+    public DataSource dataSource()  {
+        DriverManagerDataSource dataSource=new DriverManagerDataSource();
+        dataSource.setDriverClassName(driverClassName);
+        dataSource.setUrl(databaseUrl);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        return dataSource;
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManager(){
+    public LocalContainerEntityManagerFactoryBean entityManager() {
         LocalContainerEntityManagerFactoryBean entityManager=new LocalContainerEntityManagerFactoryBean();
         entityManager.setDataSource(dataSource());
         entityManager.setPackagesToScan("com.hotel.model");

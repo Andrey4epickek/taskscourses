@@ -7,7 +7,7 @@ import com.hotel.model.dto.MaintenanceDto;
 import java.util.List;
 
 public interface IMaintenanceService {
-    Maintenance addService(String name, Integer price, Order order);
+    Maintenance addService(String name, Integer price, Integer orderId);
     List<Maintenance> getAllServices();
     MaintenanceDto getById(Integer maintenanceId);
 }

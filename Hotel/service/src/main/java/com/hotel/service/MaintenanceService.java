@@ -2,6 +2,7 @@ package com.hotel.service;
 
 
 import com.hotel.api.dao.IMaintenanceDao;
+import com.hotel.api.dao.IOrderDao;
 import com.hotel.api.service.IMaintenanceService;
 import com.hotel.model.Maintenance;
 import com.hotel.IDGenerator;
@@ -19,11 +20,12 @@ import java.util.List;
 @Transactional
 public class MaintenanceService implements IMaintenanceService {
     private final IMaintenanceDao maintenanceDao;
+    private final IOrderDao orderDao;
     private final ModelMapper mapper;
 
     @Override
-    public Maintenance addService(String name, Integer price, Order order) {
-        Maintenance maintenance=new Maintenance(name,price,order);
+    public Maintenance addService(String name, Integer price, Integer orderId) {
+        Maintenance maintenance=new Maintenance(name,price,orderDao.getByid(orderId));
         maintenanceDao.save(maintenance);
         return maintenance;
     }
