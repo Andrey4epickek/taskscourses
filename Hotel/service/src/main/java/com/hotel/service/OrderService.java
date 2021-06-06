@@ -25,6 +25,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import static java.lang.Math.toIntExact;
@@ -42,12 +43,16 @@ public class OrderService implements IOrderService {
     private final ModelMapper mapper;
 
     @Override
-    public Order create(RoomDto room, GuestDto guest, LocalDate checkInDate, LocalDate checkOutDate) {
+    public Order create(RoomDto roomDto, GuestDto guestDto, LocalDate checkInDate, LocalDate checkOutDate) {
         try {
             LOGGER.info(String.format("Creating of order"));
-            Room room1=mapper.map(room,Room.class);
-            Guest guest1=mapper.map(guest,Guest.class);
-            Order order=new Order(room1,guest1,checkInDate,checkOutDate);
+            Order order=new Order();
+            Room room=mapper.map(roomDto,Room.class);
+            order.setRoom(room);
+            Guest guest=mapper.map(guestDto,Guest.class);
+            order.setGuest(guest);
+            order.setCheckInDate(checkInDate);
+            order.setCheckOutDate(checkOutDate);
             orderDao.save(order);
             return order;
         }catch (DaoException e){
@@ -119,10 +124,11 @@ public class OrderService implements IOrderService {
     }
 
     @Override
-    public Order getOrder(Integer orderId) {
+    public OrderDto getById(Integer orderId) {
         try {
             LOGGER.info(String.format("getting order %d",orderId));
-            return orderDao.getByid(orderId);
+        Order order=orderDao.getByid(orderId);
+        return mapper.map(order,OrderDto.class);
         }catch (DaoException e){
             LOGGER.warn("Getting order failed",e);
             throw new ServiceException("Getting order failed",e);
@@ -130,14 +136,14 @@ public class OrderService implements IOrderService {
     }
 
     @Override
-    public OrderDto getById(Integer orderId) {
+    public void deleteOrder(Integer orderId) {
         Order order=orderDao.getByid(orderId);
-        return mapper.map(order,OrderDto.class);
+        orderDao.delete(order);
     }
 
     @Override
     public List<Order> getSortedGuestsByName() {
-        List<Order> orderList=getAllOrderService();
+        List<Order> orderList=orderDao.getAll();
         orderList.sort(new GuestNameComparator());
         return orderList.stream().collect(Collectors.toList());
     }
@@ -149,32 +155,22 @@ public class OrderService implements IOrderService {
         return orders.stream().collect(Collectors.toList());
     }
 
-
-
     @Override
-    public List<Order> getAllOrderService() {
-        return orderDao.getAll();
+    public List<OrderDto> getAll() {
+        List<Order> ordersList=orderDao.getAll();
+        ordersList.sort(((o1, o2) -> o1.getCost()- o2.getCost()));
+        List<OrderDto> orderDtos=new ArrayList<>();
+        for(Order order:ordersList){
+            OrderDto orderDto=mapper.map(order,OrderDto.class);
+            orderDtos.add(orderDto);
+        }
+        return orderDtos;
     }
-
-
 
     @Override
     public List<Room> getFreeRoomByFixedDate(LocalDate date) {
         List<Order>orders=orderDao.getAll();
         return orders.stream().filter(o1->o1.getCheckOutDate().isBefore(date)).map(Order::getRoom).collect(Collectors.toList());
-    }
-
-    @Override
-    public List<Maintenance> getGuestServicesSortByPrice(Integer orderId) {
-        try {
-            LOGGER.info(String.format("sorting guest services for order %d",orderId));
-            List<Maintenance> maintenances=getOrder(orderId).getMaintenances();
-            maintenances.sort((s1,s2)->s1.getPrice()-s2.getPrice());
-            return maintenances;
-        }catch (DaoException e){
-            LOGGER.warn("Sorting failed failed",e);
-            throw new ServiceException("Sorting failed",e);
-        }
     }
 
     @Override

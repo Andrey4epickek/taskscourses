@@ -22,7 +22,7 @@ allprojects {
 
         implementation group: 'org.springframework', name: 'spring-core', version: '5.3.5'
         implementation group: 'org.springframework', name: 'spring-context', version: '5.3.5'
-
+        implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.5.0'
     }
 }
 

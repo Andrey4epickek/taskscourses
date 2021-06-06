@@ -1,6 +1,7 @@
 package com.hotel.api.dao;
 
 import com.hotel.model.AEntity;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 

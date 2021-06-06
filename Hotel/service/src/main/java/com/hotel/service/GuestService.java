@@ -18,8 +18,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 @Service
 @RequiredArgsConstructor
@@ -29,20 +30,7 @@ public class GuestService implements IGuestService {
     private static final Logger LOGGER= LogManager.getLogger(GuestService.class.getName());
 
     private final IGuestDao guestDao;
-    private final IRoomDao roomDao;
     private final ModelMapper mapper;
-
-
-    @Override
-    public int getQuantityGuests() {
-        List<Guest> guests=getAllGuestService().stream().collect(Collectors.toList());
-        return guests.size();
-    }
-
-    @Override
-    public List<Guest> getAllGuestService() {
-        return guestDao.getAll();
-    }
 
     @Override
     public Guest addGuest(String name, Integer age, RoomDto roomDto){
@@ -62,10 +50,11 @@ public class GuestService implements IGuestService {
     }
 
     @Override
-    public Guest getGuest(Integer guestId) {
+    public GuestDto getById(Integer guestId) {
         try {
             LOGGER.info(String.format("getting guest %d",guestId));
-            return guestDao.getByid(guestId);
+        Guest guest=guestDao.getByid(guestId);
+        return mapper.map(guest,GuestDto.class);
         }catch (DaoException e){
             LOGGER.warn("Getting guest failed",e);
             throw new ServiceException("Getting guest failed",e);
@@ -73,9 +62,15 @@ public class GuestService implements IGuestService {
     }
 
     @Override
-    public GuestDto getById(Integer guestId) {
-        Guest guest=guestDao.getByid(guestId);
-        return mapper.map(guest,GuestDto.class);
+    public List<GuestDto> getAll() {
+        List<Guest> guestList=guestDao.getAll();
+        guestList.sort(((o1, o2) -> o1.getAge()- o2.getAge()));
+        List<GuestDto> guestDtos=new ArrayList<>();
+        for(Guest guest:guestList){
+            GuestDto guestDto=mapper.map(guest,GuestDto.class);
+            guestDtos.add(guestDto);
+        }
+        return guestDtos;
     }
 
     @Override

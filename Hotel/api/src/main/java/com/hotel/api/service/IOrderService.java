@@ -12,17 +12,16 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface IOrderService {
-    Order create(RoomDto room, GuestDto guest, LocalDate checkInDate, LocalDate checkOutDate);
+    Order create(RoomDto roomDto, GuestDto guestDto, LocalDate checkInDate, LocalDate checkOutDate);
     void evict(Integer guestId,Integer orderId,Integer roomId);
     void checkIn(Integer guestId, Integer roomId);
     int countCost(Integer orderId);
     void addService( Integer maintenanceId,Integer orderId);
-    Order getOrder(Integer orderId);
     OrderDto getById(Integer orderId);
+    void deleteOrder(Integer orderId);
     List<Order> getSortedGuestsByName();
     List<Order> ordersSortedByCheckOutDate();
-    List<Order> getAllOrderService();
+    List<OrderDto> getAll();
     List<Room> getFreeRoomByFixedDate(LocalDate date);
-    List<Maintenance> getGuestServicesSortByPrice(Integer orderId);
     List<Order> getThreeLastGuests(Integer roomId);
 }

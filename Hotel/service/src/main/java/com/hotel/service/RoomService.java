@@ -4,8 +4,10 @@ import com.hotel.api.dao.IRoomDao;
 import com.hotel.api.service.IRoomService;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
+import com.hotel.model.Guest;
 import com.hotel.model.Room;
 import com.hotel.model.RoomStatus;
+import com.hotel.model.dto.GuestDto;
 import com.hotel.model.dto.RoomDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
@@ -14,6 +16,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -78,11 +81,13 @@ public class RoomService implements IRoomService {
 
     }
 
+
     @Override
-    public Room getRoom(Integer roomId) {
+    public RoomDto getById(Integer roomId) {
         try {
             LOGGER.info(String.format("getting room %d",roomId));
-            return roomDao.getByid(roomId);
+            Room room=roomDao.getByid(roomId);
+            return mapper.map(room,RoomDto.class);
         }catch (DaoException e){
             LOGGER.warn("Getting room failed",e);
             throw new ServiceException("Getting room failed",e);
@@ -90,9 +95,21 @@ public class RoomService implements IRoomService {
     }
 
     @Override
-    public RoomDto getById(Integer roomId) {
+    public List<RoomDto> getAll() {
+        List<Room> roomsList=roomDao.getAll();
+        roomsList.sort(((o1, o2) -> o1.getNumber()- o2.getNumber()));
+        List<RoomDto> roomDtos=new ArrayList<>();
+        for(Room room:roomsList){
+            RoomDto roomDto=mapper.map(room,RoomDto.class);
+            roomDtos.add(roomDto);
+        }
+        return roomDtos;
+    }
+
+    @Override
+    public void deleteRoom(Integer roomId) {
         Room room=roomDao.getByid(roomId);
-        return mapper.map(room,RoomDto.class);
+        roomDao.delete(room);
     }
 
     @Override

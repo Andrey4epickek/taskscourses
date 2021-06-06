@@ -2,6 +2,7 @@ package com.hotel.dao;
 
 import com.hotel.api.dao.GenericDao;
 import com.hotel.model.AEntity;
+import org.springframework.data.domain.Pageable;
 
 
 import javax.persistence.*;
