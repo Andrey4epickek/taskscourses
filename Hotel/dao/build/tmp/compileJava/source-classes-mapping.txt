@@ -10,3 +10,5 @@ com/hotel/dao/AbstractDao.java
  com.hotel.dao.AbstractDao
 com/hotel/dao/RoomDao.java
  com.hotel.dao.RoomDao
+com/hotel/dao/UserDao.java
+ com.hotel.dao.UserDao

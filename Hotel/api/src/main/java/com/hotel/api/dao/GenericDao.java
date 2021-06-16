@@ -11,6 +11,7 @@ public interface GenericDao<T extends AEntity>{
     T getByid(Integer id);
     List<T> getAll();
     void delete(T entity);
+    T getByLogin(String login);
     //    void saveAll(List<T> entity);
     void update(T entity);
 }

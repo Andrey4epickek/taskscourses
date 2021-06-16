@@ -27,6 +27,10 @@ public abstract class AbstractDao<T extends AEntity> implements GenericDao<T>{
         return entityManager.find(getClazz(),id);
     }
 
+    public T getByLogin(String login){
+        return entityManager.find(getClazz(),login);
+    }
+
     public List<T> getAll(){
         CriteriaBuilder builder=entityManager.getCriteriaBuilder();
         CriteriaQuery<T> query=builder.createQuery(getClazz());
