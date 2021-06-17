@@ -18,7 +18,7 @@ com/hotel/model/dto/OrderDto.java
  com.hotel.model.dto.OrderDto
 com/hotel/model/AEntity.java
  com.hotel.model.AEntity
-com/hotel/model/User.java
- com.hotel.model.User
 com/hotel/model/dto/UserDto.java
  com.hotel.model.dto.UserDto
+com/hotel/model/User.java
+ com.hotel.model.User

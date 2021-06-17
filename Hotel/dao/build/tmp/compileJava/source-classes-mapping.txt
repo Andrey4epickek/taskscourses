@@ -1,7 +1,7 @@
 com/hotel/dao/configuration/JpaConfiguration.java
  com.hotel.dao.configuration.JpaConfiguration
-com/hotel/dao/GuestDao.java
- com.hotel.dao.GuestDao
+com/hotel/dao/UserDao.java
+ com.hotel.dao.UserDao
 com/hotel/dao/MaintenanceDao.java
  com.hotel.dao.MaintenanceDao
 com/hotel/dao/OrderDao.java
@@ -10,5 +10,5 @@ com/hotel/dao/AbstractDao.java
  com.hotel.dao.AbstractDao
 com/hotel/dao/RoomDao.java
  com.hotel.dao.RoomDao
-com/hotel/dao/UserDao.java
- com.hotel.dao.UserDao
+com/hotel/dao/GuestDao.java
+ com.hotel.dao.GuestDao

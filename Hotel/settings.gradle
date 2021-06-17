@@ -7,4 +7,6 @@ include 'service'
 include 'dao'
 include 'api'
 include 'controller'
+include 'test'
+include 'test'
 

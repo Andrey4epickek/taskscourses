@@ -10,7 +10,7 @@ import java.util.Collection;
 @Data
 @Entity
 @Table(name = "users")
-public class User extends AEntity implements UserDetails {
+public class User extends AEntity  implements UserDetails{
 
     @Column(name="login")
     private String login;

@@ -4,6 +4,7 @@ import com.hotel.api.dao.IGuestDao;
 import com.hotel.model.Guest;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
 
 
 @Repository
@@ -14,6 +15,5 @@ public class GuestDao extends AbstractDao<Guest> implements IGuestDao{
     protected Class<Guest> getClazz() {
         return Guest.class;
     }
-
 
 }
