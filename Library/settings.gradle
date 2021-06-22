@@ -1,0 +1,6 @@
+rootProject.name = 'Library'
+include 'model'
+include 'api'
+include 'dao'
+include 'service'
+
