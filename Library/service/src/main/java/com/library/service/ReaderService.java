@@ -12,8 +12,8 @@ import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -26,7 +26,7 @@ public class ReaderService implements IReaderService {
     private final ModelMapper mapper;
 
     @Override
-    public Reader addReader(String lastName, String firstName, String patronymic, Integer age, Date data) {
+    public Reader addReader(String lastName, String firstName, String patronymic, Integer age, LocalDate data) {
         try {
             LOGGER.info(String.format("Adding of reader %s,age %d",lastName,age));
             Reader reader=new Reader();

@@ -8,7 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -24,7 +24,7 @@ public class Worker extends AEntity{
     @Column(name = "Patronymic")
     private String patronymic;
     @Column(name = "Data")
-    private Date data;
+    private LocalDate data;
     @OneToOne(mappedBy = "worker")
     private Issuance issuance;
 

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -28,7 +29,7 @@ public class Issuance extends AEntity{
     @Column(name = "Time")
     private Integer time;
     @Column(name = "Data")
-    private Date data;
+    private LocalDate data;
 
     @Override
     public String toString() {

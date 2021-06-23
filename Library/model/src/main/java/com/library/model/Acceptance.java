@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -26,7 +27,7 @@ public class Acceptance extends AEntity{
     @Column(name = "Sum")
     private Integer sum;
     @Column(name = "Data")
-    private Date data;
+    private LocalDate data;
 
     @Override
     public String toString() {

@@ -19,8 +19,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -33,7 +33,7 @@ public class AcceptanceService implements IAcceptanceService {
     private final ModelMapper mapper;
 
     @Override
-    public Acceptance addAcceptance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, Date data) {
+    public Acceptance addAcceptance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, LocalDate data) {
         try {
             LOGGER.info(String.format("Adding of acceptance "));
             Acceptance acceptance=new Acceptance();

@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -21,12 +19,12 @@ public class Reader extends AEntity{
     private String lastName;
     @Column(name = "FirstName")
     private String firstName;
-    @Column(name = "Ptronymic")
+    @Column(name = "Patronymic")
     private String patronymic;
     @Column(name = "Age")
     private Integer age;
     @Column(name = "Data")
-    private Date data;
+    private LocalDate data;
     @OneToOne(mappedBy = "reader")
     private Issuance issuance;
 

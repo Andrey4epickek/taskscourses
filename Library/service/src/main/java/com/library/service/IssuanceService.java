@@ -14,6 +14,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.IntSummaryStatistics;
@@ -29,7 +30,7 @@ public class IssuanceService implements IIssuanceService {
     private final ModelMapper mapper;
 
     @Override
-    public Issuance addIssuance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, Integer time, Date data) {
+    public Issuance addIssuance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, Integer time, LocalDate data) {
         try {
             LOGGER.info(String.format("Adding of issuance "));
             Issuance issuance=new Issuance();

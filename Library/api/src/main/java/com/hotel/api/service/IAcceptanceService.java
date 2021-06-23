@@ -6,11 +6,12 @@ import com.library.model.dto.BookDto;
 import com.library.model.dto.ReaderDto;
 import com.library.model.dto.WorkerDto;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 public interface IAcceptanceService {
-    Acceptance addAcceptance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, Date data);
+    Acceptance addAcceptance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, LocalDate data);
     AcceptanceDto getById(Integer acceptanceId);
     List<AcceptanceDto> getAll();
     void deleteAcceptance(Integer acceptanceId);

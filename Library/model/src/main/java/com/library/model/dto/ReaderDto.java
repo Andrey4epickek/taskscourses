@@ -1,13 +1,16 @@
 package com.library.model.dto;
 
 import lombok.Data;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
 public class ReaderDto {
-    private String name;
-    private String firstName;
+    private Integer id;
     private String lastName;
+    private String firstname;
+    private String patronymic;
     private Integer age;
-    private Date data;
+    private LocalDate data;
 }

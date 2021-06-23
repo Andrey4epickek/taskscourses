@@ -13,6 +13,7 @@ import javax.transaction.Transactional;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -27,7 +28,7 @@ public class BookService implements IBookService {
     private final ModelMapper mapper;
 
     @Override
-    public Book addBook(String title, Date data, String author, Integer god, String genre, Integer sum) {
+    public Book addBook(String title, LocalDate data, String author, Integer god, String genre, Integer sum) {
         try {
             LOGGER.info(String.format("Adding of book %s,genre %s",title,genre));
             Book book=new Book();

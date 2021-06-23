@@ -13,6 +13,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -27,7 +28,7 @@ public class WorkerService implements IWorkerService {
     private final ModelMapper mapper;
 
     @Override
-    public Worker addWorker(String lastName, String firstName, String patronymic, Date data) {
+    public Worker addWorker(String lastName, String firstName, String patronymic, LocalDate data) {
         try {
             LOGGER.info(String.format("Adding of worker %s %s",lastName,firstName));
             Worker worker=new Worker();

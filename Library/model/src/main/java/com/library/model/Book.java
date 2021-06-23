@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -17,7 +18,7 @@ public class Book extends AEntity{
     @Column(name = "Title")
     private String title;
     @Column(name = "Data")
-    private Date data;
+    private LocalDate data;
     @Column(name = "Author")
     private String author;
     @Column(name = "God")
