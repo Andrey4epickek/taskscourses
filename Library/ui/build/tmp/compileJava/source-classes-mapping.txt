@@ -1,3 +1,21 @@
+com/library/ui/menu/MenuItem.java
+ com.library.ui.menu.MenuItem
+com/library/ui/menu/MenuBuilder.java
+ com.library.ui.menu.MenuBuilder
+com/library/ui/menu/Menu.java
+ com.library.ui.menu.Menu
+com/library/ui/actions/IAction.java
+ com.library.ui.actions.IAction
+com/library/ui/menu/MenuController.java
+ com.library.ui.menu.MenuController
+com/library/ui/menu/Navigator.java
+ com.library.ui.menu.Navigator
+com/library/ui/menu/Builder.java
+ com.library.ui.menu.Builder
+com/library/ui/menu/MenuBuilderFactory.java
+ com.library.ui.menu.MenuBuilderFactory
+com/library/ui/Starter.java
+ com.library.ui.Starter
 com/library/ui/actions/reader/AddReader.java
  com.library.ui.actions.reader.AddReader
 com/library/ui/actions/AbstractAction.java

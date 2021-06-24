@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ReaderDao extends AbstractDao<Reader> implements IReaderDao {
+
     @Override
     protected Class<Reader> getClazz() {
         return Reader.class;

@@ -4,7 +4,6 @@ import com.library.model.Reader;
 import com.library.model.dto.ReaderDto;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public interface IReaderService {

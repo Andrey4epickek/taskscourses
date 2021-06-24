@@ -6,24 +6,30 @@ import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.library.model.Reader;
 import com.library.model.dto.ReaderDto;
-import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 @Transactional
 public class ReaderService implements IReaderService {
 
     private static final Logger LOGGER= LogManager.getLogger(ReaderService.class.getName());
+
     private final IReaderDao readerDao;
     private final ModelMapper mapper;
+
+    public ReaderService(IReaderDao readerDao,ModelMapper mapper){
+        this.readerDao=readerDao;
+        this.mapper=mapper;
+    }
 
     @Override
     public Reader addReader(String lastName, String firstName, String patronymic, Integer age, LocalDate data) {
