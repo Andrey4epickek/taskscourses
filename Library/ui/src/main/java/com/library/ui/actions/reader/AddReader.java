@@ -1,11 +1,9 @@
 package com.library.ui.actions.reader;
 
-import com.hotel.api.service.IReaderService;
 import com.library.facade.LibraryFacade;
 import com.library.model.Reader;
 import com.library.ui.actions.AbstractAction;
 import com.library.ui.actions.IAction;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -3,7 +3,6 @@ package com.library.facade;
 import com.hotel.api.service.*;
 import com.library.model.*;
 import com.library.model.dto.*;
-import com.library.service.IssuanceService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +13,6 @@ import java.util.List;
 @Component
 public class LibraryFacade {
 
-
     private final IReaderService readerService;
     private final IWorkerService workerService;
     private final IBookService bookService;
@@ -22,7 +20,7 @@ public class LibraryFacade {
     private final IAcceptanceService acceptanceService;
     private final ModelMapper mapper;
 
-    public LibraryFacade(IReaderService readerService,IWorkerService workerService,IBookService bookService,IssuanceService issuanceService,IAcceptanceService acceptanceService,ModelMapper mapper){
+    public LibraryFacade(IReaderService readerService,IWorkerService workerService,IBookService bookService,IIssuanceService issuanceService,IAcceptanceService acceptanceService,ModelMapper mapper){
         this.readerService=readerService;
         this.workerService=workerService;
         this.bookService=bookService;

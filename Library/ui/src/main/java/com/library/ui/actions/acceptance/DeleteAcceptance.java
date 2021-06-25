@@ -27,7 +27,7 @@ public class DeleteAcceptance extends AbstractAction implements IAction {
             System.out.println("Введите id возврата, который надо удалить");
             String acceptanceIdString=bufferedReader.readLine();
             Integer acceptanceIdInteger=Integer.parseInt(acceptanceIdString);
-            libraryFacade.deleteIssuance(acceptanceIdInteger);
+            libraryFacade.deleteAcceptance(acceptanceIdInteger);
             System.out.println("Удален возврат с id = "+acceptanceIdInteger);
         }catch (Exception e){
             LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);

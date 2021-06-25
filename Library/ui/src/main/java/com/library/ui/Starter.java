@@ -1,10 +1,6 @@
 package com.library.ui;
 
-import com.library.facade.JavaConfig;
-import com.library.facade.LibraryFacade;
 import com.library.ui.menu.MenuController;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.time.LocalDate;
 

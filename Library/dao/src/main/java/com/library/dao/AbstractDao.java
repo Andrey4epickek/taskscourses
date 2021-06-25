@@ -2,6 +2,7 @@ package com.library.dao;
 
 import com.hotel.api.dao.GenericDao;
 import com.library.model.AEntity;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
