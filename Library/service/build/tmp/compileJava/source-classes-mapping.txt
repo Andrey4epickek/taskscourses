@@ -8,9 +8,9 @@ com/library/service/WorkerService.java
  com.library.service.WorkerService
 com/library/service/AcceptanceService.java
  com.library.service.AcceptanceService
-com/library/service/ReaderService.java
- com.library.service.ReaderService
 com/library/facade/JavaConfig.java
  com.library.facade.JavaConfig
+com/library/service/ReaderService.java
+ com.library.service.ReaderService
 com/library/facade/LibraryFacade.java
  com.library.facade.LibraryFacade

@@ -1,11 +1,11 @@
 package com.library.ui.menu;
 
+
 import java.util.Objects;
 
 public class Builder {
     private static Builder instance;
     private Menu rootMenu;
-
 
     private Builder(){
         buildMenu();

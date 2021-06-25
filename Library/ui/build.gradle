@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     compile project(':service')
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.3'
 }
