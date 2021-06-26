@@ -2,6 +2,7 @@ package com.library.ui.actions.book;
 
 import com.library.facade.LibraryFacade;
 import com.library.model.Book;
+import com.library.model.dto.BookDto;
 import com.library.ui.actions.AbstractAction;
 import com.library.ui.actions.IAction;
 import com.library.ui.actions.reader.AddReader;
@@ -28,8 +29,8 @@ public class GetBook extends AbstractAction implements IAction {
             System.out.println("Введите id книги для поиска");
             String bookIdString=bufferedReader.readLine();
             Integer bookIdInteger=Integer.parseInt(bookIdString);
-            Book book=libraryFacade.getBook(bookIdInteger);
-            System.out.println(book);
+            BookDto bookDto=libraryFacade.getBook(bookIdInteger);
+            System.out.println(bookDto);
         }catch (Exception e){
             LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }

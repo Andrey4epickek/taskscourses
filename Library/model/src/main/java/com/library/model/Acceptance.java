@@ -15,13 +15,13 @@ import java.util.Date;
 @Table(name = "Acceptance")
 public class Acceptance extends AEntity{
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "worker_id")
     private Worker worker;
-    @OneToOne(cascade =CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "reader_id")
     private Reader reader;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "book_id")
     private Book book;
     @Column(name = "Sum")

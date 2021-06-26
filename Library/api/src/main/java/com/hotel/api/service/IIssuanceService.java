@@ -13,6 +13,7 @@ import java.util.List;
 public interface IIssuanceService {
     Issuance addIssuance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum,Integer time, LocalDate data);
     IssuanceDto getById(Integer issuanceId);
+    Issuance getByIdUi(Integer issuanceId);
     List<IssuanceDto> getAll();
     void deleteIssuance(Integer issuanceId);
 }

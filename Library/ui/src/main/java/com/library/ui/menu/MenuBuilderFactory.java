@@ -36,7 +36,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Issuance actions",null,issuanceMenu(new Menu(),rootMenu)))
                 .addItem(new MenuItem("Acceptance actions",null,acceptanceMenu(new Menu(),rootMenu)))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
-                .build("Hotel Application menu (0-Exit)");
+                .build("Library Application menu (0-Exit)");
 
     }
 
@@ -47,7 +47,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get all readers",context.getBean(GetAllReaders.class),rootMenu))
                 .addItem(new MenuItem("Delete reader",context.getBean(DeleteReader.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
-                .build("Hotel Application menu (0-Exit)");
+                .build("Library Application menu (0-Exit)");
     }
 
     public Menu workerMenu(Menu rootMenu,Menu previousMenu){
@@ -57,7 +57,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get all workers",context.getBean(GetAllWorkers.class),rootMenu))
                 .addItem(new MenuItem("Delete worker",context.getBean(DeleteWorker.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
-                .build("Hotel Application menu (0-Exit)");
+                .build("Library Application menu (0-Exit)");
     }
 
     public Menu bookMenu(Menu rootMenu,Menu previousMenu){
@@ -67,7 +67,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get all books",context.getBean(GetAllBooks.class),rootMenu))
                 .addItem(new MenuItem("Delete book",context.getBean(DeleteBook.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
-                .build("Hotel Application menu (0-Exit)");
+                .build("Library Application menu (0-Exit)");
     }
 
     public Menu issuanceMenu(Menu rootMenu,Menu previousMenu){
@@ -77,7 +77,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get all issuance",context.getBean(GetAllIssuance.class),rootMenu))
                 .addItem(new MenuItem("Delete issuance",context.getBean(DeleteIssuance.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
-                .build("Hotel Application menu (0-Exit)");
+                .build("Library Application menu (0-Exit)");
     }
 
     public Menu acceptanceMenu(Menu rootMenu,Menu previousMenu){
@@ -87,7 +87,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get all acceptance",context.getBean(GetAllAcceptance.class),rootMenu))
                 .addItem(new MenuItem("Delete acceptance",context.getBean(DeleteAcceptance.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
-                .build("Hotel Application menu (0-Exit)");
+                .build("Library Application menu (0-Exit)");
     }
 
 }

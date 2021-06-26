@@ -2,18 +2,18 @@ com/library/model/dto/ReaderDto.java
  com.library.model.dto.ReaderDto
 com/library/model/dto/BookDto.java
  com.library.model.dto.BookDto
-com/library/model/Book.java
- com.library.model.Book
+com/library/model/dto/WorkerDto.java
+ com.library.model.dto.WorkerDto
 com/library/model/dto/IssuanceDto.java
  com.library.model.dto.IssuanceDto
+com/library/model/dto/AcceptanceDto.java
+ com.library.model.dto.AcceptanceDto
+com/library/model/Book.java
+ com.library.model.Book
 com/library/model/Worker.java
  com.library.model.Worker
 com/library/model/Issuance.java
  com.library.model.Issuance
-com/library/model/dto/WorkerDto.java
- com.library.model.dto.WorkerDto
-com/library/model/dto/AcceptanceDto.java
- com.library.model.dto.AcceptanceDto
 com/library/model/Acceptance.java
  com.library.model.Acceptance
 com/library/model/AEntity.java

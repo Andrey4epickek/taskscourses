@@ -66,6 +66,18 @@ public class AcceptanceService implements IAcceptanceService {
     }
 
     @Override
+    public Acceptance getByIdUi(Integer acceptanceId) {
+        try {
+            LOGGER.info(String.format("Getting of acceptance %d",acceptanceId));
+            Acceptance acceptance=acceptanceDao.getById(acceptanceId);
+            return acceptance;
+        }catch (DaoException e){
+            LOGGER.warn("Getting acceptance failed",e);
+            throw new ServiceException("Getting acceptance failed",e);
+        }
+    }
+
+    @Override
     public List<AcceptanceDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all acceptances"));

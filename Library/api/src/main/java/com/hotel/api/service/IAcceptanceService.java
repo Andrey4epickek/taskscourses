@@ -13,6 +13,7 @@ import java.util.List;
 public interface IAcceptanceService {
     Acceptance addAcceptance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, LocalDate data);
     AcceptanceDto getById(Integer acceptanceId);
+    Acceptance getByIdUi(Integer acceptanceId);
     List<AcceptanceDto> getAll();
     void deleteAcceptance(Integer acceptanceId);
 }

@@ -41,9 +41,9 @@ public class LibraryFacade {
         readerService.deleteReader(readerId);
     }
 
-    public Reader getReader(Integer readerId){
+    public ReaderDto getReader(Integer readerId){
         ReaderDto readerDto=readerService.getById(readerId);
-        return mapper.map(readerDto,Reader.class);
+        return readerDto;
     }
 
     public List<Reader> getAllReaders(){
@@ -68,9 +68,9 @@ public class LibraryFacade {
         workerService.deleteWorker(workerId);
     }
 
-    public Worker getWorker(Integer workerId){
+    public WorkerDto getWorker(Integer workerId){
         WorkerDto workerDto=workerService.getById(workerId);
-        return mapper.map(workerDto,Worker.class);
+        return workerDto;
     }
 
     public List<Worker> getAllWorkers(){
@@ -95,9 +95,9 @@ public class LibraryFacade {
         bookService.deleteBook(bookId);
     }
 
-    public Book getBook(Integer bookId){
+    public BookDto getBook(Integer bookId){
         BookDto bookDto=bookService.getById(bookId);
-        return mapper.map(bookDto,Book.class);
+        return bookDto;
     }
 
     public List<Book> getAllBooks(){
@@ -123,8 +123,8 @@ public class LibraryFacade {
     }
 
     public Issuance getIssuance(Integer issuanceId){
-        IssuanceDto issuanceDto=issuanceService.getById(issuanceId);
-        return mapper.map(issuanceDto,Issuance.class);
+        Issuance issuance=issuanceService.getByIdUi(issuanceId);
+        return issuance;
     }
 
     public List<Issuance> getAllIssuance(){
@@ -150,8 +150,8 @@ public class LibraryFacade {
     }
 
     public Acceptance getAcceptance(Integer acceptanceId){
-        AcceptanceDto acceptanceDto=acceptanceService.getById(acceptanceId);
-        return mapper.map(acceptanceDto,Acceptance.class);
+        Acceptance acceptance=acceptanceService.getByIdUi(acceptanceId);
+        return acceptance;
     }
 
     public List<Acceptance> getAllAcceptance(){

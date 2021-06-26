@@ -29,6 +29,8 @@ public class Book extends AEntity{
     private Integer sum;
     @OneToOne(mappedBy = "book")
     private Issuance issuance;
+    @OneToOne(mappedBy = "book")
+    private Acceptance acceptance;
 
     @Override
     public String toString() {

@@ -27,10 +27,12 @@ public class Worker extends AEntity{
     private LocalDate data;
     @OneToOne(mappedBy = "worker")
     private Issuance issuance;
+    @OneToOne(mappedBy = "worker")
+    private Acceptance acceptance;
 
     @Override
     public String toString() {
-        return "Reader{id=" +getId()+
+        return "Worker{id=" +getId()+
                 ", lastName=" + lastName +
                 ", firstname=" + firstName +
                 ", patronymic=" + patronymic +

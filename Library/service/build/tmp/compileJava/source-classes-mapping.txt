@@ -2,13 +2,13 @@ com/library/service/ServiceConfig.java
  com.library.service.ServiceConfig
 com/library/service/BookService.java
  com.library.service.BookService
-com/library/service/IssuanceService.java
- com.library.service.IssuanceService
 com/library/service/WorkerService.java
  com.library.service.WorkerService
-com/library/service/AcceptanceService.java
- com.library.service.AcceptanceService
 com/library/service/ReaderService.java
  com.library.service.ReaderService
+com/library/service/IssuanceService.java
+ com.library.service.IssuanceService
 com/library/facade/LibraryFacade.java
  com.library.facade.LibraryFacade
+com/library/service/AcceptanceService.java
+ com.library.service.AcceptanceService

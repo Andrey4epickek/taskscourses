@@ -5,4 +5,5 @@ include 'dao'
 include 'service'
 include 'controller'
 include 'ui'
+include 'test'
 

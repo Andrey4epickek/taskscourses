@@ -3,6 +3,7 @@ package com.library.ui.actions.acceptance;
 import com.library.facade.LibraryFacade;
 import com.library.model.Acceptance;
 import com.library.model.Issuance;
+import com.library.model.dto.AcceptanceDto;
 import com.library.ui.actions.AbstractAction;
 import com.library.ui.actions.IAction;
 import com.library.ui.actions.reader.AddReader;

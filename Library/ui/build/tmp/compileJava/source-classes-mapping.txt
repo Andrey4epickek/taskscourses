@@ -12,6 +12,10 @@ com/library/ui/actions/AbstractAction.java
  com.library.ui.actions.AbstractAction
 com/library/ui/menu/Navigator.java
  com.library.ui.menu.Navigator
+com/library/ui/Starter.java
+ com.library.ui.Starter
+com/library/ui/menu/Builder.java
+ com.library.ui.menu.Builder
 com/library/ui/actions/worker/GetWorker.java
  com.library.ui.actions.worker.GetWorker
 com/library/ui/actions/acceptance/GetAcceptance.java
@@ -22,12 +26,10 @@ com/library/ui/actions/reader/GetReader.java
  com.library.ui.actions.reader.GetReader
 com/library/ui/actions/worker/AddWorker.java
  com.library.ui.actions.worker.AddWorker
-com/library/ui/Starter.java
- com.library.ui.Starter
 com/library/ui/actions/reader/AddReader.java
  com.library.ui.actions.reader.AddReader
-com/library/ui/actions/acceptance/AddAcceptance.java
- com.library.ui.actions.acceptance.AddAcceptance
+com/library/ui/menu/MenuBuilderFactory.java
+ com.library.ui.menu.MenuBuilderFactory
 com/library/ui/actions/worker/DeleteWorker.java
  com.library.ui.actions.worker.DeleteWorker
 com/library/ui/actions/acceptance/GetAllAcceptance.java
@@ -52,9 +54,7 @@ com/library/ui/actions/reader/DeleteReader.java
  com.library.ui.actions.reader.DeleteReader
 com/library/ui/actions/issuance/GetIssuance.java
  com.library.ui.actions.issuance.GetIssuance
+com/library/ui/actions/acceptance/AddAcceptance.java
+ com.library.ui.actions.acceptance.AddAcceptance
 com/library/ui/actions/book/GetBook.java
  com.library.ui.actions.book.GetBook
-com/library/ui/menu/Builder.java
- com.library.ui.menu.Builder
-com/library/ui/menu/MenuBuilderFactory.java
- com.library.ui.menu.MenuBuilderFactory

@@ -2,6 +2,7 @@ package com.library.ui.actions.reader;
 
 import com.library.facade.LibraryFacade;
 import com.library.model.Reader;
+import com.library.model.dto.ReaderDto;
 import com.library.ui.actions.AbstractAction;
 import com.library.ui.actions.IAction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class GetReader extends AbstractAction implements IAction {
             System.out.println("Введите id читателя для поиска");
             String readerIdString=bufferedReader.readLine();
             Integer readerIdInteger=Integer.parseInt(readerIdString);
-            Reader reader=libraryFacade.getReader(readerIdInteger);
-            System.out.println(reader);
+            ReaderDto readerDto=libraryFacade.getReader(readerIdInteger);
+            System.out.println(readerDto);
         }catch (Exception e){
             LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }

@@ -27,6 +27,8 @@ public class Reader extends AEntity{
     private LocalDate data;
     @OneToOne(mappedBy = "reader")
     private Issuance issuance;
+    @OneToOne(mappedBy = "book")
+    private Acceptance acceptance;
 
     @Override
     public String toString() {
