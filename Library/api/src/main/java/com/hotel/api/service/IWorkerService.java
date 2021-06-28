@@ -10,6 +10,7 @@ import java.util.List;
 public interface IWorkerService {
     Worker addWorker(String lastName,String firstName,String patronymic, LocalDate data);
     WorkerDto getById(Integer workerId);
+    void updateWorker(Integer workerId,Worker worker);
     List<WorkerDto> getAll();
     void deleteWorker(Integer workerId);
 }

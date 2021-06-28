@@ -1,37 +1,28 @@
 package com.library.test;
 
-import com.hotel.api.dao.IReaderDao;
+import com.hotel.api.service.IReaderService;
 import com.library.dao.ReaderDao;
-import com.library.dao.configuration.JpaConfiguration;
 import com.library.model.Reader;
+import com.library.service.ReaderService;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
+
 import static org.junit.Assert.*;
 
-import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(
-        classes = {JpaConfiguration.class},
-        loader = AnnotationConfigContextLoader.class)
-@Transactional
 public class ReaderDaoTest {
 
-    @Resource
-    private IReaderDao readerDao;
+    ApplicationContext context=new ClassPathXmlApplicationContext("appContext.xml");
+    ReaderDao readerDao=context.getBean(ReaderDao.class);
 
     @Test
     public void testSave(){
-        Reader reader=new Reader("dgd","dfg","dfg",20,null,null);
+
+        Reader reader=new Reader("dfg","sfgd","dgdfg",20,null,null,null);
         readerDao.save(reader);
 
-        Reader reader1= readerDao.getById(4);
+        Reader reader1= readerDao.getById(6);
         assertEquals("20",reader1.getAge());
     }
 }

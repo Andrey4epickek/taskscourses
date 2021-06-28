@@ -4,6 +4,7 @@ import com.hotel.api.dao.IWorkerDao;
 import com.hotel.api.service.IWorkerService;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
+import com.library.model.Reader;
 import com.library.model.Worker;
 import com.library.model.dto.WorkerDto;
 import lombok.RequiredArgsConstructor;
@@ -53,6 +54,22 @@ public class WorkerService implements IWorkerService {
         } catch (DaoException e) {
             LOGGER.warn("Getting of worker failed",e);
             throw new ServiceException("Getting of worker failed",e);
+        }
+    }
+
+    @Override
+    public void updateWorker(Integer workerId, Worker worker) {
+        try {
+            LOGGER.info(String.format("Updating of worker %d",workerId));
+            Worker workerGet=workerDao.getById(workerId);
+            workerGet.setLastName(worker.getLastName());
+            workerGet.setFirstName(worker.getFirstName());
+            workerGet.setPatronymic(worker.getPatronymic());
+            workerGet.setData(worker.getData());
+            workerDao.update(workerGet);
+        } catch (DaoException e) {
+            LOGGER.warn("Updating of worker failed",e);
+            throw new ServiceException("Updating of worker failed",e);
         }
     }
 

@@ -59,6 +59,23 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
+    public void updateReader(Integer readerId, Reader reader) {
+        try {
+            LOGGER.info(String.format("Updating of reader %d",readerId));
+            Reader readerGet=readerDao.getById(readerId);
+            readerGet.setLastName(reader.getLastName());
+            readerGet.setFirstName(reader.getFirstName());
+            readerGet.setPatronymic(reader.getPatronymic());
+            readerGet.setAge(reader.getAge());
+            readerGet.setData(reader.getData());
+            readerDao.update(readerGet);
+        } catch (DaoException e) {
+            LOGGER.warn("Updating of reader failed",e);
+            throw new ServiceException("Updating of reader failed",e);
+        }
+    }
+
+    @Override
     public List<ReaderDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all readers"));

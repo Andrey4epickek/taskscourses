@@ -14,6 +14,7 @@ public interface IIssuanceService {
     Issuance addIssuance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum,Integer time, LocalDate data);
     IssuanceDto getById(Integer issuanceId);
     Issuance getByIdUi(Integer issuanceId);
+    void updateIssuance(Integer issuanceId,Issuance issuance);
     List<IssuanceDto> getAll();
     void deleteIssuance(Integer issuanceId);
 }

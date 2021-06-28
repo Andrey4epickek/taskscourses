@@ -78,6 +78,23 @@ public class AcceptanceService implements IAcceptanceService {
     }
 
     @Override
+    public void updateAcceptance(Integer acceptanceId, Acceptance acceptance) {
+        try {
+            LOGGER.info(String.format("Updating of acceptance %d",acceptanceId));
+            Acceptance acceptanceGet=acceptanceDao.getById(acceptanceId);
+            acceptanceGet.setWorker(acceptance.getWorker());
+            acceptanceGet.setReader(acceptance.getReader());
+            acceptanceGet.setBook(acceptance.getBook());
+            acceptanceGet.setSum(acceptance.getSum());
+            acceptanceGet.setData(acceptance.getData());
+            acceptanceDao.update(acceptanceGet);
+        }catch (DaoException e){
+            LOGGER.warn("Updating acceptance failed",e);
+            throw new ServiceException("Updating acceptance failed",e);
+        }
+    }
+
+    @Override
     public List<AcceptanceDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all acceptances"));

@@ -5,6 +5,7 @@ import com.hotel.api.service.IBookService;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
 import com.library.model.Book;
+import com.library.model.Reader;
 import com.library.model.dto.BookDto;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -89,7 +90,20 @@ public class BookService implements IBookService {
     }
 
     @Override
-    public void updateSum() {
-
+    public void updateBook(Integer bookId, Book book) {
+        try {
+            LOGGER.info(String.format("Updating of book %d",bookId));
+            Book bookGet=bookDao.getById(bookId);
+            bookGet.setTitle(book.getTitle());
+            bookGet.setData(book.getData());
+            bookGet.setAuthor(book.getAuthor());
+            bookGet.setGod(book.getGod());
+            bookGet.setGenre(book.getGenre());
+            bookGet.setSum(book.getSum());
+            bookDao.update(bookGet);
+        } catch (DaoException e) {
+            LOGGER.warn("Updating of book failed",e);
+            throw new ServiceException("Updating of book failed",e);
+        }
     }
 }

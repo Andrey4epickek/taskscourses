@@ -14,6 +14,7 @@ public interface IAcceptanceService {
     Acceptance addAcceptance(WorkerDto workerDto, ReaderDto readerDto, BookDto bookDto, Integer sum, LocalDate data);
     AcceptanceDto getById(Integer acceptanceId);
     Acceptance getByIdUi(Integer acceptanceId);
+    void updateAcceptance(Integer acceptanceId,Acceptance acceptance);
     List<AcceptanceDto> getAll();
     void deleteAcceptance(Integer acceptanceId);
 }

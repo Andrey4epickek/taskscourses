@@ -4,7 +4,6 @@ import com.library.model.Book;
 import com.library.model.dto.BookDto;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public interface IBookService {
@@ -13,5 +12,5 @@ public interface IBookService {
     BookDto getById(Integer bookId);
     List<BookDto> getAll();
     void deleteBook(Integer bookId);
-    void updateSum();
+    void updateBook(Integer bookId, Book book);
 }

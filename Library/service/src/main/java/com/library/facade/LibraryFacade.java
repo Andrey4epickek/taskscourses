@@ -46,6 +46,9 @@ public class LibraryFacade {
         return readerDto;
     }
 
+    public void updateReader(Integer readerId,Reader reader){readerService.updateReader(readerId,reader);
+    }
+
     public List<Reader> getAllReaders(){
         List<ReaderDto> readerDtoList=readerService.getAll();
         List<Reader> readerList=new ArrayList<>();
@@ -72,6 +75,8 @@ public class LibraryFacade {
         WorkerDto workerDto=workerService.getById(workerId);
         return workerDto;
     }
+
+    public void updateWorker(Integer workerId,Worker worker){workerService.updateWorker(workerId,worker);};
 
     public List<Worker> getAllWorkers(){
         List<WorkerDto> workerDtoList=workerService.getAll();
@@ -100,6 +105,8 @@ public class LibraryFacade {
         return bookDto;
     }
 
+    public void updateBook(Integer bookId,Book book){bookService.updateBook(bookId,book);}
+
     public List<Book> getAllBooks(){
         List<BookDto> bookDtoList=bookService.getAll();
         List<Book> bookList=new ArrayList<>();
@@ -127,6 +134,8 @@ public class LibraryFacade {
         return issuance;
     }
 
+    public void updateIssuance(Integer issuanceId,Issuance issuance){issuanceService.updateIssuance(issuanceId,issuance);}
+
     public List<Issuance> getAllIssuance(){
         List<IssuanceDto> issuanceDtoList=issuanceService.getAll();
         List<Issuance> issuanceList=new ArrayList<>();
@@ -153,6 +162,8 @@ public class LibraryFacade {
         Acceptance acceptance=acceptanceService.getByIdUi(acceptanceId);
         return acceptance;
     }
+
+    public void updateAcceptance(Integer acceptanceId,Acceptance acceptance){acceptanceService.updateAcceptance(acceptanceId,acceptance);}
 
     public List<Acceptance> getAllAcceptance(){
         List<AcceptanceDto> acceptanceDtoList=acceptanceService.getAll();
