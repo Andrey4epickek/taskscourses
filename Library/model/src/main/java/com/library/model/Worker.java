@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -25,10 +23,10 @@ public class Worker extends AEntity{
     private String patronymic;
     @Column(name = "Data")
     private LocalDate data;
-    @OneToOne(mappedBy = "worker")
-    private Issuance issuance;
-    @OneToOne(mappedBy = "worker")
-    private Acceptance acceptance;
+    @OneToMany(mappedBy = "worker",fetch = FetchType.LAZY)
+    private List<Issuance> issuance;
+    @OneToMany(mappedBy = "worker",fetch = FetchType.LAZY)
+    private List<Acceptance> acceptance;
 
     @Override
     public String toString() {

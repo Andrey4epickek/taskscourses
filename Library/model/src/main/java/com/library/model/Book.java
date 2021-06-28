@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -27,10 +28,10 @@ public class Book extends AEntity{
     private String genre;
     @Column(name = "Sum")
     private Integer sum;
-    @OneToOne(mappedBy = "book")
-    private Issuance issuance;
-    @OneToOne(mappedBy = "book")
-    private Acceptance acceptance;
+    @OneToMany(mappedBy = "book",fetch = FetchType.LAZY)
+    private List<Issuance> issuance;
+    @OneToMany(mappedBy = "book",fetch = FetchType.LAZY)
+    private List<Acceptance> acceptance;
 
     @Override
     public String toString() {

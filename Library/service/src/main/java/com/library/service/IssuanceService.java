@@ -111,6 +111,18 @@ public class IssuanceService implements IIssuanceService {
     }
 
     @Override
+    public List<Issuance> getAllUi() {
+        try{
+            LOGGER.info(String.format("Getting of all issuance"));
+            List<Issuance> issuanceList=issuanceDao.getAll();
+            return issuanceList;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of all issuance failed",e);
+            throw new ServiceException("Getting of all issuance failed",e);
+        }
+    }
+
+    @Override
     public void deleteIssuance(Integer issuanceId) {
         try{
             LOGGER.info(String.format("Deleting of issuance %d",issuanceId));

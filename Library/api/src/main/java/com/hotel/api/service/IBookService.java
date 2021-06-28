@@ -10,6 +10,7 @@ public interface IBookService {
 
     Book addBook(String title, LocalDate data, String author, Integer god, String genre, Integer sum);
     BookDto getById(Integer bookId);
+    Book getByIdUi(Integer bookId);
     List<BookDto> getAll();
     void deleteBook(Integer bookId);
     void updateBook(Integer bookId, Book book);

@@ -8,15 +8,15 @@ com/library/model/dto/IssuanceDto.java
  com.library.model.dto.IssuanceDto
 com/library/model/dto/AcceptanceDto.java
  com.library.model.dto.AcceptanceDto
-com/library/model/Book.java
- com.library.model.Book
-com/library/model/Worker.java
- com.library.model.Worker
-com/library/model/Issuance.java
- com.library.model.Issuance
-com/library/model/Acceptance.java
- com.library.model.Acceptance
 com/library/model/AEntity.java
  com.library.model.AEntity
 com/library/model/Reader.java
  com.library.model.Reader
+com/library/model/Worker.java
+ com.library.model.Worker
+com/library/model/Book.java
+ com.library.model.Book
+com/library/model/Acceptance.java
+ com.library.model.Acceptance
+com/library/model/Issuance.java
+ com.library.model.Issuance

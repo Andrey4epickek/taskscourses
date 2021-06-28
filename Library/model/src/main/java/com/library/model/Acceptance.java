@@ -15,13 +15,13 @@ import java.util.Date;
 @Table(name = "Acceptance")
 public class Acceptance extends AEntity{
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "worker_id")
     private Worker worker;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "reader_id")
     private Reader reader;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
     @Column(name = "Sum")
@@ -31,12 +31,12 @@ public class Acceptance extends AEntity{
 
     @Override
     public String toString() {
-        return "Acceptance{id=" +getId()+
-                ", worker=" + worker +
-                ", reader=" + reader +
-                ", book=" + book +
-                ", sum=" + sum +
+        return "Acceptance{id=" +getId()+"\n"+
+                " worker=" + worker +"\n"+
+                " reader=" + reader +"\n"+
+                " book=" + book +"\n"+
+                " quantity=" + sum +
                 ", data=" + data +
-                "}";
+                "}"+"\n";
     }
 }

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -25,10 +26,10 @@ public class Reader extends AEntity{
     private Integer age;
     @Column(name = "Data")
     private LocalDate data;
-    @OneToOne(mappedBy = "reader")
-    private Issuance issuance;
-    @OneToOne(mappedBy = "book")
-    private Acceptance acceptance;
+    @OneToMany(mappedBy = "reader",fetch = FetchType.LAZY)
+    private List<Issuance> issuance;
+    @OneToMany(mappedBy = "book",fetch = FetchType.LAZY)
+    private List<Acceptance> acceptance;
 
     @Override
     public String toString() {

@@ -15,6 +15,8 @@ public interface IAcceptanceService {
     AcceptanceDto getById(Integer acceptanceId);
     Acceptance getByIdUi(Integer acceptanceId);
     void updateAcceptance(Integer acceptanceId,Acceptance acceptance);
+    List<Acceptance> findExpiredIssuance();
     List<AcceptanceDto> getAll();
+    List<Acceptance> getAllUi();
     void deleteAcceptance(Integer acceptanceId);
 }

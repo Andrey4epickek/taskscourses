@@ -29,8 +29,8 @@ public class GetBook extends AbstractAction implements IAction {
             System.out.println("Введите id книги для поиска");
             String bookIdString=bufferedReader.readLine();
             Integer bookIdInteger=Integer.parseInt(bookIdString);
-            BookDto bookDto=libraryFacade.getBook(bookIdInteger);
-            System.out.println(bookDto);
+            Book book=libraryFacade.getBookUi(bookIdInteger);
+            System.out.println(book);
         }catch (Exception e){
             LOGGER.log(Level.WARNING,e.getLocalizedMessage(),e);
         }

@@ -60,6 +60,18 @@ public class BookService implements IBookService {
     }
 
     @Override
+    public Book getByIdUi(Integer bookId) {
+        try {
+            LOGGER.info(String.format("Getting of book %d",bookId));
+            Book book=bookDao.getById(bookId);
+            return book;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of book failed",e);
+            throw new ServiceException("Getting of book failed",e);
+        }
+    }
+
+    @Override
     public List<BookDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all books"));

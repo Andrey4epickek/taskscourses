@@ -105,6 +105,11 @@ public class LibraryFacade {
         return bookDto;
     }
 
+    public Book getBookUi(Integer bookId){
+        Book book=bookService.getByIdUi(bookId);
+        return book;
+    }
+
     public void updateBook(Integer bookId,Book book){bookService.updateBook(bookId,book);}
 
     public List<Book> getAllBooks(){
@@ -137,13 +142,7 @@ public class LibraryFacade {
     public void updateIssuance(Integer issuanceId,Issuance issuance){issuanceService.updateIssuance(issuanceId,issuance);}
 
     public List<Issuance> getAllIssuance(){
-        List<IssuanceDto> issuanceDtoList=issuanceService.getAll();
-        List<Issuance> issuanceList=new ArrayList<>();
-        for(IssuanceDto issuanceDto:issuanceDtoList){
-            Issuance issuance=mapper.map(issuanceDto,Issuance.class);
-            issuanceList.add(issuance);
-        }
-        return issuanceList;
+        return issuanceService.getAllUi();
     }
 
     /**
@@ -166,12 +165,8 @@ public class LibraryFacade {
     public void updateAcceptance(Integer acceptanceId,Acceptance acceptance){acceptanceService.updateAcceptance(acceptanceId,acceptance);}
 
     public List<Acceptance> getAllAcceptance(){
-        List<AcceptanceDto> acceptanceDtoList=acceptanceService.getAll();
-        List<Acceptance> acceptanceList=new ArrayList<>();
-        for(AcceptanceDto acceptanceDto:acceptanceDtoList){
-            Acceptance acceptance=mapper.map(acceptanceDto,Acceptance.class);
-            acceptanceList.add(acceptance);
-        }
-        return acceptanceList;
+        return acceptanceService.getAllUi();
     }
+
+    public List<Acceptance> findExpiredAcceptance(){return acceptanceService.findExpiredIssuance();}
 }

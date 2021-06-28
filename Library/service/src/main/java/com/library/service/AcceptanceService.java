@@ -1,13 +1,11 @@
 package com.library.service;
 
 import com.hotel.api.dao.IAcceptanceDao;
+import com.hotel.api.dao.IIssuanceDao;
 import com.hotel.api.service.IAcceptanceService;
 import com.hotel.exceptions.DaoException;
 import com.hotel.exceptions.ServiceException;
-import com.library.model.Acceptance;
-import com.library.model.Book;
-import com.library.model.Reader;
-import com.library.model.Worker;
+import com.library.model.*;
 import com.library.model.dto.AcceptanceDto;
 import com.library.model.dto.BookDto;
 import com.library.model.dto.ReaderDto;
@@ -19,9 +17,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.lang.Math.toIntExact;
 
 @Service
 @RequiredArgsConstructor
@@ -30,6 +31,7 @@ public class AcceptanceService implements IAcceptanceService {
 
     private static final Logger LOGGER= LogManager.getLogger(AcceptanceService.class.getName());
     private final IAcceptanceDao acceptanceDao;
+    private final IIssuanceDao issuanceDao;
     private final ModelMapper mapper;
 
     @Override
@@ -95,6 +97,27 @@ public class AcceptanceService implements IAcceptanceService {
     }
 
     @Override
+    public List<Acceptance> findExpiredIssuance() {
+        try{
+            LOGGER.info(String.format("Finding of expired acceptance"));
+            List<Issuance> issuanceList=issuanceDao.getAll();
+            List<Acceptance> acceptanceList=acceptanceDao.getAll();
+            List<Acceptance> acceptanceExpired=new ArrayList<>();
+            for (Issuance issuance:issuanceList){
+                for(Acceptance acceptance:acceptanceList){
+                    if(issuance.getTime()<(toIntExact(Duration.between(issuance.getData().atStartOfDay(),acceptance.getData().atStartOfDay()).toDays()))){
+                        acceptanceExpired.add(acceptance);
+                    }
+                }
+            }
+            return acceptanceExpired;
+        } catch (DaoException e) {
+            LOGGER.warn("Finding of all acceptance failed",e);
+            throw new ServiceException("Finding of all acceptance failed",e);
+        }
+    }
+
+    @Override
     public List<AcceptanceDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all acceptances"));
@@ -106,8 +129,20 @@ public class AcceptanceService implements IAcceptanceService {
             }
              return acceptanceDtoList;
         } catch (DaoException e) {
-            LOGGER.warn("Getting of all acceptances failed",e);
-            throw new ServiceException("Getting of all acceptances failed",e);
+            LOGGER.warn("Getting of all acceptance failed",e);
+            throw new ServiceException("Getting of all acceptance failed",e);
+        }
+    }
+
+    @Override
+    public List<Acceptance> getAllUi() {
+        try{
+            LOGGER.info(String.format("Getting of all acceptance"));
+            List<Acceptance> acceptanceList=acceptanceDao.getAll();
+            return acceptanceList;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of all acceptance failed",e);
+            throw new ServiceException("Getting of all acceptance failed",e);
         }
     }
 

@@ -16,5 +16,6 @@ public interface IIssuanceService {
     Issuance getByIdUi(Integer issuanceId);
     void updateIssuance(Integer issuanceId,Issuance issuance);
     List<IssuanceDto> getAll();
+    List<Issuance> getAllUi();
     void deleteIssuance(Integer issuanceId);
 }
