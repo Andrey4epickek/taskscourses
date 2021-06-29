@@ -1,7 +1,9 @@
 package com.library.controller;
 
 import com.hotel.api.service.IIssuanceService;
+import com.library.model.dto.BookDto;
 import com.library.model.dto.IssuanceDto;
+import com.library.model.dto.WorkerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +39,13 @@ public class IssuanceController {
         issuanceService.addIssuance(issuanceDto.getWorkerDto(),issuanceDto.getReaderDto(),
                                     issuanceDto.getBookDto(),issuanceDto.getSum(),
                                     issuanceDto.getTime(),issuanceDto.getData());
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(value = "/update")
+    public ResponseEntity<IssuanceDto> update(@RequestBody IssuanceDto issuanceDto){
+        log.info("received request: /update/"+issuanceDto);
+        issuanceService.updateIssuanceDto(issuanceDto.getId(),issuanceDto);
         return ResponseEntity.noContent().build();
     }
 

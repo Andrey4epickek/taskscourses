@@ -9,7 +9,7 @@ import java.util.Date;
 public class ReaderDto {
     private Integer id;
     private String lastName;
-    private String firstname;
+    private String firstName;
     private String patronymic;
     private Integer age;
     private LocalDate data;

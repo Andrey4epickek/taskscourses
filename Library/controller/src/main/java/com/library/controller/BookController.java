@@ -1,6 +1,7 @@
 package com.library.controller;
 
 import com.hotel.api.service.IBookService;
+import com.library.model.Book;
 import com.library.model.dto.BookDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -37,6 +38,13 @@ public class BookController {
         bookService.addBook(bookDto.getTitle(),bookDto.getData(),
                             bookDto.getAuthor(),bookDto.getGod(),
                             bookDto.getGenre(),bookDto.getSum());
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(value = "/update")
+    public ResponseEntity<BookDto> update(@RequestBody BookDto bookDto){
+        log.info("received request: /update/"+bookDto);
+        bookService.updateBookDto(bookDto.getId(),bookDto);
         return ResponseEntity.noContent().build();
     }
 

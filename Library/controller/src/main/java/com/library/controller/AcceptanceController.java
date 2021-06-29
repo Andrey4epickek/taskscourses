@@ -2,6 +2,8 @@ package com.library.controller;
 
 import com.hotel.api.service.IAcceptanceService;
 import com.library.model.dto.AcceptanceDto;
+import com.library.model.dto.BookDto;
+import com.library.model.dto.IssuanceDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +39,13 @@ public class AcceptanceController {
         acceptanceService.addAcceptance(acceptanceDto.getWorkerDto(),acceptanceDto.getReaderDto(),
                                         acceptanceDto.getBookDto(),acceptanceDto.getSum(),
                                         acceptanceDto.getData());
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(value = "/update")
+    public ResponseEntity<AcceptanceDto> update(@RequestBody AcceptanceDto acceptanceDto){
+        log.info("received request: /update/"+acceptanceDto);
+        acceptanceService.updateAcceptanceDto(acceptanceDto.getId(),acceptanceDto);
         return ResponseEntity.noContent().build();
     }
 

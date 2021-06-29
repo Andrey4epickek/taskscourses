@@ -14,10 +14,13 @@ import javax.transaction.Transactional;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static java.lang.Math.toIntExact;
 
 @Service
 @RequiredArgsConstructor
@@ -72,11 +75,28 @@ public class BookService implements IBookService {
     }
 
     @Override
+    public List<Book> findExpiredBooks() {
+        try{
+            LOGGER.info(String.format("Finding of expired books"));
+            List<Book> bookList=bookDao.getAll();
+            List<Book> expiredBooks=new ArrayList<>();
+            for(Book book:bookList){
+                if(book.getIssuance().getTime()<(toIntExact(Duration.between(book.getIssuance().getData().atStartOfDay(),book.getAcceptance().getData().atStartOfDay()).toDays()))){
+                    expiredBooks.add(book);
+                }
+            }
+            return expiredBooks;
+        } catch (DaoException e) {
+            LOGGER.warn("Finding of expired books failed",e);
+            throw new ServiceException("Finding of expired books failed",e);
+        }
+    }
+
+    @Override
     public List<BookDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all books"));
             List<Book> bookList=bookDao.getAll();
-            bookList.sort(((o1, o2) -> o1.getGod()- o2.getGod()));
             List<BookDto> bookDtoList=new ArrayList<>();
             for(Book book:bookList){
                 BookDto bookDto=mapper.map(book,BookDto.class);
@@ -112,6 +132,24 @@ public class BookService implements IBookService {
             bookGet.setGod(book.getGod());
             bookGet.setGenre(book.getGenre());
             bookGet.setSum(book.getSum());
+            bookDao.update(bookGet);
+        } catch (DaoException e) {
+            LOGGER.warn("Updating of book failed",e);
+            throw new ServiceException("Updating of book failed",e);
+        }
+    }
+
+    @Override
+    public void updateBookDto(Integer bookId, BookDto bookDto) {
+        try {
+            LOGGER.info(String.format("Updating of book %d",bookId));
+            Book bookGet=bookDao.getById(bookId);
+            bookGet.setTitle(bookDto.getTitle());
+            bookGet.setData(bookDto.getData());
+            bookGet.setAuthor(bookDto.getAuthor());
+            bookGet.setGod(bookDto.getGod());
+            bookGet.setGenre(bookDto.getGenre());
+            bookGet.setSum(bookDto.getSum());
             bookDao.update(bookGet);
         } catch (DaoException e) {
             LOGGER.warn("Updating of book failed",e);

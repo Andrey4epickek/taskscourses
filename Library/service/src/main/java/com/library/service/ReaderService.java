@@ -59,6 +59,18 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
+    public Reader getByIdUi(Integer readerId) {
+        try {
+            LOGGER.info(String.format("Getting of reader %d",readerId));
+            Reader reader=readerDao.getById(readerId);
+            return reader;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of reader failed",e);
+            throw new ServiceException("Getting of reader failed",e);
+        }
+    }
+
+    @Override
     public void updateReader(Integer readerId, Reader reader) {
         try {
             LOGGER.info(String.format("Updating of reader %d",readerId));
@@ -68,6 +80,23 @@ public class ReaderService implements IReaderService {
             readerGet.setPatronymic(reader.getPatronymic());
             readerGet.setAge(reader.getAge());
             readerGet.setData(reader.getData());
+            readerDao.update(readerGet);
+        } catch (DaoException e) {
+            LOGGER.warn("Updating of reader failed",e);
+            throw new ServiceException("Updating of reader failed",e);
+        }
+    }
+
+    @Override
+    public void updateReaderDto(Integer readerId, ReaderDto readerDto) {
+        try {
+            LOGGER.info(String.format("Updating of reader %d",readerId));
+            Reader readerGet=readerDao.getById(readerId);
+            readerGet.setLastName(readerDto.getLastName());
+            readerGet.setFirstName(readerDto.getFirstName());
+            readerGet.setPatronymic(readerDto.getPatronymic());
+            readerGet.setAge(readerDto.getAge());
+            readerGet.setData(readerDto.getData());
             readerDao.update(readerGet);
         } catch (DaoException e) {
             LOGGER.warn("Updating of reader failed",e);

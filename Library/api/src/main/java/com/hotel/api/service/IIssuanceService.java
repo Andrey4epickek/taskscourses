@@ -1,6 +1,9 @@
 package com.hotel.api.service;
 
+import com.library.model.Book;
 import com.library.model.Issuance;
+import com.library.model.Reader;
+import com.library.model.Worker;
 import com.library.model.dto.BookDto;
 import com.library.model.dto.IssuanceDto;
 import com.library.model.dto.ReaderDto;
@@ -15,6 +18,7 @@ public interface IIssuanceService {
     IssuanceDto getById(Integer issuanceId);
     Issuance getByIdUi(Integer issuanceId);
     void updateIssuance(Integer issuanceId,Issuance issuance);
+    void updateIssuanceDto(Integer issuanceId,IssuanceDto issuanceDto);
     List<IssuanceDto> getAll();
     List<Issuance> getAllUi();
     void deleteIssuance(Integer issuanceId);

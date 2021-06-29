@@ -28,10 +28,10 @@ public class Book extends AEntity{
     private String genre;
     @Column(name = "Sum")
     private Integer sum;
-    @OneToMany(mappedBy = "book",fetch = FetchType.LAZY)
-    private List<Issuance> issuance;
-    @OneToMany(mappedBy = "book",fetch = FetchType.LAZY)
-    private List<Acceptance> acceptance;
+    @OneToOne(mappedBy = "book")
+    private Issuance issuance;
+    @OneToOne(mappedBy = "book")
+    private Acceptance acceptance;
 
     @Override
     public String toString() {

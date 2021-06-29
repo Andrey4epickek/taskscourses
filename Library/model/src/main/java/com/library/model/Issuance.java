@@ -21,7 +21,7 @@ public class Issuance extends AEntity{
     @ManyToOne
     @JoinColumn(name = "reader_id")
     private Reader reader;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "book_id")
     private Book book;
     @Column(name = "Sum")

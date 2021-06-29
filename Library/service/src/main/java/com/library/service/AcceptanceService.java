@@ -97,23 +97,22 @@ public class AcceptanceService implements IAcceptanceService {
     }
 
     @Override
-    public List<Acceptance> findExpiredIssuance() {
-        try{
-            LOGGER.info(String.format("Finding of expired acceptance"));
-            List<Issuance> issuanceList=issuanceDao.getAll();
-            List<Acceptance> acceptanceList=acceptanceDao.getAll();
-            List<Acceptance> acceptanceExpired=new ArrayList<>();
-            for (Issuance issuance:issuanceList){
-                for(Acceptance acceptance:acceptanceList){
-                    if(issuance.getTime()<(toIntExact(Duration.between(issuance.getData().atStartOfDay(),acceptance.getData().atStartOfDay()).toDays()))){
-                        acceptanceExpired.add(acceptance);
-                    }
-                }
-            }
-            return acceptanceExpired;
-        } catch (DaoException e) {
-            LOGGER.warn("Finding of all acceptance failed",e);
-            throw new ServiceException("Finding of all acceptance failed",e);
+    public void updateAcceptanceDto(Integer acceptanceId, AcceptanceDto acceptanceDto) {
+        try {
+            LOGGER.info(String.format("Updating of acceptance %d",acceptanceId));
+            Acceptance acceptanceGet=acceptanceDao.getById(acceptanceId);
+            Worker worker=mapper.map(acceptanceDto.getWorkerDto(),Worker.class);
+            acceptanceGet.setWorker(worker);
+            Reader reader=mapper.map(acceptanceDto.getReaderDto(),Reader.class);
+            acceptanceGet.setReader(reader);
+            Book book=mapper.map(acceptanceDto.getBookDto(),Book.class);
+            acceptanceGet.setBook(book);
+            acceptanceGet.setSum(acceptanceDto.getSum());
+            acceptanceGet.setData(acceptanceDto.getData());
+            acceptanceDao.update(acceptanceGet);
+        }catch (DaoException e){
+            LOGGER.warn("Updating acceptance failed",e);
+            throw new ServiceException("Updating acceptance failed",e);
         }
     }
 

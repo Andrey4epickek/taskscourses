@@ -9,7 +9,9 @@ import java.util.List;
 public interface IReaderService {
     Reader addReader( String lastName,String firstName,String patronymic, Integer age, LocalDate data);
     ReaderDto getById(Integer readerId);
+    Reader getByIdUi(Integer readerId);
     void updateReader(Integer readerId,Reader reader);
+    void updateReaderDto(Integer readerId,ReaderDto readerDto);
     List<ReaderDto> getAll();
     void deleteReader(Integer readerId);
 }

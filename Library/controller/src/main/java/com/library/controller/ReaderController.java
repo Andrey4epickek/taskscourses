@@ -1,6 +1,7 @@
 package com.library.controller;
 
 import com.hotel.api.service.IReaderService;
+import com.library.model.dto.BookDto;
 import com.library.model.dto.ReaderDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -34,8 +35,15 @@ public class ReaderController {
     @PostMapping("/add")
     public ResponseEntity<Void> create(@RequestBody ReaderDto readerDto) {
         log.info("received request: /add/"+readerDto);
-        readerService.addReader(readerDto.getLastName(),readerDto.getFirstname(),
+        readerService.addReader(readerDto.getLastName(),readerDto.getFirstName(),
                                 readerDto.getPatronymic(),readerDto.getAge(),readerDto.getData());
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(value = "/update")
+    public ResponseEntity<ReaderDto> update(@RequestBody ReaderDto readerDto){
+        log.info("received request: /update/"+readerDto);
+        readerService.updateReaderDto(readerDto.getId(),readerDto);
         return ResponseEntity.noContent().build();
     }
 

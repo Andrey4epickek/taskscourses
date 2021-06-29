@@ -46,6 +46,11 @@ public class LibraryFacade {
         return readerDto;
     }
 
+    public Reader getReaderUi(Integer readerId){
+        Reader reader=readerService.getByIdUi(readerId);
+        return reader;
+    }
+
     public void updateReader(Integer readerId,Reader reader){readerService.updateReader(readerId,reader);
     }
 
@@ -74,6 +79,11 @@ public class LibraryFacade {
     public WorkerDto getWorker(Integer workerId){
         WorkerDto workerDto=workerService.getById(workerId);
         return workerDto;
+    }
+
+    public Worker getWorkerUi(Integer workerId){
+        Worker worker=workerService.getByIdUi(workerId);
+        return worker;
     }
 
     public void updateWorker(Integer workerId,Worker worker){workerService.updateWorker(workerId,worker);};
@@ -122,6 +132,8 @@ public class LibraryFacade {
         return bookList;
     }
 
+    public List<Book> findExpiredBooks(){return bookService.findExpiredBooks();}
+
     /**
      *Issuance
      */
@@ -168,5 +180,4 @@ public class LibraryFacade {
         return acceptanceService.getAllUi();
     }
 
-    public List<Acceptance> findExpiredAcceptance(){return acceptanceService.findExpiredIssuance();}
 }

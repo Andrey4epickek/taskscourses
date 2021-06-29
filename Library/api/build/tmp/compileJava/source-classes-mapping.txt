@@ -16,10 +16,10 @@ com/hotel/api/dao/IIssuanceDao.java
  com.hotel.api.dao.IIssuanceDao
 com/hotel/api/service/IWorkerService.java
  com.hotel.api.service.IWorkerService
-com/hotel/api/service/IReaderService.java
- com.hotel.api.service.IReaderService
 com/hotel/api/service/IBookService.java
  com.hotel.api.service.IBookService
+com/hotel/api/service/IReaderService.java
+ com.hotel.api.service.IReaderService
 com/hotel/api/service/IAcceptanceService.java
  com.hotel.api.service.IAcceptanceService
 com/hotel/api/service/IIssuanceService.java

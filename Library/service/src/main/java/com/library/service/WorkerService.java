@@ -58,6 +58,18 @@ public class WorkerService implements IWorkerService {
     }
 
     @Override
+    public Worker getByIdUi(Integer workerId) {
+        try {
+            LOGGER.info(String.format("Getting of worker %d",workerId));
+            Worker worker =workerDao.getById(workerId);
+            return worker;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of worker failed",e);
+            throw new ServiceException("Getting of worker failed",e);
+        }
+    }
+
+    @Override
     public void updateWorker(Integer workerId, Worker worker) {
         try {
             LOGGER.info(String.format("Updating of worker %d",workerId));
@@ -66,6 +78,22 @@ public class WorkerService implements IWorkerService {
             workerGet.setFirstName(worker.getFirstName());
             workerGet.setPatronymic(worker.getPatronymic());
             workerGet.setData(worker.getData());
+            workerDao.update(workerGet);
+        } catch (DaoException e) {
+            LOGGER.warn("Updating of worker failed",e);
+            throw new ServiceException("Updating of worker failed",e);
+        }
+    }
+
+    @Override
+    public void updateWorkerDto(Integer workerId, WorkerDto workerDto) {
+        try {
+            LOGGER.info(String.format("Updating of worker %d",workerId));
+            Worker workerGet=workerDao.getById(workerId);
+            workerGet.setLastName(workerDto.getLastName());
+            workerGet.setFirstName(workerDto.getFirstName());
+            workerGet.setPatronymic(workerDto.getPatronymic());
+            workerGet.setData(workerDto.getData());
             workerDao.update(workerGet);
         } catch (DaoException e) {
             LOGGER.warn("Updating of worker failed",e);

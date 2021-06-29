@@ -9,7 +9,7 @@ import java.util.Date;
 public class WorkerDto {
     private Integer id;
     private String lastName;
-    private String firstname;
+    private String firstName;
     private String patronymic;
     private LocalDate data;
 }

@@ -6,6 +6,7 @@ import com.library.model.Issuance;
 import com.library.model.Reader;
 import com.library.model.Worker;
 import com.library.model.dto.BookDto;
+import com.library.model.dto.IssuanceDto;
 import com.library.model.dto.ReaderDto;
 import com.library.model.dto.WorkerDto;
 import com.library.ui.actions.AbstractAction;

@@ -94,6 +94,27 @@ public class IssuanceService implements IIssuanceService {
     }
 
     @Override
+    public void updateIssuanceDto(Integer issuanceId, IssuanceDto issuanceDto) {
+        try {
+            LOGGER.info(String.format("Updating of issuance %d",issuanceId));
+            Issuance issuanceGet=issuanceDao.getById(issuanceId);
+            Worker worker=mapper.map(issuanceDto.getWorkerDto(),Worker.class);
+            issuanceGet.setWorker(worker);
+            Reader reader=mapper.map(issuanceDto.getReaderDto(),Reader.class);
+            issuanceGet.setReader(reader);
+            Book book=mapper.map(issuanceDto.getBookDto(),Book.class);
+            issuanceGet.setBook(book);
+            issuanceGet.setSum(issuanceDto.getSum());
+            issuanceGet.setTime(issuanceDto.getTime());
+            issuanceGet.setData(issuanceDto.getData());
+            issuanceDao.update(issuanceGet);
+        }catch (DaoException e){
+            LOGGER.warn("Updating issuance failed",e);
+            throw new ServiceException("Updating issuance failed",e);
+        }
+    }
+
+    @Override
     public List<IssuanceDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all issuance"));

@@ -53,6 +53,7 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get book",context.getBean(GetBook.class),rootMenu))
                 .addItem(new MenuItem("Get all books",context.getBean(GetAllBooks.class),rootMenu))
                 .addItem(new MenuItem("Update book",context.getBean(UpdateBook.class),rootMenu))
+                .addItem(new MenuItem("Find expired books",context.getBean(FindExpiredBooks.class),rootMenu))
                 .addItem(new MenuItem("Delete book",context.getBean(DeleteBook.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))
                 .build("Library Application menu (0-Exit)");
@@ -76,7 +77,6 @@ public class MenuBuilderFactory {
                 .addItem(new MenuItem("Get acceptance",context.getBean(GetAcceptance.class),rootMenu))
                 .addItem(new MenuItem("Get all acceptance",context.getBean(GetAllAcceptance.class),rootMenu))
                 .addItem(new MenuItem("Get book acceptance history",context.getBean(GetBookAcceptanceHistory.class),rootMenu))
-                .addItem(new MenuItem("Find expired acceptance",context.getBean(FindExpiredAcceptance.class),rootMenu))
                 .addItem(new MenuItem("Update acceptance",context.getBean(UpdateAcceptance.class),rootMenu))
                 .addItem(new MenuItem("Delete acceptance",context.getBean(DeleteAcceptance.class),rootMenu))
                 .addItem(previousMenu==null?null:new MenuItem(BACK_TO_PREVIOUS,null,previousMenu))

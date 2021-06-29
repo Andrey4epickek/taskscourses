@@ -1,6 +1,8 @@
 package com.library.controller;
 
 import com.hotel.api.service.IWorkerService;
+import com.library.model.dto.BookDto;
+import com.library.model.dto.ReaderDto;
 import com.library.model.dto.WorkerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -34,8 +36,15 @@ public class WorkerController {
     @PostMapping("/add")
     public ResponseEntity<Void> create(@RequestBody WorkerDto workerDto){
         log.info("received request: /add/"+workerDto);
-        workerService.addWorker(workerDto.getLastName(),workerDto.getFirstname(),
+        workerService.addWorker(workerDto.getLastName(),workerDto.getFirstName(),
                                 workerDto.getPatronymic(),workerDto.getData());
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(value = "/update")
+    public ResponseEntity<WorkerDto> update(@RequestBody WorkerDto workerDto){
+        log.info("received request: /update/"+workerDto);
+        workerService.updateWorkerDto(workerDto.getId(),workerDto);
         return ResponseEntity.noContent().build();
     }
 
