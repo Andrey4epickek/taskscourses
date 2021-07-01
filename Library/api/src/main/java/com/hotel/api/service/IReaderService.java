@@ -13,5 +13,6 @@ public interface IReaderService {
     void updateReader(Integer readerId,Reader reader);
     void updateReaderDto(Integer readerId,ReaderDto readerDto);
     List<ReaderDto> getAll();
+    List<Reader> getAllUi();
     void deleteReader(Integer readerId);
 }

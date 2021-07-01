@@ -31,7 +31,6 @@ public class AcceptanceService implements IAcceptanceService {
 
     private static final Logger LOGGER= LogManager.getLogger(AcceptanceService.class.getName());
     private final IAcceptanceDao acceptanceDao;
-    private final IIssuanceDao issuanceDao;
     private final ModelMapper mapper;
 
     @Override

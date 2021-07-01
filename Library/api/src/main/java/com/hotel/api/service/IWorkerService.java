@@ -14,5 +14,6 @@ public interface IWorkerService {
     void updateWorker(Integer workerId,Worker worker);
     void updateWorkerDto(Integer workerId,WorkerDto workerDto);
     List<WorkerDto> getAll();
+    List<Worker> getAllUi();
     void deleteWorker(Integer workerId);
 }

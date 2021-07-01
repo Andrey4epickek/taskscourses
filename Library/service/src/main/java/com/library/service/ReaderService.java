@@ -123,6 +123,18 @@ public class ReaderService implements IReaderService {
     }
 
     @Override
+    public List<Reader> getAllUi() {
+        try{
+            LOGGER.info(String.format("Getting of all readers"));
+            List<Reader> readerList=readerDao.getAll();
+            return readerList;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of all readers failed",e);
+            throw new ServiceException("Getting of all readers failed",e);
+        }
+    }
+
+    @Override
     public void deleteReader(Integer readerId) {
         try{
             LOGGER.info(String.format("Deleting of reader %d",readerId));

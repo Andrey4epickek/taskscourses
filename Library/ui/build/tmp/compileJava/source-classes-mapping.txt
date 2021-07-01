@@ -1,21 +1,3 @@
-com/library/ui/menu/Menu.java
- com.library.ui.menu.Menu
-com/library/ui/Starter.java
- com.library.ui.Starter
-com/library/ui/actions/AbstractAction.java
- com.library.ui.actions.AbstractAction
-com/library/ui/menu/MenuItem.java
- com.library.ui.menu.MenuItem
-com/library/ui/menu/Navigator.java
- com.library.ui.menu.Navigator
-com/library/ui/menu/MenuBuilder.java
- com.library.ui.menu.MenuBuilder
-com/library/ui/menu/MenuController.java
- com.library.ui.menu.MenuController
-com/library/ui/actions/IAction.java
- com.library.ui.actions.IAction
-com/library/ui/menu/Builder.java
- com.library.ui.menu.Builder
 com/library/ui/actions/worker/GetWorker.java
  com.library.ui.actions.worker.GetWorker
 com/library/ui/actions/acceptance/GetAcceptance.java
@@ -38,6 +20,10 @@ com/library/ui/actions/book/AddBook.java
  com.library.ui.actions.book.AddBook
 com/library/ui/actions/issuance/AddIssuance.java
  com.library.ui.actions.issuance.AddIssuance
+com/library/ui/menu/MenuItem.java
+ com.library.ui.menu.MenuItem
+com/library/ui/menu/MenuBuilder.java
+ com.library.ui.menu.MenuBuilder
 com/library/ui/actions/reader/GetAllReaders.java
  com.library.ui.actions.reader.GetAllReaders
 com/library/ui/actions/reader/UpdateReader.java
@@ -48,12 +34,18 @@ com/library/ui/actions/worker/GetAllWorkers.java
  com.library.ui.actions.worker.GetAllWorkers
 com/library/ui/actions/book/GetBook.java
  com.library.ui.actions.book.GetBook
+com/library/ui/menu/MenuController.java
+ com.library.ui.menu.MenuController
+com/library/ui/actions/AbstractAction.java
+ com.library.ui.actions.AbstractAction
 com/library/ui/actions/acceptance/DeleteAcceptance.java
  com.library.ui.actions.acceptance.DeleteAcceptance
 com/library/ui/actions/reader/GetReader.java
  com.library.ui.actions.reader.GetReader
 com/library/ui/actions/worker/AddWorker.java
  com.library.ui.actions.worker.AddWorker
+com/library/ui/Starter.java
+ com.library.ui.Starter
 com/library/ui/actions/worker/DeleteWorker.java
  com.library.ui.actions.worker.DeleteWorker
 com/library/ui/actions/book/FindExpiredBooks.java
@@ -68,9 +60,17 @@ com/library/ui/actions/book/DeleteBook.java
  com.library.ui.actions.book.DeleteBook
 com/library/ui/actions/issuance/GetBookIssuanceHistory.java
  com.library.ui.actions.issuance.GetBookIssuanceHistory
+com/library/ui/actions/IAction.java
+ com.library.ui.actions.IAction
 com/library/ui/actions/reader/DeleteReader.java
  com.library.ui.actions.reader.DeleteReader
+com/library/ui/menu/Navigator.java
+ com.library.ui.menu.Navigator
 com/library/ui/actions/issuance/GetIssuance.java
  com.library.ui.actions.issuance.GetIssuance
+com/library/ui/menu/Builder.java
+ com.library.ui.menu.Builder
 com/library/ui/actions/acceptance/AddAcceptance.java
  com.library.ui.actions.acceptance.AddAcceptance
+com/library/ui/menu/Menu.java
+ com.library.ui.menu.Menu

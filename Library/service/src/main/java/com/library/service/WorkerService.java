@@ -119,6 +119,18 @@ public class WorkerService implements IWorkerService {
     }
 
     @Override
+    public List<Worker> getAllUi() {
+        try{
+            LOGGER.info(String.format("Getting of all workers"));
+            List<Worker> workerList=workerDao.getAll();
+            return workerList;
+        } catch (DaoException e) {
+            LOGGER.warn("Getting of all workers failed",e);
+            throw new ServiceException("Getting of all workers failed",e);
+        }
+    }
+
+    @Override
     public void deleteWorker(Integer workerId) {
         try{
             LOGGER.info(String.format("Deleting of worker %d",workerId));
