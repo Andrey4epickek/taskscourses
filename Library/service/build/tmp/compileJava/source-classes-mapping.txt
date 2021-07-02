@@ -12,3 +12,5 @@ com/library/facade/LibraryFacade.java
  com.library.facade.LibraryFacade
 com/library/service/AcceptanceService.java
  com.library.service.AcceptanceService
+com/library/service/UserService.java
+ com.library.service.UserService

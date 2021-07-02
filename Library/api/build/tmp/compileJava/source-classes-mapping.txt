@@ -24,3 +24,9 @@ com/hotel/api/service/IAcceptanceService.java
  com.hotel.api.service.IAcceptanceService
 com/hotel/api/service/IWorkerService.java
  com.hotel.api.service.IWorkerService
+com/hotel/api/service/IUserService.java
+ com.hotel.api.service.IUserService
+com/hotel/api/dao/IUserDao.java
+ com.hotel.api.dao.IUserDao
+com/hotel/api/dao/IRoleDao.java
+ com.hotel.api.dao.IRoleDao

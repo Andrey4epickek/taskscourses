@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/controller" />
             <option value="$PROJECT_DIR$/dao" />
             <option value="$PROJECT_DIR$/model" />
+            <option value="$PROJECT_DIR$/security" />
             <option value="$PROJECT_DIR$/service" />
             <option value="$PROJECT_DIR$/test" />
             <option value="$PROJECT_DIR$/ui" />

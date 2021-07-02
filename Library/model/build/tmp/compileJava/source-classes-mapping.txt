@@ -20,3 +20,11 @@ com/library/model/Issuance.java
  com.library.model.Issuance
 com/library/model/Acceptance.java
  com.library.model.Acceptance
+com/library/model/Status.java
+ com.library.model.Status
+com/library/model/Role.java
+ com.library.model.Role
+com/library/model/User.java
+ com.library.model.User
+com/library/model/dto/AuthenticationRequestDto.java
+ com.library.model.dto.AuthenticationRequestDto
