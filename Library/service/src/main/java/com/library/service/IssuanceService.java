@@ -1,6 +1,5 @@
 package com.library.service;
 
-import com.hotel.api.dao.IAcceptanceDao;
 import com.hotel.api.dao.IIssuanceDao;
 import com.hotel.api.service.IIssuanceService;
 import com.hotel.exceptions.DaoException;
@@ -16,13 +15,11 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.IntSummaryStatistics;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 @Transactional
+@RequiredArgsConstructor
 public class IssuanceService implements IIssuanceService {
 
     private static final Logger LOGGER= LogManager.getLogger(IssuanceService.class.getName());

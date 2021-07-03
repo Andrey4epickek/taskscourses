@@ -22,11 +22,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserService implements IUserService {
 
-    private static final Logger LOGGER= LogManager.getLogger(ReaderService.class.getName());
+    private static final Logger LOGGER= LogManager.getLogger(UserService.class.getName());
 
     private final IUserDao userDao;
     private final IRoleDao roleDao;
-    private BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+    private final BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+
 
     @Override
     public User register(User user) {
@@ -71,7 +72,7 @@ public class UserService implements IUserService {
             LOGGER.info(String.format("Finding of user by username"));
             User result=userDao.findByUsername(username);
 
-            LOGGER.info(String.format("User: {} found by username: {}",result,username));
+            LOGGER.info(String.format("User: %s found by username: %s",result,username));
 
             return result;
         } catch (DaoException e) {
@@ -91,7 +92,7 @@ public class UserService implements IUserService {
                 return null;
             }
 
-            LOGGER.info(String.format("User: {} found by id: {}",result,userId));
+            LOGGER.info(String.format("User: %s found by id: %d",result,userId));
 
             return result;
         } catch (DaoException e) {
@@ -106,8 +107,7 @@ public class UserService implements IUserService {
             LOGGER.info(String.format("Deleting of user"));
             User user=userDao.getById(userId);
             userDao.delete(user);
-
-            LOGGER.info(String.format("User with id: {} deleted",userId));
+            LOGGER.info(String.format("User with id: %d deleted",userId));
 
         } catch (DaoException e) {
             LOGGER.warn("Deleting of user failed",e);

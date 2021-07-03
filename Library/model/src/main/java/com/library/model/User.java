@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public class User extends AEntity{
 
-    @Column(name = "Username")
+    @Column(name = "Username",unique = true)
     private String username;
     @Column(name = "Password")
     private String password;
@@ -37,6 +37,7 @@ public class User extends AEntity{
         return "User{id=" +getId()+
                 ", username=" + username +
                 ", password=" + password +
+                ", roles=" + roles +
                 "}";
     }
 

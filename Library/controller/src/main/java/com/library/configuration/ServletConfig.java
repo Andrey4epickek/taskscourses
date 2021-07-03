@@ -7,6 +7,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.library.controller")
+@ComponentScan({"com.library.controller","com.library.security"})
 public class ServletConfig implements WebMvcConfigurer {
 }

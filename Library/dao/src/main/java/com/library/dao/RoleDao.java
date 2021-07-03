@@ -16,7 +16,10 @@ public class RoleDao extends AbstractDao<Role> implements IRoleDao {
 
     @Override
     public Role findByName(String name) {
-        return entityManager.find(Role.class,name);
+        Role role=entityManager.createQuery(
+                "SELECT r from Role r WHERE r.name LIKE :name", Role.class).
+                setParameter("name",name).getSingleResult();
+        return role;
     }
 
     @Override

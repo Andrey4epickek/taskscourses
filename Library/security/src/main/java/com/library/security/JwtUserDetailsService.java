@@ -7,25 +7,21 @@ import com.library.model.User;
 import com.library.security.jwt.JwtUser;
 import com.library.security.jwt.JwtUserFactory;
 import com.library.service.ReaderService;
+import lombok.RequiredArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class JwtUserDetailsService implements UserDetailsService {
 
     private static final Logger LOGGER= LogManager.getLogger(ReaderService.class.getName());
 
     private final IUserService userService;
-
-    @Autowired
-    public JwtUserDetailsService(IUserService userService){
-        this.userService=userService;
-    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -39,7 +35,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 
             JwtUser jwtUser= JwtUserFactory.create(user);
 
-            LOGGER.info(String.format("User: with username: {} successfully loaded",username));
+            LOGGER.info(String.format("User: with username: %s successfully loaded",username));
 
             return jwtUser;
         } catch (DaoException e) {

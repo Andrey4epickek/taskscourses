@@ -4,9 +4,7 @@ import com.hotel.api.dao.IUserDao;
 import com.library.model.User;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
+import javax.persistence.*;
 
 @Repository
 public class UserDao  extends AbstractDao<User> implements IUserDao {
@@ -15,8 +13,12 @@ public class UserDao  extends AbstractDao<User> implements IUserDao {
     protected EntityManager entityManager;
 
     @Override
-    public User findByUsername(String name) {
-        return entityManager.find(User.class,name);
+    public User findByUsername(String username) {
+        User user= entityManager.createQuery(
+                "SELECT u FROM User u WHERE u.username LIKE :username",User.class)
+                .setParameter("username",username)
+                .getSingleResult();
+        return user;
     }
 
     @Override
