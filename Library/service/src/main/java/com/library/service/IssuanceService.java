@@ -95,11 +95,11 @@ public class IssuanceService implements IIssuanceService {
         try {
             LOGGER.info(String.format("Updating of issuance %d",issuanceId));
             Issuance issuanceGet=issuanceDao.getById(issuanceId);
-            Worker worker=mapper.map(issuanceDto.getWorkerDto(),Worker.class);
+            Worker worker=mapper.map(issuanceDto.getWorker(),Worker.class);
             issuanceGet.setWorker(worker);
-            Reader reader=mapper.map(issuanceDto.getReaderDto(),Reader.class);
+            Reader reader=mapper.map(issuanceDto.getReader(),Reader.class);
             issuanceGet.setReader(reader);
-            Book book=mapper.map(issuanceDto.getBookDto(),Book.class);
+            Book book=mapper.map(issuanceDto.getBook(),Book.class);
             issuanceGet.setBook(book);
             issuanceGet.setSum(issuanceDto.getSum());
             issuanceGet.setTime(issuanceDto.getTime());

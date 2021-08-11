@@ -32,6 +32,13 @@ public class BookController {
         return ResponseEntity.ok(bookDtoList);
     }
 
+    @GetMapping("/expired")
+    public ResponseEntity<List<BookDto>> getExpired(){
+        log.info("received request: /books/");
+        List<BookDto> bookDtoList=bookService.findExpiredBooksDto();
+        return ResponseEntity.ok(bookDtoList);
+    }
+
     @PostMapping("/add")
     public ResponseEntity<Void> create(@RequestBody BookDto bookDto){
         log.info("received request: /add/"+bookDto);

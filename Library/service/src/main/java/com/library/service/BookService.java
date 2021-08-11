@@ -93,6 +93,29 @@ public class BookService implements IBookService {
     }
 
     @Override
+    public List<BookDto> findExpiredBooksDto() {
+        try{
+            LOGGER.info(String.format("Finding of expired books"));
+            List<Book> bookList=bookDao.getAll();
+            List<Book> expiredBooks=new ArrayList<>();
+            for(Book book:bookList){
+                if(book.getIssuance().getTime()<(toIntExact(Duration.between(book.getIssuance().getData().atStartOfDay(),book.getAcceptance().getData().atStartOfDay()).toDays()))){
+                    expiredBooks.add(book);
+                }
+            }
+            List<BookDto> bookDtoListExpired=new ArrayList<>();
+            for(Book book:expiredBooks){
+                BookDto bookDto=mapper.map(book,BookDto.class);
+                bookDtoListExpired.add(bookDto);
+            }
+            return bookDtoListExpired;
+        } catch (DaoException e) {
+            LOGGER.warn("Finding of expired books failed",e);
+            throw new ServiceException("Finding of expired books failed",e);
+        }
+    }
+
+    @Override
     public List<BookDto> getAll() {
         try{
             LOGGER.info(String.format("Getting of all books"));

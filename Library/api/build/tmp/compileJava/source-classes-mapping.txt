@@ -18,8 +18,8 @@ com/hotel/api/service/IWorkerService.java
  com.hotel.api.service.IWorkerService
 com/hotel/api/dao/IWorkerDao.java
  com.hotel.api.dao.IWorkerDao
-com/hotel/api/dao/IBookDao.java
- com.hotel.api.dao.IBookDao
+com/hotel/api/service/IIssuanceService.java
+ com.hotel.api.service.IIssuanceService
 com/hotel/api/service/IBookService.java
  com.hotel.api.service.IBookService
 com/hotel/api/dao/IUserDao.java
@@ -28,5 +28,5 @@ com/hotel/exceptions/ServiceException.java
  com.hotel.exceptions.ServiceException
 com/hotel/api/dao/GenericDao.java
  com.hotel.api.dao.GenericDao
-com/hotel/api/service/IIssuanceService.java
- com.hotel.api.service.IIssuanceService
+com/hotel/api/dao/IBookDao.java
+ com.hotel.api.dao.IBookDao

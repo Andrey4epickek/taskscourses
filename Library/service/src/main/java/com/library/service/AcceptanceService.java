@@ -100,11 +100,11 @@ public class AcceptanceService implements IAcceptanceService {
         try {
             LOGGER.info(String.format("Updating of acceptance %d",acceptanceId));
             Acceptance acceptanceGet=acceptanceDao.getById(acceptanceId);
-            Worker worker=mapper.map(acceptanceDto.getWorkerDto(),Worker.class);
+            Worker worker=mapper.map(acceptanceDto.getWorker(),Worker.class);
             acceptanceGet.setWorker(worker);
-            Reader reader=mapper.map(acceptanceDto.getReaderDto(),Reader.class);
+            Reader reader=mapper.map(acceptanceDto.getReader(),Reader.class);
             acceptanceGet.setReader(reader);
-            Book book=mapper.map(acceptanceDto.getBookDto(),Book.class);
+            Book book=mapper.map(acceptanceDto.getBook(),Book.class);
             acceptanceGet.setBook(book);
             acceptanceGet.setSum(acceptanceDto.getSum());
             acceptanceGet.setData(acceptanceDto.getData());

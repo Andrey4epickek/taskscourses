@@ -36,8 +36,8 @@ public class IssuanceController {
     @PostMapping("/add")
     public ResponseEntity<Void> create(@RequestBody IssuanceDto issuanceDto){
         log.info("received request: /add/"+issuanceDto);
-        issuanceService.addIssuance(issuanceDto.getWorkerDto(),issuanceDto.getReaderDto(),
-                                    issuanceDto.getBookDto(),issuanceDto.getSum(),
+        issuanceService.addIssuance(issuanceDto.getWorker(),issuanceDto.getReader(),
+                                    issuanceDto.getBook(),issuanceDto.getSum(),
                                     issuanceDto.getTime(),issuanceDto.getData());
         return ResponseEntity.noContent().build();
     }

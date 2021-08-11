@@ -36,8 +36,8 @@ public class AcceptanceController {
     @PostMapping("/add")
     public ResponseEntity<Void> create(@RequestBody AcceptanceDto acceptanceDto){
         log.info("received request: /add/"+acceptanceDto);
-        acceptanceService.addAcceptance(acceptanceDto.getWorkerDto(),acceptanceDto.getReaderDto(),
-                                        acceptanceDto.getBookDto(),acceptanceDto.getSum(),
+        acceptanceService.addAcceptance(acceptanceDto.getWorker(),acceptanceDto.getReader(),
+                                        acceptanceDto.getBook(),acceptanceDto.getSum(),
                                         acceptanceDto.getData());
         return ResponseEntity.noContent().build();
     }

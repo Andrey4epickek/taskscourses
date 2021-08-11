@@ -12,6 +12,7 @@ public interface IBookService {
     BookDto getById(Integer bookId);
     Book getByIdUi(Integer bookId);
     List<Book> findExpiredBooks();
+    List<BookDto> findExpiredBooksDto();
     List<BookDto> getAll();
     List<Book> getAllUi();
     void deleteBook(Integer bookId);

@@ -7,9 +7,9 @@ import java.util.Date;
 @Data
 public class AcceptanceDto {
     private Integer id;
-    private WorkerDto workerDto;
-    private ReaderDto readerDto;
-    private BookDto bookDto;
+    private WorkerDto worker;
+    private ReaderDto reader;
+    private BookDto book;
     private Integer sum;
     private LocalDate data;
 }
